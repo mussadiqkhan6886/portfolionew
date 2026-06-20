@@ -1,4 +1,4 @@
-import CurvedLoop from '@/components/ui/HeroLoopName'
+import CurvedLoop, { ScrollVelocity } from '@/components/ui/HeroLoopName'
 import Image from 'next/image'
 import React from 'react'
 import { HiArrowDownRight } from 'react-icons/hi2'
@@ -23,13 +23,15 @@ const Hero = () => {
           <h2 className="text-white text-[32px] leading-tight tracking-tight">Freelance <br /> Designer & Developer</h2>
         </div>
       </div>
-        <CurvedLoop
-          marqueeText="Mussadiq Khan ✦"
-          speed={2}
-          curveAmount={0}
-          direction="left"
-          interactive={false}
-        />
+  
+      <ScrollVelocity
+        texts={['Mussadiq Khan ✦']} 
+        velocity={70}
+        className="custom-scroll-text"
+        numCopies={4}
+        damping={20}
+        stiffness={800}
+      />
     </section>
   )
 }
