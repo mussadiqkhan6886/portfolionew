@@ -1,7 +1,7 @@
 import CurvedLoop from '@/components/ui/HeroLoopName'
 import Image from 'next/image'
 import React from 'react'
-import { HiArrowDownRight, HiOutlineGlobeAlt } from 'react-icons/hi2'
+import { HiArrowDownRight } from 'react-icons/hi2'
 
 const Hero = () => {
   return (
