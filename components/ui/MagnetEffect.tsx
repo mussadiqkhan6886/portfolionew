@@ -1,0 +1,54 @@
+"use client";
+
+import { useRef, useState, MouseEvent } from "react";
+import { motion } from "framer-motion";
+
+interface MagnetTextProps {
+  text: string;
+  className?: string;
+  strength?: number;
+}
+
+export default function MagnetText({
+  text,
+  className = "",
+  strength = 0.4,
+}: MagnetTextProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [enter, setEnter] = useState(false)
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    const el = ref.current;
+    if (!el) return;
+
+    const rect = el.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    const offsetX = (e.clientX - centerX) * strength;
+    const offsetY = (e.clientY - centerY) * strength;
+
+    setPosition({ x: offsetX, y: offsetY });
+    setEnter(true)
+  };
+
+  const handleMouseLeave = () => {
+    setPosition({ x: 0, y: 0 });
+    setEnter(false)
+  };
+
+  return (
+    <motion.span
+      ref={ref}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      animate={{ x: position.x, y: position.y }}
+      transition={{ type: "spring", stiffness: 150, damping: 12, mass: 0.5 }}
+      className={`inline-block cursor-pointer py-3 select-none ${className}`}
+    >
+      {text}
+      <motion.span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 block bg-white rounded-full ${enter ? "opacity-100 w-1.5 h-1.5" : "opacity-0 h-0 w-0"} transition-all duration-300 ease-in-out`}></motion.span>
+    </motion.span>
+  );
+}
