@@ -8,3 +8,23 @@
   --color-gray: #999D9E;
   --color-border: #D2D2D2;
 }
+
+
+@keyframes rotate {
+  0% {
+    transform: perspective(800px) rotateZ(-15deg);
+  }
+
+  50% {
+    transform: perspective(800px) rotateZ(0deg);
+  }
+
+  100% {
+    transform: perspective(800px) rotateZ(15deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotate 2s ease-in-out infinite alternate;
+  transform-style: preserve-3d;
+}
