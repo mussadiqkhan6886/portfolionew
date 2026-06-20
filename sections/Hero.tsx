@@ -8,8 +8,8 @@ const Hero = () => {
     <section style={{backgroundImage: `URL(${"/img3.png"})`, backgroundPosition: "top", backgroundRepeat: "no-repeat"}} className="w-full h-screen relative bg-gray/98 overflow-hidden bg-cover xl:bg-contain">
       <div className="absolute w-22 h-screen left-0 bg-gray hidden lg:block" />
       <div className="absolute w-screen h-screen inset-0 bg-black/10" />
-      <div className="absolute flex justify-between w-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-37 items-center">
-        <div className="bg-text text-white flex p-4 rounded-r-full items-center justify-between w-60">
+      <div className="absolute flex justify-between w-full left-1/2 bottom-0 sm:top-1/2 -translate-x-1/2 sm:-translate-y-1/2 h-32 sm:h-37 items-center">
+        <div className="bg-text text-white hidden sm:flex p-4 rounded-r-full items-center justify-between w-60">
           <div className="w-[50%] ml-7">
             <p className='leading-[1.2] font-medium tracking-tighter'>Located <br /> in the <br /> Pakistan</p>
           </div>
@@ -19,9 +19,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col mb-16 h-full justify-between pr-22">
-          <HiArrowDownRight size={24} color='white' />
-          <h2 className="text-white text-[32px] leading-tight tracking-tight">Freelance <br /> Designer & Developer</h2>
+        <div className="flex flex-col ml-10 mb-16 h-full justify-between pr-4 md:pr-22">
+          <HiArrowDownRight size={22} color='white' />
+          <h2 className="text-white text-3xl sm:text-[32px] leading-tight tracking-tight">Freelance <br /> Designer & Developer</h2>
         </div>
       </div>
   
