@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/comp/Header";
 import Footer from "@/components/comp/Footer";
-
+import { dSans } from "@/constants/font";
 
 export const metadata: Metadata = {
   title: "Mussadiq Khan | Freelance Web Developer",
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased`}
+      className={`h-full antialiased ${dSans.className}`}
     >
       <body className="min-h-full flex flex-col">
         <Header />
