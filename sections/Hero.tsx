@@ -5,8 +5,8 @@ import { HiArrowDownRight } from 'react-icons/hi2'
 
 const Hero = () => {
   return (
-    <section style={{backgroundImage: `URL(${"/img3.png"})`, backgroundSize: "contain", backgroundPosition: "top", backgroundRepeat: "no-repeat"}} className="w-full h-screen relative bg-gray/98 overflow-hidden">
-      <div className="absolute w-22 h-screen left-0 bg-gray" />
+    <section style={{backgroundImage: `URL(${"/img3.png"})`, backgroundPosition: "top", backgroundRepeat: "no-repeat"}} className="w-full h-screen relative bg-gray/98 overflow-hidden bg-cover xl:bg-contain">
+      <div className="absolute w-22 h-screen left-0 bg-gray hidden lg:block" />
       <div className="absolute w-screen h-screen inset-0 bg-black/10" />
       <div className="absolute flex justify-between w-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-37 items-center">
         <div className="bg-text text-white flex p-4 rounded-r-full items-center justify-between w-60">

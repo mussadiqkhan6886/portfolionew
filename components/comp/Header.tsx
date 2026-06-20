@@ -3,7 +3,6 @@ import Link from 'next/link'
 import React from 'react'
 import MagnetText from '../ui/MagnetEffect'
 import TextPressure from '../ui/HeaderLogo'
-import { dSans } from '@/constants/font'
 
 const Header = () => {
   return (
@@ -19,13 +18,15 @@ const Header = () => {
             italic
             textColor="#ffffff"
             strokeColor="#5227FF"
-            minFontSize={26}
+            minFontSize={24}
           />
         </Link>
       {/* menu mobile */}
-      <div className="block sm:hidden"></div>
+      <div className="block sm:hidden">
+        <MagnetText text="Menu" strength={0.5} />
+      </div>
       {/* menu larger screen */}
-      <nav className="hidden md:flex">
+      <nav className="hidden sm:flex">
         <ul className="flex gap-9">
         {menu.map((item, i) =>(
           <li className="relative" key={i}><Link href={item.link}><MagnetText text={item.title} strength={0.5} /> </Link></li>
