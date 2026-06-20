@@ -2,13 +2,26 @@ import { menu } from '@/constants'
 import Link from 'next/link'
 import React from 'react'
 import MagnetText from '../ui/MagnetEffect'
+import TextPressure from '../ui/HeaderLogo'
+import { dSans } from '@/constants/font'
 
 const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 text-white flex justify-between items-center p-6 px-8">
-      <div>
-        <h1>Code by Mussadiq</h1>
-      </div>
+        <Link href="/">
+          <TextPressure
+            text="Code By Mussadiq!"
+            flex={false}
+            alpha={false}
+            stroke={false}
+            width
+            weight
+            italic
+            textColor="#ffffff"
+            strokeColor="#5227FF"
+            minFontSize={26}
+          />
+        </Link>
       {/* menu mobile */}
       <div className="block sm:hidden"></div>
       {/* menu larger screen */}
