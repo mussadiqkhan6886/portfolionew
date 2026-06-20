@@ -17,12 +17,12 @@ const Menu = ({close}: Params) => {
       <div className="flex items-end justify-end">
         <button onClick={() => close(false)} className="bg-ctr flex justify-center items-center w-18 h-18 rounded-full cursor-pointer"><FiX color="white" size={32} /></button>
       </div>
-      <div className="mt-4 mb-17"> 
+      <div className="mt-4 mb-27"> 
         <div>
             <p className={` text-gray uppercase text-xs font-bold pb-6 border-b border-gray/80`}>Navigation</p>
         </div>
         <nav>
-            <ul>
+            <ul className="flex gap-4 flex-col">
                 <li><Link href="/"><MagnetText strength={0.1} className="w-full text-5xl pt-8" dot={"right"} mobile={true} text={"Home"} /></Link></li>
                 {menu.map(item => (
                     <li key={item.link}><Link href={item.link}><MagnetText strength={0.1} className="w-full text-5xl" mobile={true} dot={"right"} text={item.title} /></Link></li>
@@ -31,7 +31,7 @@ const Menu = ({close}: Params) => {
         </nav>
       </div>
       <div >
-        <p className=" text-gray uppercase text-xs font-bold pt-6 border-t border-gray/80">SOCIALS</p>
+        <p className=" text-gray uppercase text-xs font-bold pt-6 pb-4 border-t border-gray/80">SOCIALS</p>
         <div>
             <ul className="flex gap-6">
             {socials.map(item => (

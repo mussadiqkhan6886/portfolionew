@@ -1,4 +1,4 @@
-import CurvedLoop, { ScrollVelocity } from '@/components/ui/HeroLoopName'
+import { ScrollVelocity } from '@/components/ui/HeroLoopName'
 import Image from 'next/image'
 import React from 'react'
 import { HiArrowDownRight } from 'react-icons/hi2'
