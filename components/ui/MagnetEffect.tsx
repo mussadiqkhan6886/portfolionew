@@ -7,12 +7,16 @@ interface MagnetTextProps {
   text: string;
   className?: string;
   strength?: number;
+  dot?: "down" | "left" | "right"
+  mobile: boolean
 }
 
 export default function MagnetText({
   text,
   className = "",
   strength = 0.4,
+  dot = "down",
+  mobile
 }: MagnetTextProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -45,10 +49,10 @@ export default function MagnetText({
       onMouseLeave={handleMouseLeave}
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 150, damping: 12, mass: 0.5 }}
-      className={`inline-block cursor-pointer py-3 select-none ${className}`}
+      className={`inline-block relative cursor-pointer py-3 select-none ${className}`}
     >
       {text}
-      <motion.span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 block bg-white rounded-full ${enter ? "opacity-100 w-1.5 h-1.5" : "opacity-0 h-0 w-0"} transition-all duration-300 ease-in-out`}></motion.span>
+      <motion.span className={`absolute ${dot === "down" ? "-bottom-2 left-1/2 -translate-x-1/2" : dot === "left" ? "top-1/2 -translate-y-1/2 -left-5 -translate-x-1/2" :"top-1/2  -right-0 -translate-x-1/2"} block bg-white rounded-full ${enter || mobile ? "opacity-100 w-1.5 h-1.5" : "opacity-0 h-0 w-0"} transition-all duration-300 ease-in-out`}></motion.span>
     </motion.span>
   );
 }
