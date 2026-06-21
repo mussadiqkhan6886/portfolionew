@@ -12,5 +12,8 @@ export const socials = [
 ]
 
 export const projects = [
-    {title: "", role: "", thumbnail: "", link: "", location: "", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []}
+    {id: "1",title: "mussadiq", role: "engineer", thumbnail: "/t1.png", link: "/work/s", location: "", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
+    {id: "2",title: "khan", role: "design", thumbnail: "/t2.png", link: "/work/k", location: "", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
+    {id: "3",title: "", role: "", thumbnail: "", link: "", location: "", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
+    {id: "4",title: "", role: "", thumbnail: "", link: "", location: "", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
 ]
