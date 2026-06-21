@@ -146,7 +146,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     return (
       <div className={`${parallaxClassName} absolute bottom-46 sm:bottom-24 `} style={parallaxStyle}>
         <motion.div
-          className={`${scrollerClassName} flex whitespace-nowrap text-center text-white tracking-[-0.02em] text-9xl sm:text-[12rem] md:leading-[5rem]`}
+          className={`${scrollerClassName} flex whitespace-nowrap text-center text-white tracking-[-0.02em] text-7xl min-[460px]:text-9xl sm:text-[12rem] leading-[5rem]`}
           style={{ x, ...scrollerStyle }}
         >
           {spans}

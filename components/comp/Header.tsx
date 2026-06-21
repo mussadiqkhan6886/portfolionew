@@ -25,9 +25,9 @@ const Header = () => {
 
   
   return (
-    <header className="fixed top-0 w-full z-50 text-white flex justify-between items-center p-6 px-8">
-        {hide ? <> <button className="absolute top-8 right-8" onClick={() => setIsOpen(true)}>
-            <MagnetText mobile={false} dot={"no"} text={<FiMenu size={28} /> } strength={0.5} className=" w-18 h-18 rounded-full bg-text hover:bg-ctr-dark justify-center items-center text-gray" />
+    <header className="fixed top-0 w-full z-50 text-white flex justify-between items-center p-6 px-6 sm:px-8">
+        {hide ? <> <button className="absolute top-6 sm:top-8 right-6 sm:right-8" onClick={() => setIsOpen(true)}>
+            <MagnetText mobile={false} dot={"no"} text={<FiMenu size={28} /> } strength={0.5} className=" w-15 sm:w-18 h-15 sm:h-18 rounded-full bg-text hover:bg-ctr-dark justify-center items-center text-gray" />
         </button>
         {isOpen && <Menu close={setIsOpen} />}
         </>
@@ -42,7 +42,7 @@ const Header = () => {
             italic
             textColor="#ffffff"
             strokeColor="#5227FF"
-            minFontSize={24}
+            minFontSize={20}
           />
         </Link>
 

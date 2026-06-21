@@ -15,18 +15,18 @@ const Menu = ({close}: Params) => {
     <aside className="bg-text w-screen h-screen z-50 p-8 inset-0 absolute text-white">
       <div className="flex items-end justify-end">
         <button onClick={() => close(false)} >
-            <MagnetText mobile={false} dot={"no"} text={<FiX size={32} color={"white"} /> } strength={0.5} className=" w-18 h-18 rounded-full bg-ctr-dark justify-center items-center " />
+            <MagnetText mobile={false} dot={"no"} text={<FiX size={32} color={"white"} /> } strength={0.5} className=" w-15 sm:w-18 h-15 sm:h-18 rounded-full bg-ctr-dark justify-center items-center " />
         </button>
       </div>
       <div className="mt-4 mb-27"> 
         <div>
-            <p className={` text-gray uppercase text-xs font-bold pb-6 border-b border-gray/80`}>Navigation</p>
+            <p className={` text-gray uppercase text-xs font-bold pb-4 sm:pb-6 border-b border-gray/80`}>Navigation</p>
         </div>
         <nav>
             <ul className="flex gap-4 flex-col">
-                <li><Link href="/"><MagnetText strength={0.1} className="w-full text-5xl pt-8" dot={"right"} mobile={true} text={"Home"} /></Link></li>
+                <li><Link href="/"><MagnetText strength={0.1} className="w-full text-4xl sm:text-5xl pt-8" dot={"right"} mobile={true} text={"Home"} /></Link></li>
                 {menu.map(item => (
-                    <li key={item.link}><Link href={item.link}><MagnetText strength={0.1} className="w-full text-5xl" mobile={true} dot={"right"} text={item.title} /></Link></li>
+                    <li key={item.link}><Link href={item.link}><MagnetText strength={0.1} className="w-full text-4xl sm:text-5xl" mobile={true} dot={"right"} text={item.title} /></Link></li>
                 ))}
             </ul>
         </nav>
