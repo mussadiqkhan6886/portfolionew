@@ -8,10 +8,12 @@ import TextPressure from '../ui/HeaderLogo'
 import Menu from './Menu';
 import { FiMenu, FiX } from 'react-icons/fi';
 import {AnimatePresence, motion} from "framer-motion"
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [hide, setHide] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const pathName = usePathname()
 
   useEffect(() => {
     const checkScroll = () => {
@@ -29,7 +31,7 @@ const Header = () => {
     <header
     className={`${
       hide ? "fixed" : "absolute"
-    } top-0 z-50 flex w-full items-center justify-between px-6 py-6 text-white sm:px-8`}
+    } top-0 z-50 flex w-full items-center justify-between px-6 py-6 sm:px-8`}
   >
   <AnimatePresence mode="wait">
     {hide || isOpen ? (
@@ -50,7 +52,7 @@ const Header = () => {
       >
         <button onClick={() => setIsOpen((prev) => !prev)}>
           <MagnetText
-            mobile={false}
+            
             dot="no"
             text={isOpen ? <FiX size={26} /> : <FiMenu size={26} />}
             strength={0.5}
@@ -73,25 +75,24 @@ const Header = () => {
             width
             weight
             italic
-            textColor="#ffffff"
+            textColor={pathName === "/" ? "#fff" : "#000"}
             strokeColor="#5227FF"
             minFontSize={20}
           />
         </Link>
 
         <div className="block sm:hidden">
-          <button onClick={() => setIsOpen(true)}>
-            <MagnetText mobile dot="left" text="Menu" strength={0.5} />
+          <button className={`${pathName !== "/" ? "text-black" : "text-white"}`} onClick={() => setIsOpen(true)}>
+            <MagnetText active={true} pathname={pathName}  dot="left" text="Menu" strength={0.5} />
           </button>
         </div>
 
-        <nav className="hidden sm:flex">
+        <nav className={`hidden sm:flex ${pathName !== "/" ? "text-black" : "text-white"}`}>
           <ul className="flex gap-9">
             {menu.map((item) => (
-              <li className="relative" key={item.link}>
+              <li className="relative font-medium" key={item.link}>
                 <Link href={item.link}>
-                  <MagnetText
-                    mobile={false}
+                  <MagnetText active={pathName === item.link} pathname={pathName}
                     text={item.title}
                     strength={0.5}
                   />
@@ -106,7 +107,7 @@ const Header = () => {
 
   <AnimatePresence>
     {isOpen && (
-      <Menu close={() => setIsOpen(false)} />
+      <Menu pathname={pathName} close={() => setIsOpen(false)} />
     )}
   </AnimatePresence>
     </header>

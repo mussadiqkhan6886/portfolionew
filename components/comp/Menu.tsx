@@ -7,7 +7,7 @@ import { menu, socials } from '@/constants';
 import {easeInOut, motion} from "framer-motion"
 
 
-const Menu = ({close}: {close: (x: boolean) => void}) => {
+const Menu = ({close, pathname}: {close: (x: boolean) => void, pathname: string}) => {
   return (
     <aside onClick={() => close(false)} className="w-screen h-screen bg-text/10 absolute inset-0 cursor-pointer">
     <motion.div initial={{
@@ -52,7 +52,7 @@ const Menu = ({close}: {close: (x: boolean) => void}) => {
                   type: "tween",
                   delay: 0.1
                 }}
-                ><Link href="/"><MagnetText strength={0.1} className="w-full text-4xl sm:text-5xl pt-8" dot={"right"} mobile={true} text={"Home"} /></Link></motion.li>
+                ><Link href="/"><MagnetText strength={0.1} active={pathname === "/"} pathname={"/"} className="w-full text-4xl sm:text-5xl pt-8" dot={"right"} text={"Home"} /></Link></motion.li>
                 {menu.map(item => (
                     <motion.li initial={{
                   x: 120,
@@ -71,7 +71,7 @@ const Menu = ({close}: {close: (x: boolean) => void}) => {
                   ease: easeInOut,
                   type: "tween",
                   delay: item.d
-                }} key={item.link}><Link href={item.link}><MagnetText strength={0.1} className="w-full text-4xl sm:text-5xl" mobile={true} dot={"right"} text={item.title} /></Link></motion.li>
+                }} key={item.link}><Link href={item.link}><MagnetText active={pathname === item.link} strength={0.1} pathname={"/"} className="w-full text-4xl sm:text-5xl" dot={"right"} text={item.title} /></Link></motion.li>
                 ))}
             </ul>
         </nav>
@@ -81,7 +81,7 @@ const Menu = ({close}: {close: (x: boolean) => void}) => {
         <div>
             <ul className="flex gap-6">
             {socials.map(item => (
-                <li key={item.link}><Link href={item.link} target='_blank'><MagnetText text={item.title} mobile={false} dot={"down"} strength={0.2} /></Link></li>
+                <li key={item.link}><Link href={item.link} target='_blank'><MagnetText pathname="/" text={item.title} dot={"down"} strength={0.2} /></Link></li>
             ))}
             </ul>
         </div>
