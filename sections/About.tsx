@@ -4,7 +4,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className="bg-white flex flex-col md:flex-row justify-between gap-16 max-w-275 mx-auto px-5 pt-30 md:pt-40 pb-20">
+    <section className="bg-white flex flex-col lg:flex-row justify-between gap-16 max-w-275 mx-auto px-5 pt-30 md:pt-40 lg:pb-20">
       <article className="max-w-2xl">
         <p className="text-3xl leading-10">
           Helping brands to stand out in the digital era. Together we will set
@@ -12,7 +12,7 @@ const About = () => {
         </p>
       </article>
 
-      <div className="flex relative flex-row md:flex-col gap-5 md:gap-18 md:h-80">
+      <div className="flex relative flex-row lg:flex-col gap-5 md:gap-18 h-70 sm:h-80 ">
         <article className="max-w-xs pr-3 md:pr-10">
           <p>
             The combination of my passion for design, code & interaction
@@ -20,7 +20,7 @@ const About = () => {
           </p>
         </article>
 
-        <Link className="absolute right-0 md:left-0 bottom-0" href="/about">
+        <Link className="absolute right-0 md:right-20 bottom-0 md:bottom-30 lg:left-0 lg:bottom-0" href="/about">
           <MagnetText
             text="About Me"
             mobile={false}

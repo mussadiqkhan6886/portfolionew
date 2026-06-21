@@ -19,7 +19,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col ml-10 mb-16 h-full justify-between pr-4 md:pr-22">
+        <div className="flex flex-col ml-10 mb-22 h-full justify-between pr-4 md:pr-22">
           <HiArrowDownRight size={22} color='white' />
           <h2 className="text-white text-3xl sm:text-[32px] leading-tight tracking-tight">Freelance <br /> Designer & Developer</h2>
         </div>
