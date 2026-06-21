@@ -21,7 +21,7 @@ const About = () => {
           </p>
         </article>
 
-        <FloatEffect output={[100, -200]} className="absolute right-0 md:right-20 bottom-0 md:bottom-30 lg:left-0 lg:bottom-0">
+        <FloatEffect output={[100, -200]} className="absolute right-0 md:right-20 bottom-10 md:bottom-30 lg:left-0 lg:bottom-0">
           <Link href="/about">
             <MagnetText
               text="About Me"
