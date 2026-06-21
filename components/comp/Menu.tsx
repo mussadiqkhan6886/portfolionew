@@ -5,7 +5,6 @@ import { FiX } from 'react-icons/fi'
 import MagnetText from '../ui/MagnetEffect';
 import Link from 'next/link';
 import { menu, socials } from '@/constants';
-import { dSans } from '@/constants/font';
 
 interface Params {
     close: (x: boolean) => void
@@ -15,7 +14,9 @@ const Menu = ({close}: Params) => {
   return (
     <aside className="bg-text w-screen h-screen z-50 p-8 inset-0 absolute text-white">
       <div className="flex items-end justify-end">
-        <button onClick={() => close(false)} className="bg-ctr flex justify-center items-center w-18 h-18 rounded-full cursor-pointer"><FiX color="white" size={32} /></button>
+        <button onClick={() => close(false)} >
+            <MagnetText mobile={false} dot={"no"} text={<FiX size={32} color={"white"} /> } strength={0.5} className=" w-18 h-18 rounded-full bg-ctr-dark justify-center items-center " />
+        </button>
       </div>
       <div className="mt-4 mb-27"> 
         <div>

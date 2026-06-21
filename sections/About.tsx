@@ -26,7 +26,7 @@ const About = () => {
             mobile={false}
             dot="no"
             strength={0.5}
-            className="w-34 h-34 bg-black hover:bg-ctr-dark text-white rounded-full items-center justify-center transition-colors duration-300"
+            className="w-34 h-34 bg-text hover:bg-ctr-dark text-white rounded-full items-center justify-center transition-colors duration-300"
           />
         </Link>
       </div>

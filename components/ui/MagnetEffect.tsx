@@ -1,11 +1,11 @@
 "use client";
 
-import { useRef, useState, MouseEvent } from "react";
+import { useRef, useState, MouseEvent, ReactNode } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
 interface MagnetTextProps {
-  text: string;
+  text: string | ReactNode;
   className?: string;
   strength?: number;
   dot?: "down" | "left" | "right" | "no";
