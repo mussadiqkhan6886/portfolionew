@@ -61,16 +61,7 @@ const Header = () => {
         </button>
       </motion.div>
     ) : (
-      <motion.div
-         key="full-header"
-        initial={{ y: -25 }}
-        animate={{ y: 0 }}
-        exit={{ y: -25 }}
-        transition={{
-          type: "spring",
-          stiffness: 250,
-          damping: 24,
-        }}
+      <div  
         className="flex w-full items-center justify-between"
       >
         <Link href="/">
@@ -109,7 +100,7 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-      </motion.div>
+      </div>
     )}
   </AnimatePresence>
 
