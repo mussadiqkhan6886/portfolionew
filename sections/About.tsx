@@ -5,7 +5,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className="bg-white flex flex-col lg:flex-row justify-between gap-16 max-w-275 mx-auto px-5 pt-30 md:pt-40 lg:pb-20">
+    <section className="bg-white flex flex-col lg:flex-row justify-between gap-16 max-w-270 mx-auto px-5 md:px-0 pt-30 md:pt-40 lg:pb-20">
       <article className="max-w-2xl">
         <p className="text-3xl leading-10">
           Helping brands to stand out in the digital era. Together we will set

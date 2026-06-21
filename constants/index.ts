@@ -10,3 +10,7 @@ export const socials = [
     {link: "https://github.com/mussadiqkhan6886", title: "Github"},
     {link: "mailto:mussadiqkhan6886@gmail.com", title: "Email"},
 ]
+
+export const projects = [
+    {title: "", role: "", thumbnail: "", link: "", location: "", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []}
+]
