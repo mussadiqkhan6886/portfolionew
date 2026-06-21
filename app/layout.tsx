@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/comp/Header";
 import Footer from "@/components/comp/Footer";
 import { dSans } from "@/constants/font";
+import SmoothScroll from "@/components/ui/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Mussadiq Khan | Freelance Web Developer",
@@ -21,7 +22,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Header />
-          {children}
+          <SmoothScroll> {children} </SmoothScroll>
         <Footer />
         </body>
     </html>
