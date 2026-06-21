@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 import MagnetText from '../ui/MagnetEffect'
 import TextPressure from '../ui/HeaderLogo'
 import Menu from './Menu';
-import { FiMenu } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 const Header = () => {
   const [hide, setHide] = useState(false)
@@ -25,11 +25,11 @@ const Header = () => {
 
   
   return (
-    <header className="fixed top-0 w-full z-50 text-white flex justify-between items-center p-6 px-6 sm:px-8">
-        {hide ? <> <button className="absolute top-6 sm:top-8 right-6 sm:right-8" onClick={() => setIsOpen(true)}>
-            <MagnetText mobile={false} dot={"no"} text={<FiMenu size={28} /> } strength={0.5} className=" w-15 sm:w-18 h-15 sm:h-18 rounded-full bg-text hover:bg-ctr-dark justify-center items-center text-gray" />
+    <header className={`${hide ? "fixed" : "absolute"} top-0 w-full z-50 text-white flex justify-between items-center p-6 px-6 sm:px-8`}>
+        {hide || isOpen ? <> <button className="absolute top-6 z-50 sm:top-8 right-6 sm:right-8" onClick={isOpen ? () => setIsOpen(false) : () => setIsOpen(true)}>
+            <MagnetText mobile={false} dot={"no"} text={isOpen ? <FiX size={26} /> : <FiMenu size={26} />} strength={0.5} className={` w-15 sm:w-18 h-15 sm:h-18 rounded-full ${isOpen ? "bg-ctr-dark" : "bg-text"} hover:bg-ctr-dark justify-center items-center text-white`} />
         </button>
-        {isOpen && <Menu close={setIsOpen} />}
+        {isOpen && <Menu close={() => setIsOpen(false)} />}
         </>
          : <> <Link href="/">
           <TextPressure

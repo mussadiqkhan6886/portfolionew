@@ -6,19 +6,12 @@ import MagnetText from '../ui/MagnetEffect';
 import Link from 'next/link';
 import { menu, socials } from '@/constants';
 
-interface Params {
-    close: (x: boolean) => void
-}
 
-const Menu = ({close}: Params) => {
+const Menu = ({close}: {close: (x: boolean) => void}) => {
   return (
-    <aside className="bg-text w-screen h-screen z-50 p-8 inset-0 absolute text-white">
-      <div className="flex items-end justify-end">
-        <button onClick={() => close(false)} >
-            <MagnetText mobile={false} dot={"no"} text={<FiX size={32} color={"white"} /> } strength={0.5} className=" w-15 sm:w-18 h-15 sm:h-18 rounded-full bg-ctr-dark justify-center items-center " />
-        </button>
-      </div>
-      <div className="mt-4 mb-27"> 
+    <aside onClick={() => close(false)} className="w-screen h-screen bg-text/10 absolute inset-0 cursor-pointer">
+    <div className="bg-text max-w-160 w-full h-screen z-40 p-8 top-0 right-0 absolute text-white">
+      <div className="my-24"> 
         <div>
             <p className={` text-gray uppercase text-xs font-bold pb-4 sm:pb-6 border-b border-gray/80`}>Navigation</p>
         </div>
@@ -41,6 +34,7 @@ const Menu = ({close}: Params) => {
             </ul>
         </div>
       </div>
+    </div>
     </aside>
   )
 }
