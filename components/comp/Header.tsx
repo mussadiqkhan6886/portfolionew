@@ -7,6 +7,7 @@ import MagnetText from '../ui/MagnetEffect'
 import TextPressure from '../ui/HeaderLogo'
 import Menu from './Menu';
 import { FiMenu, FiX } from 'react-icons/fi';
+import {AnimatePresence, motion} from "framer-motion"
 
 const Header = () => {
   const [hide, setHide] = useState(false)
@@ -26,12 +27,26 @@ const Header = () => {
   
   return (
     <header className={`${hide ? "fixed" : "absolute"} top-0 w-full z-50 text-white flex justify-between items-center p-6 px-6 sm:px-8`}>
-        {hide || isOpen ? <> <button className="absolute top-6 z-50 sm:top-8 right-6 sm:right-8" onClick={isOpen ? () => setIsOpen(false) : () => setIsOpen(true)}>
+        <AnimatePresence>
+        {hide || isOpen ? 
+        <> 
+        <motion.button initial={{scale:0}} animate={{scale:1}} exit={{scale:0}} transition={{
+              duration: 0.55,
+              ease: [0.22, 1, 0.36, 1],
+              type: "spring",
+              stiffness: 350,
+              damping: 18,
+              mass: 0.7,
+            }}
+            className="absolute top-6 z-50 sm:top-8 right-6 sm:right-8" onClick={() => setIsOpen(prev => !prev)}>
+
             <MagnetText mobile={false} dot={"no"} text={isOpen ? <FiX size={26} /> : <FiMenu size={26} />} strength={0.5} className={` w-15 sm:w-18 h-15 sm:h-18 rounded-full ${isOpen ? "bg-ctr-dark" : "bg-text"} hover:bg-ctr-dark justify-center items-center text-white`} />
-        </button>
+        </motion.button>
         {isOpen && <Menu close={() => setIsOpen(false)} />}
         </>
-         : <> <Link href="/">
+         : 
+         <> 
+         <Link href="/">
           <TextPressure
             text="Code By Mussadiq!"
             flex={false}
@@ -61,6 +76,7 @@ const Header = () => {
         </ul>
       </nav>
       </>}
+      </AnimatePresence>
     </header>
   )
 }

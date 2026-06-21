@@ -1,3 +1,4 @@
+import FloatEffect from '@/components/ui/FloatEffect'
 import MagnetText from '@/components/ui/MagnetEffect'
 import Link from 'next/link'
 import React from 'react'
@@ -20,15 +21,17 @@ const About = () => {
           </p>
         </article>
 
-        <Link className="absolute right-0 md:right-20 bottom-0 md:bottom-30 lg:left-0 lg:bottom-0" href="/about">
-          <MagnetText
-            text="About Me"
-            mobile={false}
-            dot="no"
-            strength={0.5}
-            className="w-38 h-38 bg-text hover:bg-ctr-dark text-white rounded-full items-center justify-center transition-colors duration-300"
-          />
-        </Link>
+        <FloatEffect output={[100, -200]} className="absolute right-0 md:right-20 bottom-0 md:bottom-30 lg:left-0 lg:bottom-0">
+          <Link href="/about">
+            <MagnetText
+              text="About Me"
+              mobile={false}
+              dot="no"
+              strength={0.5}
+              className="w-38 h-38 bg-text hover:bg-ctr-dark text-white rounded-full items-center justify-center transition-colors duration-300"
+            />
+          </Link>
+        </FloatEffect>
       </div>
     </section>
   )
