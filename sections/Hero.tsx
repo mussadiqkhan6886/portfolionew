@@ -27,10 +27,10 @@ const Hero = () => {
   
       <ScrollVelocity
         texts={['Mussadiq Khan ✦']} 
-        velocity={75}
+        velocity={85}
         className="custom-scroll-text"
-        numCopies={4}
-        damping={20}
+        numCopies={12}
+        damping={100}
         stiffness={800}
       />
     </section>

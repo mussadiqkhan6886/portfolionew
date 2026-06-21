@@ -12,21 +12,21 @@ const About = () => {
         </p>
       </article>
 
-      <div className="flex relative flex-row md:flex-col gap-5 md:gap-18">
-        <article className="max-w-xs pr-10">
+      <div className="flex relative flex-row md:flex-col gap-5 md:gap-18 md:h-80">
+        <article className="max-w-xs pr-3 md:pr-10">
           <p>
             The combination of my passion for design, code & interaction
             positions me in a unique place in the web design world.
           </p>
         </article>
 
-        <Link className="absolute right-0" href="/about">
+        <Link className="absolute right-0 md:left-0 bottom-0" href="/about">
           <MagnetText
             text="About Me"
             mobile={false}
             dot="no"
             strength={0.5}
-            className="w-34 h-34 bg-text hover:bg-ctr-dark text-white rounded-full items-center justify-center transition-colors duration-300"
+            className="w-38 h-38 bg-text hover:bg-ctr-dark text-white rounded-full items-center justify-center transition-colors duration-300"
           />
         </Link>
       </div>
