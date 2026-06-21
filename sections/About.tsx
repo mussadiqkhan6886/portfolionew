@@ -25,7 +25,6 @@ const About = () => {
           <Link href="/about">
             <MagnetText
               text="About Me"
-              mobile={false}
               dot="no"
               strength={0.5}
               className="w-38 h-38 bg-text hover:bg-ctr-dark text-white rounded-full items-center justify-center transition-colors duration-300"
