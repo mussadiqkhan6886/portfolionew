@@ -1,7 +1,7 @@
 export const menu = [
-    {link: "/work", title: "Work"},
-    {link: "/about", title: "About"},
-    {link: "/contact", title: "Contact"},
+    {d: 0.2,link: "/work", title: "Work"},
+    {d: 0.3,link: "/about", title: "About"},
+    {d: 0.4,link: "/contact", title: "Contact"},
 ]
 
 export const socials = [
