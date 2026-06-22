@@ -6,7 +6,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className="bg-white flex flex-col lg:flex-row justify-between gap-16 max-w-240 mx-auto px-5 md:px-0 pt-30 md:pt-40 ">
+    <section className="bg-white flex flex-col lg:flex-row justify-between gap-16 max-w-240 mx-auto px-5 lg:px-0 pt-28 lg:pt-40 ">
       <article className="max-w-2xl">
         <ScrollFloat
           animationDuration={0.5}
