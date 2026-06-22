@@ -4,19 +4,19 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 const greetings = [
-  "Hello",          // English
-  "Hola",           // Spanish
-  "Bonjour",        // French
-  "Ciao",           // Italian
+    "Hola",           // Spanish
+    "Bonjour",        // French
+    "Ciao",           // Italian
   "Hallo",          // German
   "Olá",            // Portuguese
+  "السلام علیکم",    // Urdu / Arabic
   "Hej",            // Swedish / Danish
   "Hallo",          // Dutch
   "Merhaba",        // Turkish
   "नमस्ते",          // Hindi
   "こんにちは",       // Japanese
   "안녕하세요",       // Korean
-  "السلام علیکم",    // Urdu / Arabic
+  "Hello",          // English
 ];
 
 export default function IntroLoader() {
