@@ -92,7 +92,7 @@ export default function ProjectsShowcase() {
                 height: THUMB_H,
                 transform: "translate(-50%, -50%)",
               }}
-              className="relative overflow-hidden bg-border"
+              className="relative overflow-hidden "
             >
               {/* Crossfading image layer */}
               <AnimatePresence>
@@ -101,7 +101,7 @@ export default function ProjectsShowcase() {
                   initial={{ y:300 }}
                   animate={{ y: 0 }}
                   exit={{ y:300 }}
-                  transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.5 }}
                   className="absolute inset-0 h-full w-full object-cover flex items-center justify-center"
                 >
                   <Image src={activeProject.thumbnail}
@@ -120,6 +120,13 @@ export default function ProjectsShowcase() {
             </motion.div>
           )}
         </AnimatePresence>
+      </div>
+
+      <div onMouseEnter={() => {
+        setIsHovering(false) 
+        setActiveId(null)}} className="py-16">
+
+      <Link href={"/work"} className="py-5 block text-center max-w-40 mx-auto rounded-full border border-border">More work</Link>
       </div>
     </section>
   );
