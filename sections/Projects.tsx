@@ -19,7 +19,7 @@ const Projects = () => {
     return () => window.removeEventListener("resize", checkDevice)
   }, [])
   return (
-    <section>
+    <section className='mb-10 md:mb-0'>
       {mobile ? <ProjectShowCaseMobile /> : <ProjectsShowcase /> }
     </section>
   )
