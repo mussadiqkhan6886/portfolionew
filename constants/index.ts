@@ -17,3 +17,10 @@ export const projects = [
     {id: "3",title: "Zevora", role: "development & SEO", thumbnail: "/t1.png", link: "/work/s", location: "", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
     {id: "4",title: "True Horizon", role: "design & development", thumbnail: "/t3.png", link: "/work/l", location: "", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
 ]
+
+export const thumbnails1 = [
+    "/t1.png", "/t2.png", "/t3.png", "/t4.png"
+]
+export const thumbnails2 = [
+    "/t4.png", "/t3.png", "/t2.png", "/t1.png"
+]

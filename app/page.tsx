@@ -5,6 +5,7 @@ import Idea from '@/sections/Idea'
 import Projects from '@/sections/Projects'
 import Skills from '@/sections/Skills'
 import Testimonials from '@/sections/Testimonials'
+import WorkThumbnails from '@/sections/WorkThumbnails'
 import React from 'react'
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Hero />
       <About />
       <Projects />
+      <WorkThumbnails />
       <Skills />
       <Experience />
       <Testimonials />
