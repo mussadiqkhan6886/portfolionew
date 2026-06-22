@@ -8,7 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import MagnetText from "@/components/ui/MagnetEffect";
 
-const THUMB_W = 360;
+const THUMB_W = 380;
 const THUMB_H = 340;
 
 export default function ProjectsShowcase() {
@@ -63,9 +63,9 @@ export default function ProjectsShowcase() {
             setIsHovering(true);
             setActiveId(project.id);
           }}
-          className={`relative flex cursor-pointer items-center justify-between ${project.id === activeId ? "px-4" : "px-0"} border-b border-border transition-all duration-300 h-42`}
+          className={`relative flex cursor-pointer items-center justify-between ${project.id === activeId ? "px-4" : "px-0"} border-b border-border transition-all duration-300 h-40`}
         >
-          <h3 className={`text-2xl tracking-tight transition-colors duration-300 ${activeId !== project.id ? "text-black" : "text-gray"} sm:text-4xl md:text-8xl capitalize`}>
+          <h3 className={`text-2xl tracking-tight transition-colors duration-300 ${activeId !== project.id ? "text-black" : "text-gray"} sm:text-4xl md:text-7xl capitalize`}>
             {project.title}
           </h3>
           <p className={`transition-colors capitalize duration-300 ${activeId !== project.id ? "text-black" : "text-gray"}`}>
@@ -92,20 +92,20 @@ export default function ProjectsShowcase() {
                 height: THUMB_H,
                 transform: "translate(-50%, -50%)",
               }}
-              className="relative overflow-hidden bg-border shadow-2xl shadow-black/50"
+              className="relative overflow-hidden bg-border"
             >
               {/* Crossfading image layer */}
               <AnimatePresence>
                 <motion.div
                   key={activeProject.id}
-                  initial={{ opacity: 0, scale: 1.06 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.98 }}
-                  transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                  initial={{ y:300 }}
+                  animate={{ y: 0 }}
+                  exit={{ y:300 }}
+                  transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
                   className="absolute inset-0 h-full w-full object-cover flex items-center justify-center"
                 >
                   <Image src={activeProject.thumbnail}
-                  alt={activeProject.title} width={300} height={250} className="object-cover object-center" />
+                  alt={activeProject.title} width={360} height={300} className="object-cover w-full h-full object-center" />
                 </motion.div>
               </AnimatePresence>
 
@@ -115,7 +115,7 @@ export default function ProjectsShowcase() {
                 rel="noopener noreferrer"
                 className="pointer-events-none absolute inset-0 flex items-center justify-center"
               >
-                <MagnetText text="View" className="pointer-events-auto rounded-full bg-ctr w-18 h-18 p-2 text-sm font-medium text-white text-center items-center justify-center transition-transform duration-300" strength={10} dot={"no"} />
+                <MagnetText text="View" className="pointer-events-auto rounded-full bg-ctr w-18 h-18 p-2 text-sm font-medium text-white text-center items-center justify-center transition-transform duration-300" strength={7} dot={"no"} />
               </Link>
             </motion.div>
           )}
