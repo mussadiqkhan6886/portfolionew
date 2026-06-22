@@ -179,7 +179,7 @@ export const ScrollThumbnail: React.FC<ScrollVelocityProps> = ({
         {text.map((img, i) => (
           <div
             key={`${img}-${i}`}
-            className="relative h-[200px] w-[280px] mb-10 shrink-0 overflow-hidden md:h-[260px] md:w-[420px] bg-border px-7 py-10"
+            className="relative h-[200px] w-[280px] mb-6 shrink-0 overflow-hidden md:h-[260px] md:w-[420px] bg-border px-7 py-10"
           >
             <Image
               src={img}
