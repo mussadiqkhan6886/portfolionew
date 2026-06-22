@@ -48,11 +48,11 @@ export default function IntroLoader() {
       {showLoader && (
         <motion.div
           initial={{ y: 0, borderBottomLeftRadius: "0%",
-    borderBottomRightRadius: "0%", }}
+            borderBottomRightRadius: "0%", }}
           exit={{
             y: "-100%",
             borderBottomLeftRadius: "60%",
-    borderBottomRightRadius: "60%",
+            borderBottomRightRadius: "60%",
             transition: {
               duration: 1.1,
               ease: [0.76, 0, 0.24, 1],
