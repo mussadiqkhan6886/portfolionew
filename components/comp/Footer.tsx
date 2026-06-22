@@ -8,17 +8,17 @@ import FloatEffect from "../ui/FloatEffect";
 const Footer = () => {
 
   return (
-    <footer className="bg-text text-white">
+    <footer className="bg-text mt-10 text-white">
 
-      <section className="max-w-4xl mx-auto px-7 pt-20 pb-0">
-        <div className="relative flex items-center justify-between gap-6 pb-20 border-b border-gray/40">
+      <section className="max-w-4xl mx-auto px-3 lg:px-7 pt-6 lg:pt-20 pb-0">
+        <div className="relative flex items-center justify-between gap-6 pb-4 lg:pb-20 border-b border-gray/40">
 
           <div className="flex items-start gap-5">
             <h6 className="text-[clamp(42px,7vw,90px)] leading-none tracking-tight text-white">
                <Image
                 src="/img3.png"
                 alt="Mussadiq Khan"
-                className="w-23 h-23 inline-block mr-3 rounded-full object-cover"
+                className="w-23 h-23 inline-block mr-4 rounded-full object-cover"
                 width={32}
                 height={32}
               /> Let&apos;s work
@@ -27,25 +27,32 @@ const Footer = () => {
             </h6>
           </div>
 
-          <div className="w-13 h-13 rounded-full">
+          <div>
+          <div className="hidden sm:block w-13 h-13 rounded-full">
             <FiArrowDownLeft size={22} />
           </div>
-          <FloatEffect output={[0,250]}>
-            <MagnetText dot="no" text="Get in touch" className="absolute w-38 h-38 items-center justify-center bg-ctr hover:bg-ctr-dark rounded-full -bottom-18 right-14" />
+          <FloatEffect className="hidden lg:block" output={[0,250]}>
+            <Link href="/contact">
+              <MagnetText dot="no" text="Get in touch" className="absolute w-38 h-38 items-center justify-center bg-ctr hover:bg-ctr-dark rounded-full -bottom-15 right-10" />
+            </Link>
           </FloatEffect>
+          <Link href="/contact">
+            <MagnetText dot="no" text="Get in touch" className="absolute w-30 h-30 lg:w-38 lg:h-38 items-center justify-center bg-ctr hover:bg-ctr-dark rounded-full -bottom-18 right-14 flex lg:hidden" />
+          </Link>
+          </div>
         </div>
 
-        <div className="flex gap-3 pt-20">
+        <div className="flex flex-col md:flex-row gap-3 pt-16">
           <Link
             href="mailto:mussadiqkhan6886@gmail.com"
           >
-            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all duration-300" dot="no" text="mussadiqkhan6886@gmail.com" />
+            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all duration-300 w-full justify-center items-center text-sm md:text-base" dot="no" text="mussadiqkhan6886@gmail.com" />
           </Link>
 
           <Link
             href="tel:+923189328584"
           >
-            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all duration-300" dot="no" text="+92 318 9328584" />
+            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all duration-300 w-full justify-center items-center text-sm md:text-base" dot="no" text="+92 318 9328584" />
             
           </Link>
 
@@ -53,13 +60,13 @@ const Footer = () => {
             href="/Resume.docx.pdf"
             download="/Resume.docx.pdf"
           >
-            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all duration-300" dot="no" text="Download CV" />
+            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all duration-300 w-full justify-center items-center text-sm md:text-base" dot="no" text="Download CV" />
           </Link>
         </div>
       </section>
 
-      <section className="max-w-8xl mx-auto px-7 mt-14">
-        <div className="flex items-center justify-between flex-wrap gap-5 py-6 ">
+      <section className="max-w-8xl mx-auto px-7 mt-4 lg:mt-14">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between flex-wrap gap-5 py-6 ">
 
           <div className="flex gap-8 flex-wrap">
             <div>
@@ -80,7 +87,7 @@ const Footer = () => {
               </p>
               <p className="text-sm text-white/70">Islamabad, PK</p>
             </div>
-            <div>
+            <div className="hidden md:block">
               <p className="text-[10px] uppercase tracking-widest text-gray mb-1">
                 Fuel
               </p>
@@ -92,7 +99,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Mussadiq Khan. All rights reserved.
           </p>
 
-          <div className="flex flex-col items-end gap-2">
+          <div className="flex flex-col lg:items-end gap-2">
             <p className="text-[10px] uppercase tracking-widest text-gray">
               Socials
             </p>
@@ -105,6 +112,7 @@ const Footer = () => {
                       text={item.title}
                       dot="down"
                       strength={0.2}
+                      className="text-xs md:text-sm"
                     />
                   </Link>
                 </li>
