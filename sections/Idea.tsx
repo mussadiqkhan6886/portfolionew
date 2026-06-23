@@ -12,13 +12,13 @@ const Idea = () => {
         <div className="flex h-28 w-full items-center justify-center overflow-hidden">
           <MaskContainer
             revealText={
-              <Link href="/contact" className="rounded-full tracking-tight w-70 text-center text-4xl lg:text-5xl font-black text-white ">
+              <Link href="/contact" className="rounded-full tracking-tight w-70 text-center text-5xl lg:text-6xl  text-white ">
                 TELL US
               </Link>
             }
-            className="h-24 lg:h-28 w-84 lg:w-94 border-border font-black border rounded-full text-black "
+            className="h-24 lg:h-28 w-84 lg:w-94 border-border  border rounded-full text-black "
           >
-            <Link href="/contact" className="flex items-center gap-2 uppercase">Let&apos;s build <FiArrowUpRight size={33} /> </Link>
+            <Link href="/contact" className="flex items-start justify-start gap-3 uppercase">Let&apos;s build <FiArrowUpRight size={33} /> </Link>
           </MaskContainer>
         </div>
       </div>

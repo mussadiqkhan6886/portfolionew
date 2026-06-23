@@ -69,7 +69,7 @@ export const MaskContainer = ({
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className="relative z-20 rounded-full mx-auto max-w-3xl lg:max-w-4xl text-center text-4xl lg:text-5xl font-black"
+          className="relative z-20 rounded-full mx-auto max-w-3xl lg:max-w-4xl text-center text-4xl lg:text-5xl "
         >
           {children}
         </div>
