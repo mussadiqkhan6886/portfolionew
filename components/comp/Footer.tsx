@@ -4,6 +4,7 @@ import MagnetText from "../ui/MagnetEffect";
 import Image from "next/image";
 import { FiArrowDownLeft } from "react-icons/fi";
 import FloatEffect from "../ui/FloatEffect";
+import Socials from "./Socials";
 
 const Footer = () => {
 
@@ -99,26 +100,12 @@ const Footer = () => {
             © {new Date().getFullYear()} Mussadiq Khan. All rights reserved.
           </p>
 
-          <div className="flex flex-col lg:items-end gap-2">
-            <p className="text-[10px] uppercase tracking-widest text-gray">
-              Socials
-            </p>
-            <ul className="flex gap-5 flex-wrap justify-end">
-              {socials.map((item) => (
-                <li key={item.link}>
-                  <Link href={item.link} target="_blank">
-                    <MagnetText
-                      pathname="/"
-                      text={item.title}
-                      dot="down"
-                      strength={0.2}
-                      className="text-xs md:text-sm"
-                    />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="flex flex-col lg:items-end gap-2">
+          <p className="text-[10px] uppercase tracking-widest text-gray">
+            Socials
+           </p>
+          <Socials />
+        </div>
 
         </div>
       </section>

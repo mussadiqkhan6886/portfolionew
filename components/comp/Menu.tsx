@@ -5,6 +5,7 @@ import MagnetText from '../ui/MagnetEffect';
 import Link from 'next/link';
 import { menu, socials } from '@/constants';
 import {easeInOut, motion} from "framer-motion"
+import Socials from './Socials';
 
 
 const Menu = ({close, pathname}: {close: (x: boolean) => void, pathname: string}) => {
@@ -78,13 +79,7 @@ const Menu = ({close, pathname}: {close: (x: boolean) => void, pathname: string}
       </div>
       <div >
         <p className=" text-gray uppercase text-xs font-bold pt-6 pb-4 border-t border-gray/80">SOCIALS</p>
-        <div>
-            <ul className="flex gap-6">
-            {socials.map(item => (
-                <li key={item.link}><Link href={item.link} target='_blank'><MagnetText pathname="/" text={item.title} dot={"down"} strength={0.2} /></Link></li>
-            ))}
-            </ul>
-        </div>
+        <Socials />
       </div>
     </motion.div>
     </aside>
