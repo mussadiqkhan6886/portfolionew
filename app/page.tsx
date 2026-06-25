@@ -1,4 +1,5 @@
 import About from '@/sections/About'
+import Certificates from '@/sections/Certificates'
 import Experience from '@/sections/Experience'
 import Hero from '@/sections/Hero'
 import Idea from '@/sections/Idea'
@@ -17,6 +18,7 @@ const Home = () => {
       <WorkThumbnails />
       <Skills />
       <Experience />
+      <Certificates />
       <Testimonials />
       <Idea />
     </main>

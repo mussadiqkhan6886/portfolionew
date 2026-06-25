@@ -53,9 +53,9 @@ export default function ProjectsShowcase() {
         setIsHovering(false);
         setActiveId(null);
       }}
-      className="relative max-w-240 mx-auto px-2 w-full text-black"
+      className="relative max-w-240 mx-auto px-5 lg:px-0 w-full text-black"
     >
-      <h3 className="text-gray uppercase text-xs border-b border-border pb-10">Recent Work</h3>
+      <h3 className="text-gray uppercase text-sm border-b border-border pb-10">Recent Work</h3>
       {projects.map((project) => (
         <div
           key={project.id}
