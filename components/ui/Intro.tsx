@@ -51,8 +51,8 @@ export default function IntroLoader() {
             borderBottomRightRadius: "0%", }}
           exit={{
             y: "-100%",
-            borderBottomLeftRadius: "60%",
-            borderBottomRightRadius: "60%",
+            borderBottomLeftRadius: "50%",
+            borderBottomRightRadius: "50%",
             transition: {
               duration: 1.1,
               ease: [0.76, 0, 0.24, 1],
