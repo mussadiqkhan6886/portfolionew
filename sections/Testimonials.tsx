@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useAnimationControls } from 'framer-motion';
 import { allReviews } from '@/constants';
 import Image from 'next/image';
 
@@ -30,21 +30,24 @@ const ReviewCard = ({ review }: { review: (typeof allReviews)[0] }) => (
   </div>
 );
 
-const ReviewColumn = ({ reviews, duration, reverse = false }: { reviews: typeof allReviews, duration: number, reverse?: boolean }) => (
-  <motion.div 
-    initial={{ y: reverse ? "-50%" : "0%" }}
-    animate={{ y: reverse ? "0%" : "-50%" }}
-    transition={{
-      duration: duration,
-      repeat: Infinity,
-      ease: "linear",
-    }}
-    className="flex flex-col data-[active=true]:pause"
+const ReviewColumn = ({ reviews, duration, reverse = false }: {
+  reviews: typeof allReviews,
+  duration: number,
+  reverse?: boolean
+}) => (
+  <div
+    data-active="false"
+    onMouseEnter={e => e.currentTarget.setAttribute("data-active", "true")}
+    onMouseLeave={e => e.currentTarget.setAttribute("data-active", "false")}
+    className={`flex flex-col data-[active=true]:pause ${
+      reverse ? "animate-scroll-up" : "animate-scroll-down"
+    }`}
+    style={{ animationDuration: `${duration}s` }}
   >
     {reviews.map((rev, i) => (
       <ReviewCard key={i} review={rev} />
     ))}
-  </motion.div>
+  </div>
 );
 
 const Testimonials = () => {

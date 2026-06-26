@@ -159,3 +159,10 @@ export const allReviews = [
     image: "/reviews/s.jpg",
   },
 ];
+
+export const cert = [
+  {id: 1, image: "/certificate/certf.png", alt:"certificate 1"},
+  {id: 2, image: "/certificate/certf.png", alt:"certificate 2"},
+  {id: 3, image: "/certificate/certf.png", alt:"certificate 3"},
+  {id: 4, image: "/certificate/certf.png", alt:"certificate 4"},
+]

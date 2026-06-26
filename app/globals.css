@@ -36,3 +36,17 @@ html {
 html::-webkit-scrollbar {
   display: none;
 }
+
+@keyframes scroll-down {
+  from { transform: translateY(0%); }
+  to   { transform: translateY(-50%); }
+}
+@keyframes scroll-up {
+  from { transform: translateY(-50%); }
+  to   { transform: translateY(0%); }
+}
+
+.animate-scroll-down { animation: scroll-down linear infinite; }
+.animate-scroll-up   { animation: scroll-up linear infinite; }
+
+.pause { animation-play-state: paused; }
