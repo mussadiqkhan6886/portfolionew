@@ -9,7 +9,7 @@ import Socials from "./Socials";
 const Footer = () => {
 
   return (
-    <footer className="bg-text mt-10 text-white">
+    <footer className="bg-text lg:mt-10 text-white">
 
       <section className="max-w-4xl mx-auto px-3 lg:px-7 pt-6 lg:pt-20 pb-0">
         <div className="relative flex items-center justify-between gap-6 pb-4 lg:pb-20 border-b border-gray/40">

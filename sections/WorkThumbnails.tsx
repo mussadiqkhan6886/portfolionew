@@ -3,7 +3,7 @@ import { thumbnails1, thumbnails2 } from "@/constants";
 
 const WorkThumbnails = () => {
   return (
-    <section className="hidden md:block space-y-5 overflow-hidden py-10">
+    <section className="hidden md:block space-y-5 overflow-hidden py-13">
       <ScrollThumbnail
         texts={[thumbnails1, thumbnails2]}
         velocity={10}

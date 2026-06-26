@@ -7,7 +7,7 @@ import {motion} from "framer-motion"
 
 const Skills = () => {
   return (
-    <section className="max-w-6xl mx-auto lg:mb-20 px-6 xl:px-0">
+    <section className="max-w-6xl mx-auto mb-6 sm:mb-10 lg:mb-16 px-6 xl:px-0">
       <h3 className="text-gray uppercase text-sm border-b border-border pb-8">Skills Set</h3>
       <div className="py-8 flex flex-col gap-6">
         {skillsSet.map((item, i) => (

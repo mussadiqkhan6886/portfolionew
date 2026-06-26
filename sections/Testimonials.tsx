@@ -5,16 +5,15 @@ import { motion } from 'framer-motion';
 import { allReviews } from '@/constants';
 import Image from 'next/image';
 
-// Duplicate once cleanly for a seamless transform loop
 const duplicatedReviews = [...allReviews, ...allReviews];
 
 const ReviewCard = ({ review }: { review: (typeof allReviews)[0] }) => (
-  <div className="p-6 bg-black border border-zinc-900 rounded-none mb-6 w-full group hover:border-white transition-colors duration-300">
-    <p className="text-zinc-400 group-hover:text-zinc-200 transition-colors duration-300 leading-relaxed text-sm mb-6">
+  <div className="p-6 bg-black border border-zinc-900 rounded-none mb-6 w-full group hover:border-white transition-all duration-300">
+    <p className="text-white/90 group-hover:text-white transition-colors duration-300 leading-relaxed text-sm mb-6">
       "{review.review}"
     </p>
     <div className="flex items-center gap-4 pt-4 border-t border-zinc-900">
-      <div className="w-8 h-8 rounded-full overflow-hidden grayscale contract-125 border border-zinc-800">
+      <div className="w-8 h-8 rounded-full overflow-hidden border border-zinc-800">
         <Image 
           src={review.image} 
           alt={`${review.name} image`} 
@@ -24,8 +23,8 @@ const ReviewCard = ({ review }: { review: (typeof allReviews)[0] }) => (
         />
       </div>
       <div>
-        <h4 className="font-medium text-white text-xs uppercase tracking-wider">{review.name}</h4>
-        <p className="text-[10px] text-zinc-600 tracking-wide uppercase mt-0.5">Verified Client</p>
+        <h4 className="font-medium text-white/90 text-xs uppercase tracking-wider">{review.name}</h4>
+        <p className="text-[10px] text-gray tracking-wide uppercase mt-0.5">Verified Client</p>
       </div>
     </div>
   </div>
@@ -50,20 +49,14 @@ const ReviewColumn = ({ reviews, duration, reverse = false }: { reviews: typeof 
 
 const Testimonials = () => {
   return (
-    <section className="py-24 bg-black overflow-hidden relative border-t border-zinc-900">
+    <section className="py-18 bg-black overflow-hidden relative border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-6">
         
-        {/* Header Layout: Ultra Minimalist Editorial */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
-          <div>
-            <span className="text-xs uppercase tracking-widest text-zinc-600 block mb-3">03 / RETROSPECTIVE</span>
-            <h3 className="text-4xl md:text-5xl font-light tracking-tighter text-white uppercase">
+        <div className="mb-16">
+            <span className="text-xs uppercase tracking-widest text-gray block mb-2">20+ Happy Clients</span>
+            <h3 className="text-4xl font-light tracking-tighter text-white uppercase">
               Client Reviews
             </h3>
-          </div>
-          <p className="text-zinc-500 text-sm max-w-sm leading-relaxed">
-            Selected feedback from collaborations, detailing execution, performance optimizations, and design systems.
-          </p>
         </div>
 
         {/* The Scrolling Stage */}
