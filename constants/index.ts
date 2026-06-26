@@ -1,38 +1,3 @@
-import {
-  SiJavascript,
-  SiTypescript,
-  SiPython,
-  SiCplusplus,
-  SiReact,
-  SiNextdotjs,
-  SiRedux,
-  SiTailwindcss,
-  SiHtml5,
-  SiCss,
-  SiSass,
-  SiMongodb,
-  SiShadcnui,
-  SiMui,
-  SiFramer,
-  SiGreensock,
-  SiFigma,
-  SiGoogle,
-  SiCloudinary,
-  SiGit,
-  SiGithub,
-  SiVercel,
-  SiHostinger,
-} from "react-icons/si";
-
-import {
-  FaCode,
-  FaServer,
-  FaKey,
-  FaUniversalAccess,
-  FaTachometerAlt,
-} from "react-icons/fa";
-import { VscCode } from "react-icons/vsc";
-
 
 export const menu = [
     {d: 0.2,link: "/work", title: "Work"},
@@ -123,7 +88,7 @@ export const skillsSet = [
     category: "Tools & Deployment",
     skills: [
       { name: "Cloudinary", icon: "/skills/cloudinary.png" },
-      { name: "Git", icon: "/skills/git.eps" },
+      { name: "Git", icon: "/skills/git.png" },
       { name: "GitHub", icon: "/skills/github.png" },
       { name: "Vercel", icon: "/skills/vercel.svg" },
       { name: "Hostinger", icon: "/skills/hostinger.svg" },
