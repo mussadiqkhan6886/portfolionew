@@ -131,3 +131,66 @@ export const skillsSet = [
     ],
   },
 ];
+
+export const allReviews = [
+  {
+    name: "Ali Khan",
+    review:
+      "Working with Mussadiq was a great experience. He understood my requirements clearly and delivered a modern, responsive website that looks professional on every device.",
+    image: "/images/reviews/ali-khan.jpg",
+  },
+  {
+    name: "Sarah Ahmed",
+    review:
+      "The website design was clean, fast, and exactly what I wanted. Communication was smooth throughout the project, and every small detail was handled carefully.",
+    image: "/images/reviews/sarah-ahmed.jpg",
+  },
+  {
+    name: "Hamza Shah",
+    review:
+      "Mussadiq improved the performance and user experience of our website significantly. The final result was fast, mobile-friendly, and visually impressive.",
+    image: "/images/reviews/hamza-shah.jpg",
+  },
+  {
+    name: "Ayesha Malik",
+    review:
+      "I really liked how professionally the project was managed. The design was modern, easy to use, and perfectly matched my business requirements.",
+    image: "/images/reviews/ayesha-malik.jpg",
+  },
+  {
+    name: "Usman Tariq",
+    review:
+      "Excellent front-end developer. He converted our ideas into a polished website with smooth animations, responsive layouts, and a very clean interface.",
+    image: "/images/reviews/usman-tariq.jpg",
+  },
+  {
+    name: "Hira Noor",
+    review:
+      "The website feels premium and works perfectly on mobile as well as desktop. I appreciated the quick updates and attention to detail during the whole process.",
+    image: "/images/reviews/hira-noor.jpg",
+  },
+  {
+    name: "Bilal Raza",
+    review:
+      "Very skilled and cooperative developer. He delivered the project on time and made sure everything was working properly before handing it over.",
+    image: "/images/reviews/bilal-raza.jpg",
+  },
+  {
+    name: "Zainab Fatima",
+    review:
+      "I am very happy with the final website. It is simple, attractive, and easy for visitors to navigate. Highly recommended for web development projects.",
+    image: "/images/reviews/zainab-fatima.jpg",
+  },
+  {
+    name: "Danish Ali",
+    review:
+      "Mussadiq has strong problem-solving skills and great design sense. He made our website faster, more professional, and much easier to use.",
+    image: "/images/reviews/danish-ali.jpg",
+  },
+  {
+    name: "Mariam Iqbal",
+    review:
+      "A reliable developer who listens carefully and delivers quality work. The portfolio website he created was modern, responsive, and exceeded my expectations.",
+    image: "/images/reviews/mariam-iqbal.jpg",
+  },
+];
