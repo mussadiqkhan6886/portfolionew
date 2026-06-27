@@ -27,14 +27,14 @@ const StickyCard_001 = ({
   return (
     <div
       ref={container}
-      className="sticky -top-2 flex items-center justify-center"
+      className="sticky -top-4 flex items-center justify-center"
     >
       <motion.div
         style={{
           scale,
           top: `calc(${i * 20 + 20}px)`,
         }}
-        className="relative flex h-70 w-120 sm:h-100 sm:w-150 md:h-130 md:w-180 lg:h-150 lg:w-200 origin-top flex-col overflow-hidden"
+        className="relative flex h-60 w-90 min-[450px]:h-65 min-[450]:w-115 sm:h-100 sm:w-150 md:h-130 md:w-180 lg:h-150 lg:w-200 origin-top flex-col overflow-hidden"
       >
         <Image fill src={src} alt={title} className="h-full w-full object-contain" />
       </motion.div>
