@@ -5,6 +5,7 @@ import Footer from "@/components/comp/Footer";
 import { dSans } from "@/constants/font";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import IntroLoader from "@/components/ui/Intro";
+import ReactLenis from "lenis/react"
 
 export const metadata: Metadata = {
   title: "Mussadiq Khan | Freelance Web Developer",
@@ -22,10 +23,12 @@ export default function RootLayout({
       className={`h-full antialiased ${dSans.className}`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
-        <IntroLoader />
-          <SmoothScroll> {children} </SmoothScroll>
-        <Footer />
+        <ReactLenis root >
+          <Header />
+          <IntroLoader />
+            <SmoothScroll> {children} </SmoothScroll>
+          <Footer />
+        </ReactLenis>
         </body>
     </html>
   );

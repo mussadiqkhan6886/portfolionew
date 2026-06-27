@@ -161,8 +161,8 @@ export const allReviews = [
 ];
 
 export const cert = [
-  {id: 1, image: "/certificate/certf.png", alt:"certificate 1"},
-  {id: 2, image: "/certificate/certf.png", alt:"certificate 2"},
-  {id: 3, image: "/certificate/certf.png", alt:"certificate 3"},
-  {id: 4, image: "/certificate/certf.png", alt:"certificate 4"},
+  {id: 1, src: "/certificate/certf.png", title:"certificate 1"},
+  {id: 2, src: "/certificate/certf.png", title:"certificate 2"},
+  {id: 3, src: "/certificate/certf.png", title:"certificate 3"},
+  {id: 4, src: "/certificate/certf.png", title:"certificate 4"},
 ]
