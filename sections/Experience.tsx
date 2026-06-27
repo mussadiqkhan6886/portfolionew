@@ -1,54 +1,10 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-
-// ─── Types ────────────────────────────────────────────────────────────────────
-
-interface ExperienceItem {
-  index: string;
-  role: string[];        // split lines for line-break control
-  company: string;
-  type: string;
-  period: string;
-  location: string;
-  bullets: string[];
-  tags: string[];
-}
-
-// ─── Data ─────────────────────────────────────────────────────────────────────
-
-const experiences: ExperienceItem[] = [
-  {
-    index: "01",
-    role: ["Full-Stack Developer", "& Founder"],
-    company: "Scrupulous",
-    type: "Freelance Agency",
-    period: "Aug 2025 — Present",
-    location: "Islamabad, PK",
-    bullets: [
-      "Built and deployed 20+ production websites for clients across Pakistan, Saudi Arabia, and the UK — solo, end-to-end.",
-      "Architected full-stack Next.js + TypeScript apps with MongoDB, NextAuth, Cloudinary, and REST API routes.",
-      "Engineered admin dashboards with product CRUD, order fulfilment, coupon engines, and real-time analytics.",
-      "Achieved 99+ Lighthouse SEO scores via JSON-LD, XML sitemaps, Open Graph, and GSC integration.",
-    ],
-    tags: ["Next.js 16", "TypeScript", "MongoDB", "Tailwind CSS", "Cloudinary", "JWT", "SEO"],
-  },
-  {
-    index: "02",
-    role: ["Front-End Developer", "Intern"],
-    company: "Code Alpha",
-    type: "Remote",
-    period: "Feb 2024 — Mar 2024",
-    location: "Remote",
-    bullets: [
-      "Shipped three interactive JS apps — Calculator, 3D CSS Gallery, Music Player — demonstrating DOM manipulation and event delegation.",
-      "Resolved cross-browser CSS inconsistencies across mobile, tablet, and desktop viewports.",
-      "Built responsive, animation-driven UIs in a production-speed remote environment.",
-    ],
-    tags: ["JavaScript", "CSS3", "DOM Manipulation", "Responsive Design", "CSS Animation"],
-  },
-];
+import { motion, AnimatePresence, easeInOut } from "motion/react";
+import { experiences } from "@/constants";
+import MagnetText from "@/components/ui/MagnetEffect";
+import {gsap} from "gsap"
 
 // ─── Stat counter ─────────────────────────────────────────────────────────────
 
@@ -92,13 +48,46 @@ function ExperienceRow({
   isOpen: boolean;
   onToggle: () => void;
 }) {
+
+  const [isHovering, setIsHovering] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
+
+  const xTo = useRef<gsap.QuickToFunc | null>(null);
+  const yTo = useRef<gsap.QuickToFunc | null>(null);
+
+  useEffect(() => {
+      if (!cursorRef.current) return;
+      xTo.current = gsap.quickTo(cursorRef.current, "x", {
+        duration: 0.55,
+        ease: "power3.out",
+      });
+      yTo.current = gsap.quickTo(cursorRef.current, "y", {
+        duration: 0.55,
+        ease: "power3.out",
+      });
+    }, []);
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+      const rect = containerRef.current?.getBoundingClientRect();
+      if (!rect) return;
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      xTo.current?.(x);
+      yTo.current?.(y);
+    };
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      initial={{ y: 20 }}
+      whileInView={{ y: 0 }}
       viewport={{ once: true, margin: "0px 0px -60px 0px" }}
       transition={{ delay: index * 0.1, duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
       onClick={onToggle}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
       className="
         group relative grid grid-cols-2 gap-8
         border-b border-border
@@ -136,6 +125,38 @@ function ExperienceRow({
           </span>
         </div>
       </div>
+
+      {/* cursor following button */}
+      <div
+          ref={cursorRef}
+          className="pointer-events-none absolute -left-6 -top-6 z-50"
+        >
+          <AnimatePresence>
+            {isHovering && (
+              <motion.div
+                key="thumb"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0 }}
+                transition={{ duration: 0.35, ease: easeInOut }}
+                style={{
+                  width: 130,
+                  height: 130,
+                  transform: "translate(-50%, -50%)",
+                }}
+                className="relative overflow-hidden "
+              >
+  
+                <button
+                  className="pointer-events-none absolute inset-0 flex items-center justify-center"
+                >
+                  <MagnetText text="View" className="pointer-events-auto rounded-full bg-ctr w-18 h-18 p-2 text-sm font-medium text-white text-center items-center justify-center transition-transform duration-300" strength={7} dot={"no"} />
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+      </div>
+
 
       {/* ── Right ── */}
       <div className="flex gap-3 items-start">
@@ -187,7 +208,7 @@ function ExperienceRow({
             w-7 h-7 rounded-full border border-gray flex-shrink-0
             flex items-center justify-center text-gray-400 text-base font-light
             group-hover:border-gray-400 group-hover:text-gray-700
-            transition-colors duration mt-0.5
+            transition-colors duration-300 mt-0.5
           "
           style={{ lineHeight: 1 }}
         >

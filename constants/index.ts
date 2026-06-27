@@ -166,3 +166,35 @@ export const cert = [
   {id: 3, src: "/certificate/certf.png", title:"certificate 3"},
   {id: 4, src: "/certificate/certf.png", title:"certificate 4"},
 ]
+
+export const experiences: ExperienceItem[] = [
+  {
+    index: "01",
+    role: ["Full-Stack Developer", "& Founder"],
+    company: "Scrupulous",
+    type: "Freelance Agency",
+    period: "Aug 2025 — Present",
+    location: "Islamabad, PK",
+    bullets: [
+      "Built and deployed 20+ production websites for clients across Pakistan, Saudi Arabia, and the UK — solo, end-to-end.",
+      "Architected full-stack Next.js + TypeScript apps with MongoDB, NextAuth, Cloudinary, and REST API routes.",
+      "Engineered admin dashboards with product CRUD, order fulfilment, coupon engines, and real-time analytics.",
+      "Achieved 99+ Lighthouse SEO scores via JSON-LD, XML sitemaps, Open Graph, and GSC integration.",
+    ],
+    tags: ["Next.js 16", "TypeScript", "MongoDB", "Tailwind CSS", "Cloudinary", "JWT", "SEO"],
+  },
+  {
+    index: "02",
+    role: ["Front-End Developer", "Intern"],
+    company: "Code Alpha",
+    type: "Remote",
+    period: "Feb 2024 — Mar 2024",
+    location: "Remote",
+    bullets: [
+      "Shipped three interactive JS apps — Calculator, 3D CSS Gallery, Music Player — demonstrating DOM manipulation and event delegation.",
+      "Resolved cross-browser CSS inconsistencies across mobile, tablet, and desktop viewports.",
+      "Built responsive, animation-driven UIs in a production-speed remote environment.",
+    ],
+    tags: ["JavaScript", "CSS3", "DOM Manipulation", "Responsive Design", "CSS Animation"],
+  },
+];
