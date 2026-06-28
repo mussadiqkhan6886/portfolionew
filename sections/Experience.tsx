@@ -150,7 +150,7 @@ function ExperienceRow({
                 <button
                   className="pointer-events-none absolute inset-0 flex items-center justify-center"
                 >
-                  <MagnetText text="View" className="pointer-events-auto rounded-full bg-ctr w-18 h-18 p-2 text-sm font-medium text-white text-center items-center justify-center transition-transform duration-300" strength={7} dot={"no"} />
+                  <MagnetText text={isOpen ? "Close" : "View"} className="pointer-events-auto rounded-full bg-ctr w-18 h-18 p-2 text-sm font-medium text-white text-center items-center justify-center transition-transform duration-300" strength={7} dot={"no"} />
                 </button>
               </motion.div>
             )}

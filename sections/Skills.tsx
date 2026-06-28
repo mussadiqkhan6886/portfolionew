@@ -11,17 +11,16 @@ const Skills = () => {
       <h3 className="text-gray uppercase text-sm border-b border-border pb-8">Skills Set</h3>
       <div className="py-8 flex flex-col gap-6">
         {skillsSet.map((item, i) => (
-          <div  className="flex flex-col lg:flex-row gap-4 border-b border-border pb-6" key={item.category}>
+          <div className="flex flex-col lg:flex-row gap-4 border-b border-border pb-6" key={item.category}>
             <motion.div
-              initial={{opacity: 0, y: 100}}
-              whileInView={{opacity: 1, y: 0}}
+              initial={{y: 100}}
+              whileInView={{y: 0}}
               transition={{
-                duration: 0.8,
+                duration: 0.7,
                 delay: i * 0.1
               }}
               viewport={{
                 once: true,
-                amount: 0.2
               }}
               className="flex-2">
               <h4 className="font-bold text-4xl md:text-5xl uppercase tracking-tighter leading-10">{item.category}</h4>
@@ -29,17 +28,16 @@ const Skills = () => {
             <div className="flex flex-3 gap-6 md:gap-8 flex-wrap">
               {item.skills.map((skill, ind) => (
                 <motion.div
-                  initial={{opacity: 0, y: 100}}
-                  whileInView={{opacity: 1, y: 0}}
+                  initial={{x: 100}}
+                  whileInView={{x: 0}}
                   transition={{
                     duration: 0.9,
                     delay: ind * 0.1
                   }}
                   viewport={{
                     once: true,
-                    amount: 0.4
                   }}
-                className="flex gap-2 items-center" key={skill.name}>
+                className="flex gap-2 items-center overflow-hidden" key={skill.name}>
                   <Image
                     src={skill.icon}
                     alt={`${skill.name} logo`}
