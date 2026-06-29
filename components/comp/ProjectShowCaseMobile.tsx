@@ -4,9 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 import TransitionLink from './TransitionLink'
 
-const ProjectShowCaseMobile = () => {
+const ProjectShowCaseMobile = ({smaller, work}: {smaller?: boolean, work?: boolean}) => {
   return (
-    <section className="px-5 flex flex-col gap-17 items-center justify-center">
+    <section className={`px-5 grid ${smaller ? "grid-cols-1" : "grid-cols-2"}  gap-17 items-center justify-center`}>
       {projects.slice(0,3).map((item, i) => (
         <TransitionLink href={item.link} key={i} className="h-[80vh] w-full block">
             <div className="relative w-full h-[78%]">
@@ -21,7 +21,7 @@ const ProjectShowCaseMobile = () => {
             </div>
         </TransitionLink>
       ))}
-      <TransitionLink href={"/work"} className="py-4 mt-2 block text-center max-w-40 w-full rounded-full border border-border">More work</TransitionLink>
+      {!work && <TransitionLink href={"/work"} className="py-4 mt-2 block text-center max-w-40 w-full rounded-full border border-border">More work</TransitionLink>}
     </section>
   )
 }

@@ -8,16 +8,28 @@ import { THUMB_H, THUMB_W } from './ProjectsShowCase';
 import Image from 'next/image';
 import TransitionLink from './TransitionLink';
 import MagnetText from '../ui/MagnetEffect';
+import ProjectShowCaseMobile from './ProjectShowCaseMobile';
 
 const ProjectsAll = ({ option }: { option: string }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
-
+  const [smaller, setSmaller] = useState(false)
   const xTo = useRef<gsap.QuickToFunc | null>(null);
   const yTo = useRef<gsap.QuickToFunc | null>(null);
 
   const [activeId, setActiveId] = useState<string | null>(null);
   const [isHovering, setIsHovering] = useState(false);
+
+  useEffect(() => {
+    const checkSize = () => {
+      setSmaller(window.innerWidth <= 750)
+    }
+
+    checkSize()
+
+    window.addEventListener("resize", checkSize)
+    return  () =>  window.removeEventListener("resize", checkSize)
+  }, [])
 
   // Set up the magnetic-follow quickTo tweens once.
   useEffect(() => {
@@ -30,7 +42,7 @@ const ProjectsAll = ({ option }: { option: string }) => {
       duration: 0.55,
       ease: "power3.out",
     });
-  }, []);
+  }, [option, smaller]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = containerRef.current?.getBoundingClientRect();
@@ -43,8 +55,13 @@ const ProjectsAll = ({ option }: { option: string }) => {
 
   const activeProject = projects.find((p) => p.id === activeId) ?? null;
 
-  return (
-    <section
+
+   return option === "grid" || smaller ? 
+   <motion.section initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} className="my-20">
+     <ProjectShowCaseMobile smaller={smaller} work={true} />
+   </motion.section>
+        :  (
+        <section
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => {
@@ -73,7 +90,7 @@ const ProjectsAll = ({ option }: { option: string }) => {
               className="relative overflow-hidden"
             >
               {/* Crossfading image layer */}
-              <AnimatePresence>
+              <AnimatePresence mode="popLayout">
                 <motion.div
                   key={activeProject.id}
                   initial={{ y: 300 }}
@@ -110,7 +127,7 @@ const ProjectsAll = ({ option }: { option: string }) => {
         </AnimatePresence>
       </div>
 
-      <table className="w-full border-collapse text-left table-fixed">
+      <motion.table initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} className="w-full border-collapse text-left table-fixed">
         <thead>
             <tr className="border-b border-border/60 ">
                 <th className="py-10 text-xs font-medium tracking-tight text-gray uppercase w-[35%]">CLIENT</th>
@@ -147,9 +164,10 @@ const ProjectsAll = ({ option }: { option: string }) => {
             </tr>
             ))}
         </tbody>
-        </table>
+        </motion.table>
     </section>
-  );
+      )
+    
 };
 
 export default ProjectsAll;
