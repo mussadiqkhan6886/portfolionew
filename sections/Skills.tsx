@@ -23,13 +23,13 @@ const Skills = () => {
                 once: true,
               }}
               className="flex-2">
-              <h4 className="font-bold text-4xl md:text-5xl uppercase tracking-tighter leading-10">{item.category}</h4>
+              <h4 className="font-bold text-2xl sm:text-4xl md:text-5xl uppercase tracking-tighter leading-10">{item.category}</h4>
             </motion.div>
             <div className="flex flex-3 gap-6 md:gap-8 flex-wrap">
               {item.skills.map((skill, ind) => (
                 <motion.div
-                  initial={{x: 100}}
-                  whileInView={{x: 0}}
+                  initial={{y: 100}}
+                  whileInView={{y: 0}}
                   transition={{
                     duration: 0.9,
                     delay: ind * 0.1
@@ -43,9 +43,9 @@ const Skills = () => {
                     alt={`${skill.name} logo`}
                     width={40}
                     height={40}
-                    className={`w-8 h-8 md:h-10 md:w-10 object-contain ${skill.name.includes("Next.js") && "invert"}`}
+                    className={`h-6 w-6 sm:w-8 sm:h-8 md:h-10 md:w-10 object-contain ${skill.name.includes("Next.js") && "invert"}`}
                   />
-                  <h5 className="text-lg md:text-xl font-light">{skill.name}</h5>
+                  <h5 className="text-base sm:text-lg md:text-xl font-light">{skill.name}</h5>
                 </motion.div>
               ))}
             </div>

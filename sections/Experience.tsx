@@ -89,7 +89,7 @@ function ExperienceRow({
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       className="
-        group relative grid grid-cols-2 gap-8
+        group relative grid grid-cols-1 md:grid-cols-2 gap-8
         border-b border-border
         py-8 cursor-pointer
       "
@@ -129,7 +129,7 @@ function ExperienceRow({
       {/* cursor following button */}
       <div
           ref={cursorRef}
-          className="pointer-events-none absolute -left-6 -top-6 z-50"
+          className="hidden md:block pointer-events-none absolute -left-6 -top-6 z-50"
         >
           <AnimatePresence>
             {isHovering && (
@@ -205,10 +205,9 @@ function ExperienceRow({
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="
-            w-7 h-7 rounded-full border border-gray flex-shrink-0
-            flex items-center justify-center text-gray-400 text-base font-light
-            group-hover:border-gray-400 group-hover:text-gray-700
-            transition-colors duration-300 mt-0.5
+            w-7 h-7 rounded-full bg-ctr-dark text-white flex-shrink-0
+            flex items-center justify-center  text-base 
+             mt-0.5
           "
           style={{ lineHeight: 1 }}
         >
