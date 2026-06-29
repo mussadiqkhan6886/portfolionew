@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useAnimationControls } from "framer-motion";
+import { motion, useAnimationControls, Variant, Variants } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -51,10 +51,9 @@ export default function PageTransition() {
         delay: 0.6 + i * 0.04, // Keeps screen black while text drops out first
       },
     }),
-  };
+  } as Variants
 
-  // Title-level animation variants
-  const titleVariants = {
+  const titleVariants : unknown = {
     initial: { y: "105%", opacity: 0 },
     enter: {
       y: "0%",
@@ -74,7 +73,7 @@ export default function PageTransition() {
         delay: 0.1, // Disappears smoothly up into the mask before curtain opens
       },
     },
-  };
+  }
 
   return (
     <motion.div
@@ -95,7 +94,7 @@ export default function PageTransition() {
       <div className="absolute inset-0 flex items-center justify-center mix-blend-difference pointer-events-none">
         <div className="overflow-hidden py-6 px-12 flex items-center justify-center">
           <motion.h1 
-            variants={titleVariants}
+            variants={titleVariants as Variants | undefined}
             className="text-white text-4xl flex items-center justify-center gap-5 sm:text-5xl md:text-6xl tracking-tight leading-none will-change-transform capitalize"
           >
            <span className="bg-white rounded-full h-2 w-2 inline-block" /> {displayTitle}
