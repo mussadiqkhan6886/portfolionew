@@ -12,8 +12,8 @@ export default function PageTransition() {
   const controls = useAnimationControls();
 
   const formatTitle = (path: string) => {
-    if (path === "/") return "HOME";
-    return path.replace("/", "").replaceAll("-", " ").toUpperCase();
+    if (path === "/") return "Home";
+    return path.replace("/", "").replaceAll("-", " ")
   };
 
   useEffect(() => {
@@ -88,19 +88,17 @@ export default function PageTransition() {
           key={`panel-${i}`}
           custom={i}
           variants={panelVariants}
-          className="w-full h-full bg-neutral-950 border-r border-neutral-900/10 last:border-none will-change-transform"
+          className="w-full h-full bg-black border-r border-neutral-900/10 last:border-none will-change-transform"
         />
       ))}
 
-      {/* Title Mask Area */}
       <div className="absolute inset-0 flex items-center justify-center mix-blend-difference pointer-events-none">
-        {/* The overflow-hidden wrapper is padded vertically so letters like T & C never catch on the edge */}
         <div className="overflow-hidden py-6 px-12 flex items-center justify-center">
           <motion.h1 
             variants={titleVariants}
-            className="text-white text-5xl sm:text-7xl md:text-9xl font-black tracking-wider leading-none will-change-transform"
+            className="text-white text-4xl flex items-center justify-center gap-5 sm:text-5xl md:text-6xl tracking-tight leading-none will-change-transform capitalize"
           >
-            {displayTitle}
+           <span className="bg-white rounded-full h-2 w-2 inline-block" /> {displayTitle}
           </motion.h1>
         </div>
       </div>
