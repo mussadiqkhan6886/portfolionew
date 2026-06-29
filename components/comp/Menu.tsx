@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { menu, socials } from '@/constants';
 import {easeInOut, motion} from "framer-motion"
 import Socials from './Socials';
+import TransitionLink from './TransitionLink';
 
 
 const Menu = ({close, pathname}: {close: (x: boolean) => void, pathname: string}) => {
@@ -53,7 +54,7 @@ const Menu = ({close, pathname}: {close: (x: boolean) => void, pathname: string}
                   type: "tween",
                   delay: 0.1
                 }}
-                ><Link href="/"><MagnetText strength={0.1} active={pathname === "/"} pathname={"/"} className="w-full text-4xl sm:text-5xl pt-8" dot={"right"} text={"Home"} /></Link></motion.li>
+                ><TransitionLink href="/"><MagnetText strength={0.1} active={pathname === "/"} pathname={"/"} className="w-full text-4xl sm:text-5xl pt-8" dot={"right"} text={"Home"} /></TransitionLink></motion.li>
                 {menu.map(item => (
                     <motion.li initial={{
                   x: 120,
@@ -72,7 +73,7 @@ const Menu = ({close, pathname}: {close: (x: boolean) => void, pathname: string}
                   ease: easeInOut,
                   type: "tween",
                   delay: item.d
-                }} key={item.link}><Link href={item.link}><MagnetText active={pathname === item.link} strength={0.1} pathname={"/"} className="w-full text-4xl sm:text-5xl" dot={"right"} text={item.title} /></Link></motion.li>
+                }} key={item.link}><TransitionLink href={item.link}><MagnetText active={pathname === item.link} strength={0.1} pathname={"/"} className="w-full text-4xl sm:text-5xl" dot={"right"} text={item.title} /></TransitionLink></motion.li>
                 ))}
             </ul>
         </nav>

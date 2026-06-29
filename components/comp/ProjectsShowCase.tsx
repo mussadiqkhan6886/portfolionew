@@ -7,6 +7,7 @@ import { projects } from "@/constants";
 import Link from "next/link";
 import Image from "next/image";
 import MagnetText from "@/components/ui/MagnetEffect";
+import TransitionLink from "./TransitionLink";
 
 const THUMB_W = 380;
 const THUMB_H = 340;
@@ -109,14 +110,14 @@ export default function ProjectsShowcase() {
                 </motion.div>
               </AnimatePresence>
 
-              <Link
+              <TransitionLink
                 href={activeProject.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="pointer-events-none absolute inset-0 flex items-center justify-center"
               >
                 <MagnetText text="View" className="pointer-events-auto rounded-full bg-ctr w-18 h-18 p-2 text-sm font-medium text-white text-center items-center justify-center transition-transform duration-300" strength={7} dot={"no"} />
-              </Link>
+              </TransitionLink>
             </motion.div>
           )}
         </AnimatePresence>
@@ -126,7 +127,7 @@ export default function ProjectsShowcase() {
         setIsHovering(false) 
         setActiveId(null)}} className="py-16">
 
-      <Link href={"/work"} className="py-5 block hover:bg-ctr-dark duration-300 transition-all text-center max-w-40 mx-auto rounded-full border border-border hover:text-white">More work</Link>
+      <TransitionLink href={"/work"} className="py-5 block hover:bg-ctr-dark duration-300 transition-all text-center max-w-40 mx-auto rounded-full border border-border hover:text-white">More work</TransitionLink>
       </div>
     </section>
   );

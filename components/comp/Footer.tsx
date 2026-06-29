@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FiArrowDownLeft } from "react-icons/fi";
 import FloatEffect from "../ui/FloatEffect";
 import Socials from "./Socials";
+import TransitionLink from "./TransitionLink";
 
 const Footer = () => {
 
@@ -33,13 +34,13 @@ const Footer = () => {
             <FiArrowDownLeft size={22} />
           </div>
           <FloatEffect className="hidden lg:block" output={[0,250]}>
-            <Link href="/contact">
+            <TransitionLink href="/contact">
               <MagnetText dot="no" text="Get in touch" className="absolute w-38 h-38 items-center justify-center bg-ctr hover:bg-ctr-dark rounded-full -bottom-15 right-10" />
-            </Link>
+            </TransitionLink>
           </FloatEffect>
-          <Link href="/contact">
+          <TransitionLink href="/contact">
             <MagnetText dot="no" text="Get in touch" className="absolute w-30 h-30 lg:w-38 lg:h-38 items-center justify-center bg-ctr hover:bg-ctr-dark rounded-full -bottom-18 right-14 flex lg:hidden" />
-          </Link>
+          </TransitionLink>
           </div>
         </div>
 

@@ -9,6 +9,7 @@ import Menu from './Menu';
 import { FiMenu, FiX } from 'react-icons/fi';
 import {AnimatePresence, motion} from "framer-motion"
 import { usePathname } from 'next/navigation';
+import TransitionLink from './TransitionLink';
 
 const Header = () => {
   const [hide, setHide] = useState(false)
@@ -66,7 +67,7 @@ const Header = () => {
       <div  
         className="flex w-full items-center justify-between"
       >
-        <Link href="/">
+        <TransitionLink href="/">
           <TextPressure
             text="Code By Mussadiq!"
             flex={false}
@@ -79,7 +80,7 @@ const Header = () => {
             strokeColor="#5227FF"
             minFontSize={20}
           />
-        </Link>
+        </TransitionLink>
 
         <div className="block sm:hidden">
           <button className={`${pathName !== "/" ? "text-black" : "text-white"}`} onClick={() => setIsOpen(true)}>
@@ -91,12 +92,12 @@ const Header = () => {
           <ul className="flex gap-9">
             {menu.map((item) => (
               <li className="relative font-medium" key={item.link}>
-                <Link href={item.link}>
+                <TransitionLink href={item.link}>
                   <MagnetText active={pathName === item.link} pathname={pathName}
                     text={item.title}
                     strength={0.5}
                   />
-                </Link>
+                </TransitionLink>
               </li>
             ))}
           </ul>

@@ -6,6 +6,8 @@ import { dSans } from "@/constants/font";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import IntroLoader from "@/components/ui/Intro";
 import ReactLenis from "lenis/react"
+import { AnimatePresence } from "framer-motion";
+import PageTransition from "@/components/ui/PageTransition";
 
 export const metadata: Metadata = {
   title: "Mussadiq Khan | Freelance Web Developer",
@@ -25,6 +27,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <ReactLenis root >
           <Header />
+          <PageTransition />
           <IntroLoader />
             <SmoothScroll> {children} </SmoothScroll>
           <Footer />

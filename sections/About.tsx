@@ -1,3 +1,4 @@
+import TransitionLink from '@/components/comp/TransitionLink'
 import FloatEffect from '@/components/ui/FloatEffect'
 import MagnetText from '@/components/ui/MagnetEffect'
 import ScrollFloat from '@/components/ui/ScrollEffect'
@@ -25,14 +26,14 @@ const About = () => {
         </article>
 
         <FloatEffect output={[100, -200]} className="absolute right-0 md:right-20 bottom-10 md:bottom-30 lg:left-0 lg:bottom-0">
-          <Link href="/about">
+          <TransitionLink href="/about">
             <MagnetText
               text="About Me"
               dot="no"
               strength={0.5}
               className="w-38 h-38 bg-text hover:bg-ctr-dark text-white rounded-full items-center justify-center transition-colors duration-300"
             />
-          </Link>
+          </TransitionLink>
         </FloatEffect>
       </div>
     </section>

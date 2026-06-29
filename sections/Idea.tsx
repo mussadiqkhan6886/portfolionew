@@ -1,3 +1,4 @@
+import TransitionLink from '@/components/comp/TransitionLink'
 import { MaskContainer } from '@/components/ui/mask-effect'
 import Link from 'next/link'
 import React from 'react'
@@ -12,13 +13,13 @@ const Idea = () => {
         <div className="flex h-28 w-full items-center justify-center overflow-hidden">
           <MaskContainer
             revealText={
-              <Link href="/contact" className="rounded-full tracking-tight w-70 text-center text-5xl lg:text-6xl  text-white ">
+              <TransitionLink href="/contact" className="rounded-full tracking-tight w-70 text-center text-5xl lg:text-6xl  text-white ">
                 TELL US
-              </Link>
+              </TransitionLink>
             }
             className="h-24 lg:h-28 w-84 lg:w-94 border-border  border rounded-full text-black "
           >
-            <Link href="/contact" className="flex items-start justify-start gap-3 uppercase">Let&apos;s build <FiArrowUpRight size={33} /> </Link>
+            <TransitionLink href="/contact" className="flex items-start justify-start gap-3 uppercase">Let&apos;s build <FiArrowUpRight size={33} /> </TransitionLink>
           </MaskContainer>
         </div>
       </div>
