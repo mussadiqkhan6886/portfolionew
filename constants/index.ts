@@ -14,10 +14,10 @@ export const socials = [
 ]
 
 export const projects = [
-    {id: "1",title: "ChunkD", role: "design & engineer", thumbnail: "/t4.png", link: "/work/s", location: "Saudi", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
-    {id: "2",title: "HALIR", role: "design & engineer", thumbnail: "/t2.png", link: "/work/k", location: "Pakistan", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
-    {id: "3",title: "Zevora", role: "development & SEO", thumbnail: "/t1.png", link: "/work/s", location: "UK", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
-    {id: "4",title: "True Horizon", role: "design & development", thumbnail: "/t3.png", link: "/work/l", location: "USA", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
+    {id: "1", service: "SEO & Development",title: "ChunkD", role: "design & engineer", thumbnail: "/t4.png", link: "/work/s", location: "Saudi", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
+    {id: "2", service: "Development",title: "HALIR", role: "design & engineer", thumbnail: "/t2.png", link: "/work/k", location: "Pakistan", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
+    {id: "3", service: "SEO & Development",title: "Zevora", role: "development & SEO", thumbnail: "/t1.png", link: "/work/s", location: "UK", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
+    {id: "4", service: "SEO & Development",title: "True Horizon", role: "design & development", thumbnail: "/t3.png", link: "/work/l", location: "USA", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
 ]
 
 export const thumbnails1 = [

@@ -9,8 +9,8 @@ import Image from "next/image";
 import MagnetText from "@/components/ui/MagnetEffect";
 import TransitionLink from "./TransitionLink";
 
-const THUMB_W = 380;
-const THUMB_H = 340;
+export const THUMB_W = 380;
+export const THUMB_H = 340;
 
 export default function ProjectsShowcase() {
   const containerRef = useRef<HTMLDivElement>(null);

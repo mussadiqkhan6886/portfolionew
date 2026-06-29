@@ -10,11 +10,14 @@ import TransitionLink from './TransitionLink';
 
 
 const Menu = ({close, pathname}: {close: (x: boolean) => void, pathname: string}) => {
+
+  const CUBIC_EASE : [number, number, number, number] = [0.215, 0.61, 0.355, 1];
+
   return (
     <aside onClick={() => close(false)} className="w-screen h-screen bg-text/10 absolute inset-0 cursor-pointer">
     <motion.div initial={{
         x: 1000,
-        borderRadius: "600px",
+        borderRadius: "100%",
       }}
       animate={{
         x: 0,
@@ -22,11 +25,11 @@ const Menu = ({close, pathname}: {close: (x: boolean) => void, pathname: string}
       }}
       exit={{
         x: 1000,
-        borderRadius: "600px",
+        borderRadius: "100%",
       }}
       transition={{
-        duration: 1,
-        ease: easeInOut,
+        duration: 0.8,
+        ease: CUBIC_EASE,
         type: "tween"
       }} className="bg-text max-w-130 w-full h-screen z-40 p-8 top-0 right-0 fixed text-white">
       <div className="my-24 h-[53%]"> 
@@ -49,8 +52,8 @@ const Menu = ({close, pathname}: {close: (x: boolean) => void, pathname: string}
                   
                 }}
                 transition={{
-                  duration: 0.8,
-                  ease: easeInOut,
+                  duration: 0.7,
+                  ease: CUBIC_EASE,
                   type: "tween",
                   delay: 0.1
                 }}
@@ -70,7 +73,7 @@ const Menu = ({close, pathname}: {close: (x: boolean) => void, pathname: string}
                 }}
                 transition={{
                   duration: 0.8,
-                  ease: easeInOut,
+                  ease: CUBIC_EASE,
                   type: "tween",
                   delay: item.d
                 }} key={item.link}><TransitionLink href={item.link}><MagnetText active={pathname === item.link} strength={0.1} pathname={"/"} className="w-full text-4xl sm:text-5xl" dot={"right"} text={item.title} /></TransitionLink></motion.li>

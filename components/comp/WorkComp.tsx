@@ -4,6 +4,7 @@ import MagnetText from '@/components/ui/MagnetEffect'
 import React, { useState } from 'react'
 import { FiMenu } from 'react-icons/fi'
 import { HiOutlineSquares2X2 } from 'react-icons/hi2'
+import ProjectsAll from './ProjectsAll';
 
 const WorkComp = () => {
     const [option, setOption] = useState<"col" | "grid">("col")
@@ -12,7 +13,7 @@ const WorkComp = () => {
     <>
       <section className='min-h-[70vh] gap-8 h-full flex flex-col justify-end'>
         <h1 className="text-[80px] leading-22 tracking-tight">Engineering the future of <br /> digital experience</h1>
-        <div className="flex justify-between w-full items-center">
+        <div className="flex justify-between pt-2 w-full items-center">
           <p className="max-w-xl text-gray-700">Collaborating with forward-thinking brands to build fast, scalable, and beautifully engineered web systems. We transform complex product strategies into intuitive, high-performance interfaces that scale effortlessly.</p>
           <div className='flex gap-4'>
             <button onClick={() => setOption("col")}>
@@ -24,9 +25,7 @@ const WorkComp = () => {
           </div>
         </div>
       </section>
-      <section className="h-full">
-
-      </section>
+    <ProjectsAll option={option} />
     </>
   )
 }
