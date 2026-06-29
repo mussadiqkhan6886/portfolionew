@@ -13,6 +13,7 @@ export default function PageTransition() {
 
   const formatTitle = (path: string) => {
     if (path === "/") return "Home";
+    if(path.includes("/work/")) return path.split("/work/")[1]
     return path.replace("/", "").replaceAll("-", " ")
   };
 
