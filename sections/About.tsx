@@ -1,6 +1,7 @@
 import TransitionLink from '@/components/comp/TransitionLink'
 import FloatEffect from '@/components/ui/FloatEffect'
 import MagnetText from '@/components/ui/MagnetEffect'
+import ResponsiveSplitText from '@/components/ui/ScrollEffect'
 import ScrollFloat from '@/components/ui/ScrollEffect'
 import Link from 'next/link'
 import React from 'react'
@@ -9,14 +10,10 @@ const About = () => {
   return (
     <section className="bg-white flex flex-col lg:flex-row justify-between gap-16 max-w-240 mx-auto px-5 lg:px-0 pt-28 lg:pt-40 ">
       <article className="max-w-2xl">
-        <ScrollFloat
-          animationDuration={0.5}
-          ease='back.inOut(2)'
-          stagger={0.01}
-          textClassName='text-3xl leading-10'
-        >
-          Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.
-        </ScrollFloat>
+        <ResponsiveSplitText
+          className='text-3xl tracking-tight leading-10'
+          text={"Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge."}
+        />
       </article>
 
       <div className="flex relative flex-row lg:flex-col gap-5 md:gap-18 h-70 sm:h-80 ">

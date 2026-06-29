@@ -1,81 +1,68 @@
-'use client';
+"use client";
 
-import React, { useEffect, useMemo, useRef, ReactNode, RefObject } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion, Variants } from "framer-motion";
+import { useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
-
-interface ScrollFloatProps {
-  children: ReactNode;
-  scrollContainerRef?: RefObject<HTMLElement>;
-  containerClassName?: string;
-  textClassName?: string;
-  animationDuration?: number;
-  ease?: string;
-  scrollStart?: string;
-  scrollEnd?: string;
-  stagger?: number;
+interface ResponsiveSplitTextProps {
+  text: string;
+  className?: string;
 }
 
-const ScrollFloat: React.FC<ScrollFloatProps> = ({
-  children,
-  scrollContainerRef,
-  containerClassName = '',
-  textClassName = '',
-  animationDuration = 1,
-  ease = 'back.inOut(2)',
-  scrollStart = 'center bottom+=50%',
-  scrollEnd = 'bottom bottom-=40%',
-  stagger = 0.1
-}) => {
-  const containerRef = useRef<HTMLHeadingElement>(null);
+export default function ResponsiveSplitText({ text, className }: ResponsiveSplitTextProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const splitText = useMemo(() => {
-    const text = typeof children === 'string' ? children : '';
-    return text.split('').map((char, index) => (
-      <span className="inline-block word" key={index}>
-        {char === ' ' ? '\u00A0' : char}
-      </span>
-    ));
-  }, [children]);
+  // Smooth Awwwards fluid curve
+  const CUBIC_EASE : [number, number, number, number] = [0.215, 0.61, 0.355, 1];
 
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-
-    const scroller = scrollContainerRef && scrollContainerRef.current ? scrollContainerRef.current : window;
-
-    const charElements = el.querySelectorAll('.inline-block');
-
-    gsap.fromTo(
-      charElements,
-      {
-        willChange: 'opacity, transform',
-        yPercent: 120,
-        transformOrigin: '50% 0%'
+  const containerVariants = {
+    initial: {},
+    animate: {
+      transition: {
+        staggerChildren: 0.020,
+        delayChildren: 0.04,
       },
-      {
-        duration: animationDuration,
-        ease: ease,
-        yPercent: 0,
-        stagger: stagger,
-        scrollTrigger: {
-          trigger: el,
-          scroller,
-          start: scrollStart,
-          end: scrollEnd,
-          scrub: true
-        }
-      }
-    );
-  }, [scrollContainerRef, animationDuration, ease, scrollStart, scrollEnd, stagger]);
+    },
+  };
+
+  const wordVariants = {
+    initial: {
+      y: "120%",
+    },
+    animate: {
+      y: "0%",
+      transition: {
+        duration: 0.55,
+        ease: CUBIC_EASE,
+      },
+    },
+  } as Variants
+
+  // Split string cleanly into individual words by spaces
+  const words = text.split(" ");
 
   return (
-    <p ref={containerRef} className={`my-5 overflow-hidden ${containerClassName}`}>
-      <span className={`inline-block ${textClassName}`}>{splitText}</span>
-    </p>
+    <motion.div
+      ref={containerRef}
+      variants={containerVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ margin: "-12%" }}
+      className={`${className} flex flex-wrap`} // flex-wrap lets words flow perfectly onto new lines
+    >
+      {words.map((word, index) => (
+        <p
+          key={index}
+          className="relative inline-block overflow-hidden mr-[0.25em] py-[0.1em]"
+          style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
+        >
+          <motion.span
+            variants={wordVariants}
+            className="inline-block will-change-transform"
+          >
+            {word}
+          </motion.span>
+        </p>
+      ))}
+    </motion.div>
   );
-};
-
-export default ScrollFloat;
+}
