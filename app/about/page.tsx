@@ -1,5 +1,7 @@
+import AboutComp from '@/components/comp/AboutComp'
 import Image from 'next/image'
 import React from 'react'
+import { FiArrowRight } from 'react-icons/fi'
 
 const About = () => {
   return (
@@ -10,7 +12,7 @@ const About = () => {
         <Image src="/globes.gif" alt="globe" width={50} height={50} className="rounded-full  mix-blend-darken animate-rotate" />
       </div>
       </section>
-      <section></section>
+      <AboutComp />
       <section></section>
       <section></section>
     </main>
