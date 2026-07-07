@@ -20,7 +20,7 @@ const Projects = () => {
   }, [])
   return (
     <section className='mb-10 md:mb-0'>
-      {mobile ? <ProjectShowCaseMobile /> : <ProjectsShowcase /> }
+      {mobile ? <ProjectShowCaseMobile smaller={true} /> : <ProjectsShowcase /> }
     </section>
   )
 }

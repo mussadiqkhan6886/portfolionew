@@ -70,7 +70,7 @@ const Skills = () => {
                         alt={`${skill.name} logo`}
                         width={36}
                         height={36}
-                        className={`object-contain transition-transform duration-300 hover:scale-110 ${
+                        className={`object-contain ${
                           skill.name.includes("Next.js") && "invert"
                         }`}
                       />

@@ -78,12 +78,12 @@ export default function PageTransition() {
 
   return (
     <motion.div
-      className="fixed inset-0 z-[9999] w-screen h-screen grid grid-cols-4 overflow-hidden bg-transparent select-none pointer-events-none"
+      className="fixed inset-0 z-[9999] w-screen h-screen grid grid-cols-12 overflow-hidden bg-transparent select-none pointer-events-none"
       initial="initial"
       animate={controls}
     >
       {/* Background Panels */}
-      {[...Array(4)].map((_, i) => (
+      {[...Array(12)].map((_, i) => (
         <motion.div
           key={`panel-${i}`}
           custom={i}

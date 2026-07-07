@@ -6,7 +6,7 @@ import TransitionLink from './TransitionLink'
 
 const ProjectShowCaseMobile = ({smaller, work}: {smaller?: boolean, work?: boolean}) => {
   return (
-    <section className={`px-5 grid ${smaller ? "grid-cols-1" : "grid-cols-2"}  gap-17 items-center justify-center`}>
+    <section className={`px-5 grid ${smaller ? "grid-cols-1" : "grid-cols-2"} place-items-center gap-17 items-center justify-center`}>
       {projects.slice(0,3).map((item, i) => (
         <TransitionLink href={item.link} key={i} className="h-[80vh] w-full block">
             <div className="relative w-full h-[78%]">
