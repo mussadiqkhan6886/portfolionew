@@ -7,8 +7,8 @@ import { FiArrowDownRight } from "react-icons/fi";
 
 const Contact = () => {
   return (
-    <main className="bg-text text-white py-20">
-      <section className="max-w-4xl flex justify-between w-full mx-auto relative">
+    <main className="bg-text text-white py-20 px-4 xl:px-0">
+      <section className="max-w-4xl flex flex-col md:flex-row justify-between w-full mx-auto relative">
         <section className="py-20">
           <h1 className="text-[clamp(42px,7vw,84px)] tracking-tight leading-none">Let's start a <br /> project together</h1>
           <div className="w-full relative pt-30 pb-40 border-b border-gray/50">
@@ -68,7 +68,7 @@ const Contact = () => {
             </form>
           </div>
         </section>
-        <section className="w-[20%] pt-40">
+        <section className="w-[30%] lg:w-[20%] pt-40">
           <div className="relative mb-34">
             <Image
               src="/img3.png"
