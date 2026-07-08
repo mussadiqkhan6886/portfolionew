@@ -1,5 +1,6 @@
 import AboutComp from '@/components/comp/AboutComp'
 import LoadingAnimation from '@/components/comp/LoadingAnimation'
+import Services from '@/components/comp/Services'
 import { services } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
@@ -33,7 +34,8 @@ const About = () => {
           ))}
         </div>
       </section>
-      <section></section>
+
+      <Services />
     </main>
   )
 }
