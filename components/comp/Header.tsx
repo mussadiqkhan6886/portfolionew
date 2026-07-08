@@ -76,19 +76,19 @@ const Header = () => {
             width
             weight
             italic
-            textColor={pathName === "/" ? "#fff" : "#000"}
+            textColor={pathName === "/" || pathName === "/contact" ? "#fff" : "#000"}
             strokeColor="#5227FF"
             minFontSize={20}
           />
         </TransitionLink>
 
         <div className="block sm:hidden">
-          <button className={`${pathName !== "/" ? "text-black" : "text-white"}`} onClick={() => setIsOpen(true)}>
+          <button className={`${pathName === "/" || pathName === "/contact" ? "text-white" : "text-black"}`} onClick={() => setIsOpen(true)}>
             <MagnetText active={true} pathname={pathName}  dot="left" text="Menu" strength={0.5} />
           </button>
         </div>
 
-        <nav className={`hidden sm:flex ${pathName !== "/" ? "text-black" : "text-white"}`}>
+        <nav className={`hidden sm:flex ${pathName === "/" || pathName === "/contact" ? "text-white" : "text-black"}`}>
           <ul className="flex gap-9">
             {menu.map((item) => (
               <li className="relative font-medium" key={item.link}>

@@ -66,7 +66,7 @@ export default function MagnetText({
               : dot === "left"
               ? "top-1/2 -translate-y-1/2 -left-5 -translate-x-1/2"
               : "top-1/2 -right-0 -translate-x-1/2"
-          } block ${pathname === "/" ? "bg-white" : "bg-black"} rounded-full ${
+          } block ${pathname === "/" || pathname === "/contact" ? "bg-white" : "bg-black"} rounded-full ${
             enter || active ? "opacity-100 w-1.5 h-1.5" : "opacity-0 h-0 w-0"
           } transition-all duration-300 ease-in-out`}
         />
