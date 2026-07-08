@@ -11,7 +11,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <main>
+    <main className="lg:pb-10">
       <Hero />
       <About />
       <Projects />

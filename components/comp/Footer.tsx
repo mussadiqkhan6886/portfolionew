@@ -4,7 +4,7 @@ import Socials from "./Socials";
 const Footer = () => {
 
   return (
-    <footer className="bg-text lg:mt-10 text-white">
+    <footer className="bg-text text-white">
 
       <FooterContact />
 
