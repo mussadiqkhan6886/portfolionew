@@ -198,3 +198,24 @@ export const experiences: ExperienceItem[] = [
     tags: ["JavaScript", "CSS3", "DOM Manipulation", "Responsive Design", "CSS Animation"],
   },
 ];
+
+export const services = [
+  {
+    id: "01",
+    title: "Web Development",
+    description:
+      "I build modern, fast, and scalable websites tailored to your business goals. Whether it's a company website, portfolio, landing page, or custom web application, every project is responsive, secure, and designed to deliver an exceptional user experience.",
+  },
+  {
+    id: "02",
+    title: "Performance & SEO",
+    description:
+      "A great website should also be discoverable and lightning fast. I optimize Core Web Vitals, loading speed, technical SEO, accessibility, and overall performance to improve search rankings, increase traffic, and create a smoother experience for every visitor.",
+  },
+  {
+    id: "03",
+    title: "End-to-End Solutions",
+    description:
+      "From planning and development to deployment and ongoing improvements, I handle the entire process. You receive a production-ready website that's easy to maintain, built to scale, and focused on helping your business grow online.",
+  },
+];
