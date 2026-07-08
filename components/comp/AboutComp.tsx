@@ -33,9 +33,9 @@ const About = () => {
 }, []);
 
   return (
-      <section ref={containerRef} className="flex flex-col md:flex-row gap-8 md:px-13 py-14 md:py-26 relative items-start">
+      <section ref={containerRef} className="flex flex-col lg:flex-row gap-8 md:px-13 py-14 md:py-26 relative items-start">
         
-        <FloatEffect output={[-15, 100]}  className="w-full md:w-99 mb-6 md:mb-0 space-y-5 mr-5">
+        <FloatEffect output={[-15, 100]}  className="w-full lg:w-99 mb-6 lg:mb-0 space-y-5 mr-5">
           <p >
             I help companies from all over the world with tailor-made solutions. With each project, I push my work to new horizons, always putting quality first.
           </p>
