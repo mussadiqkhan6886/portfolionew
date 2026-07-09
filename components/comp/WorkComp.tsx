@@ -11,8 +11,8 @@ const WorkComp = () => {
 
   return (
     <>
-      <section className='min-h-[60vh] md:min-h-[70vh] gap-8 h-full flex flex-col justify-end'>
-        <h1 className="text-4xl md:text-[80px] md:leading-22 tracking-tight">Engineering the future of <br /> digital experience</h1>
+      <section className='min-h-[60vh] md:min-h-[70vh] px-5 gap-8 h-full flex flex-col justify-end'>
+        <h1 className="text-[44px] leading-none md:text-6xl lg:text-[86px] lg:leading-22 tracking-tight">Engineering the future of <br className="hidden sm:block" /> digital experience</h1>
         <div className="flex justify-between pt-2 w-full items-center">
           <p className="max-w-xl text-gray-700">Collaborating with forward-thinking brands to build fast, scalable, and beautifully engineered web systems. We transform complex product strategies into intuitive, high-performance interfaces that scale effortlessly.</p>
           <div className='hidden md:flex gap-4'>

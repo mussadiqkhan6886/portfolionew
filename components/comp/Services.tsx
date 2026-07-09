@@ -47,7 +47,7 @@ const Services = () => {
         </div>
         <div className="md:w-[70%] lg:pt-20">
             <CircularText
-                text="AVAILABLE FOR WORK •"
+                text="AVAILABLE FOR WORK • "
                 onHover="pause"
                 spinDuration={20}
                 className="custom-class"

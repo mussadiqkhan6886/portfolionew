@@ -16,7 +16,7 @@ const Footer = () => {
               <p className="text-[10px] uppercase tracking-widest text-gray mb-1">
                 Local time
               </p>
-              <p className="text-sm text-white/70 tabular-nums">
+              <p className="text-xs md:text-sm text-white/70 tabular-nums">
                 {new Date().toLocaleTimeString("en-US", {
                   hour: "2-digit",
                   minute: "2-digit",
@@ -28,7 +28,7 @@ const Footer = () => {
               <p className="text-[10px] uppercase tracking-widest text-gray mb-1">
                 Location
               </p>
-              <p className="text-sm text-white/70">Islamabad, PK</p>
+              <p className="text-xs md:text-sm text-white/70">Islamabad, PK</p>
             </div>
             <div className="hidden md:block">
               <p className="text-[10px] uppercase tracking-widest text-gray mb-1">

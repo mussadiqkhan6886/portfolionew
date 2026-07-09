@@ -207,7 +207,7 @@ function ExperienceRow({
           className="
             w-7 h-7 rounded-full bg-ctr-dark text-white flex-shrink-0
             flex items-center justify-center  text-base 
-             mt-0.5
+             mt-0.5 absolute top-8 lg:-top-4  right-0  
           "
           style={{ lineHeight: 1 }}
         >

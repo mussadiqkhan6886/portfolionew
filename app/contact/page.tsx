@@ -7,7 +7,7 @@ import { FiArrowDownLeft, FiArrowDownRight } from "react-icons/fi";
 
 const Contact = () => {
   return (
-    <main className="bg-text text-white py-20 px-20 xl:px-0">
+    <main className="bg-text text-white py-20 px-6 sm:px-20 xl:px-0">
       <section className="max-w-4xl flex flex-col md:flex-row justify-between w-full mx-auto relative">
         <section className="block pt-14 md:hidden relative">
           <div>
@@ -53,7 +53,7 @@ const Contact = () => {
         </section>
         <section className="md:py-20">
           <h1 className="text-[clamp(42px,7vw,84px)] tracking-tight leading-none hidden md:block">Let's start a <br /> project together</h1>
-          <div className="w-full relative pt-30 pb-40 border-b border-gray/50">
+          <div className="w-full relative pt-30 pb-30 sm:pb-40 border-b border-gray/50">
             <form>
               <div className="border-t border-gray/50 py-10 flex gap-8 w-full md:gap-10">
                 <span className="inline-block mt-1 text-gray text-xs">
@@ -103,7 +103,7 @@ const Contact = () => {
               <div>
                  <FloatEffect output={[100,250]}>
                   <button type="submit">
-                    <MagnetText dot="no" text="Send it!" className="absolute w-38 h-38 items-center justify-center bg-ctr hover:bg-ctr-dark rounded-full -bottom-5 right-8" />
+                    <MagnetText dot="no" text="Send it!" className="absolute w-34 h-34 sm:w-38 sm:h-38 items-center justify-center bg-ctr hover:bg-ctr-dark rounded-full bottom-0 sm:-bottom-5 right-8" />
                   </button>
                 </FloatEffect>
               </div>
