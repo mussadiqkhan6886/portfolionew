@@ -14,10 +14,15 @@ export const socials = [
 ]
 
 export const projects = [
-    {id: "1", service: "SEO & Development",title: "ChunkD", role: "design & engineer", thumbnail: "/t4.png", link: "s", location: "Saudi", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
+
+    {id: "1", service: "Design & Development",title: "ChunkD", role: "design & developer", thumbnail: "/projects/chunkdMain.png", link: "chunkd", location: "Lahore, Pakistan", stack: ["NEXT.JS", "MONGODB", "TYPESCRIPT"], description: "Chunk'd Cookies is a premium cookie eCommerce platform built to deliver a seamless online ordering experience. The website features a fully customized shopping flow, including Build Your Own Box, limited-edition product drops, dynamic product management, and a mobile-first responsive design. Optimized for performance, SEO, and conversions, it helps the brand provide a fast, engaging shopping experience while simplifying online sales and order management.", problemStatement: "The client wanted a bold, premium cookie brand experience inspired by the energy of Apple and Crumbl clean, modern, and visually engaging. Beyond aesthetics, they needed a flexible ordering system supporting Build Your Own Box, Pre-Order Drops, Standard Orders, and Deals, along with a custom admin dashboard to manage products, orders, and business analytics efficiently.", features: [], live: "www.chunkdpk.com", video: "", webVideo: "", mobileShots: []},
+
     {id: "2", service: "Development",title: "HALIR", role: "design & engineer", thumbnail: "/t2.png", link: "k", location: "Pakistan", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
+
     {id: "3", service: "SEO & Development",title: "Zevora", role: "development & SEO", thumbnail: "/t1.png", link: "s", location: "UK", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
+    
     {id: "4", service: "SEO & Development",title: "True Horizon", role: "design & development", thumbnail: "/t3.png", link: "l", location: "USA", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
+
 ]
 
 export const thumbnails1 = [
