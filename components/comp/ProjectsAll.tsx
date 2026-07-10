@@ -110,7 +110,7 @@ const ProjectsAll = ({ option }: { option: string }) => {
               </AnimatePresence>
 
               <TransitionLink
-                href={activeProject.link}
+                href={`/work/${activeProject.link}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="pointer-events-none absolute inset-0 flex items-center justify-center"
