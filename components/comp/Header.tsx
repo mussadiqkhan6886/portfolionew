@@ -93,7 +93,7 @@ const Header = () => {
             {menu.map((item) => (
               <li className="relative font-medium" key={item.link}>
                 <TransitionLink href={item.link}>
-                  <MagnetText active={pathName === item.link} pathname={pathName}
+                  <MagnetText active={pathName.includes(item.link)} pathname={pathName}
                     text={item.title}
                     strength={0.5}
                   />

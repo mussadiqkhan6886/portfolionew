@@ -76,7 +76,7 @@ const Menu = ({close, pathname}: {close: (x: boolean) => void, pathname: string}
                   ease: CUBIC_EASE,
                   type: "tween",
                   delay: item.d
-                }} key={item.link}><TransitionLink href={item.link}><MagnetText active={pathname === item.link} strength={0.1} pathname={"/"} className="w-full text-4xl sm:text-5xl" dot={"right"} text={item.title} /></TransitionLink></motion.li>
+                }} key={item.link}><TransitionLink href={item.link}><MagnetText active={pathname.includes(item.link)} strength={0.1} pathname={"/"} className="w-full text-4xl sm:text-5xl" dot={"right"} text={item.title} /></TransitionLink></motion.li>
                 ))}
             </ul>
         </nav>
