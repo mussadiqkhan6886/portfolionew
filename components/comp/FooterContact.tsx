@@ -13,7 +13,7 @@ const FooterContact = () => {
 
     const pathName = usePathname()
   return (
-    <section className={`${pathName === "/contact" ? "hidden" : "block"} max-w-4xl mx-auto px-3 lg:px-7 pt-6 lg:pt-20 pb-0`}>
+    <section className={`${pathName === "/" || pathName === "/work" || pathName === "/about" ? "block" : "hidden"} max-w-4xl mx-auto px-3 lg:px-7 pt-6 lg:pt-20 pb-0`}>
         <div className="relative flex items-center justify-between gap-6 pb-4 lg:pb-20 border-b border-gray/40">
 
           <div className="flex items-start gap-5">
