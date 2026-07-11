@@ -15,7 +15,18 @@ export const socials = [
 
 export const projects = [
 
-    {id: "1", service: "Design & Development",title: "ChunkD", role: "design & developer", thumbnail: "/projects/chunkdMain.png", link: "chunkd", location: "Lahore, Pakistan", stack: ["NEXT.JS", "MONGODB", "TYPESCRIPT"], description: "Chunk'd Cookies is a premium cookie eCommerce platform built to deliver a seamless online ordering experience. The website features a fully customized shopping flow, including Build Your Own Box, limited-edition product drops, dynamic product management, and a mobile-first responsive design. Optimized for performance, SEO, and conversions, it helps the brand provide a fast, engaging shopping experience while simplifying online sales and order management.", problemStatement: "The client wanted a bold, premium cookie brand experience inspired by the energy of Apple and Crumbl clean, modern, and visually engaging. Beyond aesthetics, they needed a flexible ordering system supporting Build Your Own Box, Pre-Order Drops, Standard Orders, and Deals, along with a custom admin dashboard to manage products, orders, and business analytics efficiently.", features: [], live: "www.chunkdpk.com", video: "", webVideo: "", mobileShots: []},
+    {id: "1", service: "Design & Development",title: "ChunkD", role: "design & developer", thumbnail: "/projects/chunkd/chunkdMain.png", link: "chunkd", location: "Lahore, Pakistan", stack: "NEXT.JS ✦ MONGODB ✦ TYPESCRIPT", description: "Chunk'd Cookies is a premium cookie eCommerce platform built to deliver a seamless online ordering experience. The website features a fully customized shopping flow, including Build Your Own Box, limited-edition product drops, dynamic product management, and a mobile-first responsive design. Optimized for performance, SEO, and conversions, it helps the brand provide a fast, engaging shopping experience while simplifying online sales and order management.", problemStatement: "The client wanted a bold, premium cookie brand experience inspired by the energy of Apple and Crumbl clean, modern, and visually engaging. Beyond aesthetics, they needed a flexible ordering system supporting Build Your Own Box, Pre-Order Drops, Standard Orders, and Deals, along with a custom admin dashboard to manage products, orders, and business analytics efficiently.", features: [
+  "Build Your Own Box",
+  "Limited Cookie Drops",
+  "Multiple Order Flows",
+  "Dynamic Cart & Checkout",
+  "Admin Dashboard",
+  "Sales Analytics",
+  "SEO Optimized",
+  "Mobile First",
+  "High Performance",
+  "Product Management"
+], live: "www.chunkdpk.com", hero: "/projects/chunkd/hero.mp4", pcVideo: "/projects/chunkd/pc.mp4", laptopVideo: "/projects/chunkd/laptop.mp4", image1:"/projects/chunkd/image1.png" ,mobileShots: ["/projects/chunkd/mb1.png", "/projects/chunkd/mb2.png", "/projects/chunkd/mb3.png"], logo: "/projects/chunkd/logo.png"},
 
     {id: "2", service: "Development",title: "HALIR", role: "design & engineer", thumbnail: "/t2.png", link: "k", location: "Pakistan", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},
 
