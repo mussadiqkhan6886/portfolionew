@@ -27,9 +27,9 @@ export const projects = [
   "High Performance",
   "Product Management"
 ], live: "www.chunkdpk.com", hero: "/projects/chunkd/hero.mp4", pcVideo: "/projects/chunkd/pc.mp4", laptopVideo: "/projects/chunkd/laptop.mp4", image1:"/projects/chunkd/image1.png" ,mobileShots: [
-  {type: "image", sr: "/mb1.png"},
-  {type: "image", sr: "/mb2.png"},
-  {type: "image", sr: "/mb3.png"},
+  {type: "image", sr: "/projects/chunkd/mb1.jpeg"},
+  {type: "video", sr: "/projects/chunkd/mb2video.mov"},
+  {type: "image", sr: "/projects/chunkd/mb3.jpeg"},
 ], logo: "/projects/chunkd/logo.png"},
 
     {id: "2", service: "Development",title: "HALIR", role: "design & engineer", thumbnail: "/t2.png", link: "k", location: "Pakistan", stack: [], description: "", features: [], live: "", video: "", webVideo: "", mobileShots: []},

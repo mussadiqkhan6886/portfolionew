@@ -102,24 +102,51 @@ const SingleWork = async ({params}: Params) => {
             {/* pc frame */}
             <Image
               src="/projectassets/pc.png"
-              alt="Laptop"
+              alt="pc"
               width={1200}
               height={750}
               className="relative z-10 w-full h-auto pointer-events-none"
             />
         </div>
-        {/* computer image or video */}
-        <div className="w-full h-screen">
+        {/*big image */}
+        <div className="w-full relative h-screen">
           <Image src={project.image1 as string} alt="image 1" fill className="w-full h-full" />
         </div>
-        {/* 3 mobile size images */}
-        <div>
+       <div className="grid grid-cols-3 max-w-5xl mx-auto gap-12 py-30">
           {project.mobileShots.map((item, i) => (
-            item.type === "video" ? <video key={i} src={item.sr} autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full object-contain " /> : <Image key={i} src={item.sr} alt="image of mobile" fill />
+            <div
+              key={i}
+              className="relative aspect-[1/2] scale-90 w-full"
+            >
+              {/* Phone Frame */}
+              <Image
+                src="/projectassets/phone.png"
+                alt="Phone Frame"
+                fill
+                className="pointer-events-none scale-y-95 z-20 object-contain"
+              />
+
+              {/* Screen */}
+              <div className="absolute left-[5.5%] top-0 h-full w-[89%] overflow-hidden">
+                {item.type === "video" ? (
+                  <video
+                    src={item.sr}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <Image
+                    src={item.sr}
+                    alt={`Mobile ${i + 1}`}
+                    fill
+                    className="object-contain"
+                  />
+                )}
+              </div>
+            </div>
           ))}
         </div>
         {/* next case */}
