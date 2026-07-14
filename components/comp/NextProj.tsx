@@ -58,6 +58,7 @@ const NextProj = ({name, link, image}: Props) => {
             <Image
             src={image}
             alt="next project image"
+            loading="lazy"
             width={1200}
             height={800}
             className="

@@ -110,14 +110,14 @@ const SingleWork = async ({params}: Params) => {
         </div>
         {/*big image */}
         <div className="w-full relative h-screen">
-          <Image src={project.image1 as string} alt="image 1" fill className="w-full h-full" />
+          <Image loading="lazy" src={project.image1 as string} alt="image 1" fill className="w-full h-full" />
         </div>
         
-       <div className="grid grid-cols-3 max-w-5xl mx-auto gap-12 py-30">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto lg:gap-16 py-30">
           {project.mobileShots.map((item, i) => (
             <div
               key={i}
-              className="relative aspect-[1/2] scale-90 w-full"
+              className="relative max-h-screen aspect-[1/2] scale-85 w-full"
             >
               {/* Phone Frame */}
               <Image
@@ -128,7 +128,7 @@ const SingleWork = async ({params}: Params) => {
               />
 
               {/* Screen */}
-              <div className="absolute left-[5.5%] top-0 h-full w-[89%] overflow-hidden">
+              <div className="absolute left-[5.5%] top-3 h-[97%] w-[89%] overflow-hidden">
                 {item.type === "video" ? (
                   <video
                     src={item.sr}
@@ -136,14 +136,15 @@ const SingleWork = async ({params}: Params) => {
                     muted
                     loop
                     playsInline
-                    className="h-full w-full object-contain"
+                    className="h-full w-full rounded-[30%] sm:rounded-[40%] md:rounded-[20%] lg:rounded-[5%] object-contain"
                   />
                 ) : (
                   <Image
                     src={item.sr}
                     alt={`Mobile ${i + 1}`}
                     fill
-                    className="object-contain"
+                    loading="lazy"
+                    className="object-contain rounded-xl"
                   />
                 )}
               </div>
