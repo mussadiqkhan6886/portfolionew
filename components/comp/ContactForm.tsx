@@ -86,7 +86,7 @@ const ContactForm = () => {
             04
         </span>
         <div className="w-full">
-            <label className="font-[450] text-white tracking-tight text-xl md:text-2xl mb-3 block" htmlFor='service'>What services are you looking for??</label>
+            <label className="font-[450] text-white tracking-tight text-xl md:text-2xl mb-3 block" htmlFor='service'>What services are you looking for?</label>
             <input name="service" value={data.service} onChange={e => handleChange(e)} autoComplete='off' id="service" type="text" placeholder="Web Development, Optimization ... *" className="outline-none w-full  placeholder:text-gray/70 text-white  tracking-tight text-[16px] md:text-[20px]" />
         </div>
         </div>
@@ -101,11 +101,11 @@ const ContactForm = () => {
         </div>
         <div>
             <FloatEffect output={[100,250]}>
-            <button type="submit">
-            <MagnetText dot="no" text={loading ? "Loading ..." : "Send it!"} className="absolute w-34 h-34 sm:w-38 sm:h-38 items-center justify-center bg-ctr hover:bg-ctr-dark rounded-full bottom-0 sm:-bottom-5 right-8" />
+            <button disabled={loading} className="disabled:opacity-60 disabled:cursor-not-allowed" type="submit">
+            <MagnetText dot="no" text={loading ? "Sending ..." : "Send it!"} className="absolute w-34 h-34 sm:w-38 sm:h-38 items-center justify-center bg-ctr hover:bg-ctr-dark rounded-full bottom-0 sm:-bottom-5 right-8" />
             </button>
         </FloatEffect>
-        <p>{respond}</p>
+        <p className="text-border font-medium">{respond}</p>
         </div>
     </form>
     </div>

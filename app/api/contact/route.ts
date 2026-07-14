@@ -145,7 +145,7 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json(
-      { message: "Email sent successfully." },
+      { message: "Contacted successfully." },
       { status: 200 }
     );
   } catch (error) {
