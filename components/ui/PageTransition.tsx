@@ -39,7 +39,7 @@ export default function PageTransition() {
     enter: (i: number) => ({
       y: "0%",
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: [0.76, 0, 0.24, 1],
         delay: i * 0.04,
       },
@@ -47,7 +47,7 @@ export default function PageTransition() {
     exit: (i: number) => ({
       y: "-100%",
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: [0.76, 0, 0.24, 1],
         delay: 0.6 + i * 0.04, // Keeps screen black while text drops out first
       },
@@ -60,7 +60,7 @@ export default function PageTransition() {
       y: "0%",
       opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: EASE_CUSTOM,
         delay: 0.2, // Appears smoothly right after curtains meet
       },
@@ -69,7 +69,7 @@ export default function PageTransition() {
       y: "-105%",
       opacity: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         ease: EASE_CUSTOM,
         delay: 0.1, // Disappears smoothly up into the mask before curtain opens
       },

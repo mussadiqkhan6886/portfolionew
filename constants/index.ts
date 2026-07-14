@@ -28,7 +28,7 @@ export const projects = [
   "Product Management"
 ], live: "www.chunkdpk.com", hero: "/projects/chunkd/hero.mp4", pcVideo: "/projects/chunkd/pc.mp4", laptopVideo: "/projects/chunkd/laptop.mp4", image1:"/projects/chunkd/image1.png" ,mobileShots: [
   {type: "image", sr: "/projects/chunkd/mb1.jpeg"},
-  {type: "video", sr: "/projects/chunkd/mb2video.mov"},
+  {type: "video", sr: "/projects/chunkd/mb2video.mp4"},
   {type: "image", sr: "/projects/chunkd/mb3.jpeg"},
 ], logo: "/projects/chunkd/logo.png"},
 

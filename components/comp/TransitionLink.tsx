@@ -32,7 +32,7 @@ export default function TransitionLink({ href, children, className, target, rel 
     // then execute the actual router switch behind the black curtain.
     setTimeout(() => {
       router.push(href);
-    }, 850); 
+    }, 650); 
   };
 
   return (

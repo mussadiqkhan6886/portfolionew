@@ -91,7 +91,7 @@ function ExperienceRow({
       className="
         group relative grid grid-cols-1 md:grid-cols-2 gap-8
         border-b border-border
-        py-8 cursor-pointer
+        py-8 cursor-pointer hover:pl-3 duration-300 transition-all
       "
     >
       {/* Hover underline sweep */}
@@ -115,7 +115,7 @@ function ExperienceRow({
         </div>
 
         <div className="flex flex-col gap-0.5">
-          <span className="text-[12px] text-gray-500">
+          <span className="text-[12px] text-black font-medium">
             {item.company}
             <span className="mx-1.5 text-gray">·</span>
             {item.type}
@@ -192,7 +192,7 @@ function ExperienceRow({
             {item.tags.map((t) => (
               <span
                 key={t}
-                className="text-[10px] tracking-[0.08em] uppercase px-2.5 py-1 rounded-full border border-gray text-gray-500"
+                className="text-[10px] tracking-[0.08em] uppercase px-2.5 py-1 border rounded-full border-gray text-white bg-black"
               >
                 {t}
               </span>
