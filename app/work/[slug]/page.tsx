@@ -64,7 +64,7 @@ const SingleWork = async ({params}: Params) => {
                 muted
                 loop
                 playsInline
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-contain rounded-lg"
               />
             </div>
 
@@ -112,6 +112,7 @@ const SingleWork = async ({params}: Params) => {
         <div className="w-full relative h-screen">
           <Image src={project.image1 as string} alt="image 1" fill className="w-full h-full" />
         </div>
+        
        <div className="grid grid-cols-3 max-w-5xl mx-auto gap-12 py-30">
           {project.mobileShots.map((item, i) => (
             <div
@@ -123,7 +124,7 @@ const SingleWork = async ({params}: Params) => {
                 src="/projectassets/phone.png"
                 alt="Phone Frame"
                 fill
-                className="pointer-events-none scale-y-95 z-20 object-contain"
+                className="pointer-events-none z-20 object-contain"
               />
 
               {/* Screen */}
@@ -135,7 +136,7 @@ const SingleWork = async ({params}: Params) => {
                     muted
                     loop
                     playsInline
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                   />
                 ) : (
                   <Image
