@@ -28,8 +28,8 @@ const SingleWork = async ({params}: Params) => {
   return (
     <main>
       <section className="max-w-5xl mx-auto py-16 md:py-24 md:pb-10 mb-0 my-16 px-4 md:px-12 relative h-[54vh] sm:h-[64vh] flex justify-between flex-col ">
-        <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 tracking-tight">{slug}</h1>
-        <div className="flex justify-between gap-6 sm:gap-10 items-center">
+        <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 capitalize tracking-tight">{slug}</h1>
+        <div className="flex justify-between gap-5 sm:gap-10 items-center">
           <div className="w-full">
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-5 sm:pb-7 mb-5 sm:mb-7">role / Services</h2>
             <h3 className="text-[11px] sm:text-sm md:text-base">{project.service}</h3>
