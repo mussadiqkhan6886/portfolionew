@@ -31,16 +31,16 @@ const SingleWork = async ({params}: Params) => {
         <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 tracking-tight">{slug}</h1>
         <div className="flex justify-between gap-6 sm:gap-10 items-center">
           <div className="w-full">
-            <h2 className="border-b border-border/70 text-[11px] sm:text-xs uppercase text-gray pb-5 sm:pb-7 mb-5 sm:mb-7">role / Services</h2>
-            <h3 className="text-[12px] sm:text-sm md:text-base">{project.service}</h3>
+            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-5 sm:pb-7 mb-5 sm:mb-7">role / Services</h2>
+            <h3 className="text-[11px] sm:text-sm md:text-base">{project.service}</h3>
           </div>
           <div className="w-full">
-            <h2 className="border-b border-border/70 text-[11px] sm:text-xs uppercase text-gray pb-5 sm:pb-7 mb-5 sm:mb-7">Location</h2>
-            <h3 className="text-[12px] sm:text-sm md:text-base">{project.location}</h3>
+            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-5 sm:pb-7 mb-5 sm:mb-7">Location</h2>
+            <h3 className="text-[11px] sm:text-sm md:text-base">{project.location}</h3>
           </div>
           <div className="w-full">
-            <h2 className="border-b border-border/70 text-[11px] sm:text-xs uppercase text-gray pb-5 sm:pb-7 mb-5 sm:mb-7">STACK</h2>
-            <h3 className="text-[12px] sm:text-sm md:text-base">{project.stack}</h3>
+            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-5 sm:pb-7 mb-5 sm:mb-7">STACK</h2>
+            <h3 className="text-[11px] sm:text-sm md:text-base">{project.stack}</h3>
           </div>
         </div>
         <div className="absolute z-50 -bottom-30 right-10">
