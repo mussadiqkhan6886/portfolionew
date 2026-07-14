@@ -55,8 +55,7 @@ const SingleWork = async ({params}: Params) => {
         {/* main image */}
         <ProjectThumb thumbnail={project.thumbnail} logo={project.logo as string} title={project.title}  />
         {/* laptop video */}
-        <div className="relative mx-auto w-[1200px] my-20">
-            {/* Video */}
+        {/* <div className="relative mx-auto w-[1200px] my-20">
             <div className="absolute left-[12.5%] top-2 w-[74.5%] h-full overflow-hidden rounded-lg">
               <video
                 src={project.laptopVideo}
@@ -68,7 +67,6 @@ const SingleWork = async ({params}: Params) => {
               />
             </div>
 
-            {/* Laptop frame */}
             <Image
               src="/projectassets/laptop.png"
               alt="Laptop"
@@ -76,7 +74,7 @@ const SingleWork = async ({params}: Params) => {
               height={750}
               className="relative z-10 w-full h-auto pointer-events-none"
             />
-        </div>
+        </div> */}
         {/* simple video */}
         <div>
           <video src={project.hero} autoPlay
@@ -86,8 +84,7 @@ const SingleWork = async ({params}: Params) => {
                 className="w-full object-contain"  />
         </div>
         {/* big screen image / video */}
-        <div className="relative mx-auto w-[900px] my-20">
-            {/* Video */}
+        {/* <div className="relative mx-auto w-[900px] my-20">
             <div className="absolute left-0 top-0 w-full h-full overflow-hidden rounded-lg">
               <video
                 src={project.pcVideo}
@@ -99,7 +96,6 @@ const SingleWork = async ({params}: Params) => {
               />
             </div>
 
-            {/* pc frame */}
             <Image
               src="/projectassets/pc.png"
               alt="pc"
@@ -107,7 +103,7 @@ const SingleWork = async ({params}: Params) => {
               height={750}
               className="relative z-10 w-full h-auto pointer-events-none"
             />
-        </div>
+        </div> */}
         {/*big image */}
         <div className="w-full relative h-screen">
           <Image loading="lazy" src={project.image1 as string} alt="image 1" fill className="w-full h-full" />
@@ -117,7 +113,7 @@ const SingleWork = async ({params}: Params) => {
           {project.mobileShots.map((item, i) => (
             <div
               key={i}
-              className="relative max-h-screen aspect-[1/2] scale-85 w-full"
+              className="relative max-h-screen aspect-[1/2] scale-85 xl:scale-100 w-full"
             >
               {/* Phone Frame */}
               <Image
@@ -128,7 +124,7 @@ const SingleWork = async ({params}: Params) => {
               />
 
               {/* Screen */}
-              <div className="absolute left-[5.5%] top-3 h-[97%] w-[89%] overflow-hidden">
+              <div className="absolute left-0 sm:left-[5.5%] top-4 sm:top-3 h-[96%] sm:h-[97%] w-full sm:w-[89%] overflow-hidden">
                 {item.type === "video" ? (
                   <video
                     src={item.sr}
@@ -136,7 +132,7 @@ const SingleWork = async ({params}: Params) => {
                     muted
                     loop
                     playsInline
-                    className="h-full w-full rounded-[0%] sm:rounded-[40%] md:rounded-[20%] lg:rounded-[5%] object-contain"
+                    className="h-full w-full rounded-[8%] sm:rounded-[40%] md:rounded-[30%] lg:rounded-[20%] xl:rounded-[5%] object-contain"
                   />
                 ) : (
                   <Image
