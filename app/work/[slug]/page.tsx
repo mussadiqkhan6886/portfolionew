@@ -29,18 +29,18 @@ const SingleWork = async ({params}: Params) => {
     <main>
       <section className="max-w-5xl mx-auto py-16 md:py-24 md:pb-10 mb-0 my-16 px-4 md:px-12 relative h-[54vh] sm:h-[64vh] flex justify-between flex-col ">
         <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 capitalize tracking-tight">{slug}</h1>
-        <div className="flex justify-between gap-5 sm:gap-10 items-center">
+        <div className="flex justify-between flex-col md:flex-row mt-5 md:mt-0 gap-5 sm:gap-10 items-center">
           <div className="w-full">
-            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-5 sm:pb-7 mb-5 sm:mb-7">role / Services</h2>
-            <h3 className="text-[11px] sm:text-sm md:text-base">{project.service}</h3>
+            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-7 mb-2 md:mb-7">role / Services</h2>
+            <h3 className="text-[12px] sm:text-sm md:text-base">{project.service}</h3>
           </div>
           <div className="w-full">
-            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-5 sm:pb-7 mb-5 sm:mb-7">Location</h2>
-            <h3 className="text-[11px] sm:text-sm md:text-base">{project.location}</h3>
+            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-7 mb-2 md:mb-7">Location</h2>
+            <h3 className="text-[12px] sm:text-sm md:text-base">{project.location}</h3>
           </div>
           <div className="w-full">
-            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-5 sm:pb-7 mb-5 sm:mb-7">STACK</h2>
-            <h3 className="text-[11px] sm:text-sm md:text-base">{project.stack}</h3>
+            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-7 mb-2 md:mb-7">STACK</h2>
+            <h3 className="text-[12px] sm:text-sm md:text-base">{project.stack}</h3>
           </div>
         </div>
         <div className="absolute z-50 -bottom-30 right-10">
@@ -55,15 +55,15 @@ const SingleWork = async ({params}: Params) => {
         {/* main image */}
         <ProjectThumb thumbnail={project.thumbnail} logo={project.logo as string} title={project.title}  />
         {/* laptop video */}
-        {/* <div className="relative mx-auto w-[1200px] my-20">
-            <div className="absolute left-[12.5%] top-2 w-[74.5%] h-full overflow-hidden rounded-lg">
+        <div className="relative mx-auto max-w-6xl my-20">
+            <div className="absolute left-[13%] -top-2 md:-top-3 lg:-top-4 w-[74%] h-full overflow-hidden rounded-lg">
               <video
                 src={project.laptopVideo}
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full h-full object-contain rounded-lg"
+                className="w-full h-full  object-contain rounded-lg"
               />
             </div>
 
@@ -72,9 +72,9 @@ const SingleWork = async ({params}: Params) => {
               alt="Laptop"
               width={1200}
               height={750}
-              className="relative z-10 w-full h-auto pointer-events-none"
+              className="relative z-10 w-full scale-y-90 h-auto pointer-events-none"
             />
-        </div> */}
+        </div>
         {/* simple video */}
         <div>
           <video src={project.hero} autoPlay
@@ -83,16 +83,16 @@ const SingleWork = async ({params}: Params) => {
                 playsInline
                 className="w-full object-contain"  />
         </div>
-        {/* big screen image / video */}
-        {/* <div className="relative mx-auto w-[900px] my-20">
-            <div className="absolute left-0 top-0 w-full h-full overflow-hidden rounded-lg">
+        {/* pc*/}
+        <div className="relative mx-auto max-w-6xl my-20 ">
+            <div className="absolute left-0 top-3 md:top-9 lg:top-16 xl:top-18 w-full h-full overflow-hidden rounded-lg">
               <video
                 src={project.pcVideo}
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full object-contain rounded-lg"
+                className="w-full object-contain rounded-lg lg:scale-80"
               />
             </div>
 
@@ -101,12 +101,12 @@ const SingleWork = async ({params}: Params) => {
               alt="pc"
               width={1200}
               height={750}
-              className="relative z-10 w-full h-auto pointer-events-none"
+              className="relative z-10 w-full scale-y-95 md:scale-y-91 lg:scale-80 lg:scale-y-73 h-auto pointer-events-none"
             />
-        </div> */}
+        </div>
         {/*big image */}
-        <div className="w-full relative h-screen">
-          <Image loading="lazy" src={project.image1 as string} alt="image 1" fill className="w-full h-full" />
+        <div className="w-full relative h-[400px] lg:h-screen">
+          <Image loading="lazy" src={project.image1 as string} alt="image 1" fill className="w-full h-full object-cover" />
         </div>
         
        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto lg:gap-16 py-30">

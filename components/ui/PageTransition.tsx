@@ -78,7 +78,7 @@ export default function PageTransition() {
 
   return (
     <motion.div
-      className="fixed inset-0 z-[9999] w-screen h-screen grid grid-cols-2 overflow-hidden bg-transparent select-none pointer-events-none"
+      className="fixed inset-0 z-[9999] w-screen h-dvh grid grid-cols-2 overflow-hidden bg-transparent select-none pointer-events-none"
       initial="initial"
       animate={controls}
     >
@@ -88,7 +88,7 @@ export default function PageTransition() {
           key={`panel-${i}`}
           custom={i}
           variants={panelVariants}
-          className="w-full h-full bg-black will-change-transform"
+          className="w-full h-full bg-text will-change-transform"
         />
       ))}
 
@@ -104,4 +104,4 @@ export default function PageTransition() {
       </div>
     </motion.div>
   );
-}
+} 

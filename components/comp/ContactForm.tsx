@@ -54,7 +54,7 @@ const ContactForm = () => {
   return (
     <div className="w-full relative pt-30 pb-30 sm:pb-40 border-b border-gray/50">
     <form onSubmit={submitForm}>
-        <div className="border-t border-gray/50 py-10 flex gap-8 w-full md:gap-10">
+        <div className="border-t border-gray/50 py-10 flex gap-6 sm:gap-8 w-full md:gap-10">
         <span className="inline-block mt-1 text-gray text-xs">
             01
         </span>
@@ -63,7 +63,7 @@ const ContactForm = () => {
             <input name="name" value={data.name} onChange={e => handleChange(e)} autoComplete='off' id="name" type="text" placeholder="Mussadiq Khan *" className="outline-none w-full  placeholder:text-gray/70 text-white  tracking-tight text-[16px] md:text-[20px]" />
         </div>
         </div>
-        <div className="border-t border-gray/50 py-10 flex gap-8 md:gap-10">
+        <div className="border-t border-gray/50 py-10 flex gap-6 sm:gap-8 md:gap-10">
         <span className="inline-block mt-1 text-gray text-xs">
             02
         </span>
@@ -72,7 +72,7 @@ const ContactForm = () => {
             <input name="email" value={data.email} onChange={e => handleChange(e)} autoComplete='off' id="email" type="email" placeholder="mussadiqkhan@gmail.com *" className="outline-none w-full  placeholder:text-gray/70 text-white  tracking-tight text-[16px] md:text-[20px]" />
         </div>
         </div>
-        <div className="border-t border-gray/50 py-10 flex gap-8 md:gap-10">
+        <div className="border-t border-gray/50 py-10 flex gap-6 sm:gap-8 md:gap-10">
         <span className="inline-block mt-1 text-gray text-xs">
             03
         </span>
@@ -81,7 +81,7 @@ const ContactForm = () => {
             <input name="organization" value={data.organization} onChange={e => handleChange(e)} autoComplete='off' id="organization" type="text" placeholder="Scrupulous *" className="outline-none w-full  placeholder:text-gray/70 text-white  tracking-tight text-[16px] md:text-[20px]" />
         </div>
         </div>
-        <div className="border-t border-gray/50 py-10 flex gap-8 md:gap-10">
+        <div className="border-t border-gray/50 py-10 flex gap-6 sm:gap-8 md:gap-10">
         <span className="inline-block mt-1 text-gray text-xs">
             04
         </span>
@@ -90,7 +90,7 @@ const ContactForm = () => {
             <input name="service" value={data.service} onChange={e => handleChange(e)} autoComplete='off' id="service" type="text" placeholder="Web Development, Optimization ... *" className="outline-none w-full  placeholder:text-gray/70 text-white  tracking-tight text-[16px] md:text-[20px]" />
         </div>
         </div>
-        <div className="border-t border-gray/50 py-10 flex gap-8 md:gap-10">
+        <div className="border-t border-gray/50 py-10 flex gap-6 sm:gap-8 md:gap-10">
         <span className="inline-block mt-1 text-gray text-xs">
             05
         </span>
