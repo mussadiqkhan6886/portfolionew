@@ -8,12 +8,10 @@ const greetings = [
     "Bonjour",        // French
     "Ciao",           // Italian
   "Hallo",          // German
-  "Olá",            // Portuguese
   "السلام علیکم",    // Urdu / Arabic
   "Hej",            // Swedish / Danish
   "Hallo",          // Dutch
   "Merhaba",        // Turkish
-  "नमस्ते",          // Hindi
   "こんにちは",       // Japanese
   "안녕하세요",       // Korean
   "Hello",          // English
@@ -31,14 +29,14 @@ export default function IntroLoader() {
 
           setTimeout(() => {
             setShowLoader(false);
-          }, 500);
+          }, 450);
 
           return current;
         }
 
         return current + 1;
       });
-    }, 180);
+    }, 140);
 
     return () => clearInterval(greetingInterval);
   }, []);
@@ -54,7 +52,7 @@ export default function IntroLoader() {
             borderBottomLeftRadius: "100%",
             borderBottomRightRadius: "100%",
             transition: {
-              duration: 1.1,
+              duration: 1,
               ease: [0.76, 0, 0.24, 1],
             },
           }}
