@@ -31,23 +31,23 @@ const SingleWork = async ({params}: Params) => {
     <main>
       <section className="max-w-5xl mx-auto px-4 md:px-12 relative h-screen flex pt-16 sm:pt-12 md:pt-5 justify-evenly flex-col ">
         <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 tracking-tight">{project.title}</h1>
-        <p className="text-sm">{project.description}</p>
-        <div className="flex justify-between flex-col md:flex-row mt-5 md:mt-0 gap-5 sm:gap-10 items-center">
-          <div className="w-full mb-1 md:mb-0">
+        <p className="text-sm hidden md:block">{project.description}</p>
+        <div className="grid grid-cols-2 sm:flex justify-between  mt-5 md:mt-0 gap-5 sm:gap-10 items-center">
+          <div className="w-[80%] mb-1 md:mb-0">
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-6 mb-2 md:mb-6">role / Services</h2>
-            <h3 className="text-[12px] sm:text-sm md:text-base">{project.service}</h3>
+            <h3 className="text-[12px] md:text-sm lg:text-base">{project.service}</h3>
           </div>
-          <div className="w-full mb-1 md:mb-0">
+          <div className="w-[80%] mb-1 md:mb-0">
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-6 mb-2 md:mb-6">Location</h2>
-            <h3 className="text-[12px] sm:text-sm md:text-base">{project.location}</h3>
+            <h3 className="text-[12px] md:text-sm lg:text-base">{project.location}</h3>
           </div>
           <div className="w-full mb-1 md:mb-0">
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-6 mb-2 md:mb-6">STACK</h2>
-            <h3 className="text-[12px] sm:text-sm md:text-base">{project.stack}</h3>
+            <h3 className="text-[12px] md:text-sm lg:text-base">{project.stack}</h3>
           </div>
         </div>
 
-        <ProblemStat problemStatement={project.problemStatement as string} />
+        <ProblemStat problemStatement={project.problemStatement} mainObjective={project.mainObjective} techStack={project.skillSet as string[]} description={project.description} />
 
         <div className="absolute z-50 -bottom-30 right-10">
           <FloatEffect output={[0,-250]}>
@@ -59,7 +59,7 @@ const SingleWork = async ({params}: Params) => {
       </section>
       <section>
         {/* main image */}
-        <ProjectThumb thumbnail={project.thumbnail} logo={project.logo as string} title={project.title}  />
+        <ProjectThumb thumbnail={project.thumbnail} logo={project.logo} title={project.title}  />
         {/* laptop video */}
         <div className="relative mx-auto max-w-6xl my-20">
             <div className="absolute left-[13%] -top-1 sm:-top-2 md:-top-3 lg:-top-4 w-[74%] h-full overflow-hidden rounded-lg">
@@ -113,7 +113,7 @@ const SingleWork = async ({params}: Params) => {
         </div>
         {/*big image */}
         <div className="w-full relative h-[40vh] sm:h-[50vh] md:h-[80vh] lg:h-screen">
-          <Image loading="lazy" src={project.image1 as string} alt="image 1" fill className="w-full h-full object-contain" />
+          <Image loading="lazy" src={project.image1} alt="image 1" fill className="w-full h-full object-contain" />
         </div>
         
        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto lg:gap-16 py-24 sm:py-30">

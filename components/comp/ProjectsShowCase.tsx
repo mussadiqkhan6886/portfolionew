@@ -57,7 +57,7 @@ export default function ProjectsShowcase() {
       className="relative max-w-240 mx-auto px-5 lg:px-0 w-full text-black"
     >
       <h3 className="text-gray uppercase text-sm border-b border-border pb-10">Recent Work</h3>
-      {projects.map((project) => (
+      {projects.slice(0, 4).map((project) => (
         <div
           key={project.id}
           onMouseEnter={() => {
