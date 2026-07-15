@@ -11,7 +11,7 @@ const Footer = () => {
       <section className="max-w-8xl mx-auto px-7 mt-4 lg:mt-14">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between flex-wrap gap-5 py-6 ">
 
-          <div className="flex gap-8 flex-wrap">
+          <div className="flex justify-between md:justify-normal w-full gap-8 flex-wrap">
             <div>
               <p className="text-[10px] uppercase tracking-widest text-gray mb-1">
                 Local time

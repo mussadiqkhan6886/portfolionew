@@ -30,15 +30,15 @@ const SingleWork = async ({params}: Params) => {
       <section className="max-w-5xl mx-auto py-16 md:py-24 md:pb-10 mb-0 my-16 px-4 md:px-12 relative h-[54vh] sm:h-[64vh] flex justify-between flex-col ">
         <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 capitalize tracking-tight">{slug}</h1>
         <div className="flex justify-between flex-col md:flex-row mt-5 md:mt-0 gap-5 sm:gap-10 items-center">
-          <div className="w-full">
+          <div className="w-full mb-1 md:mb-0">
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-7 mb-2 md:mb-7">role / Services</h2>
             <h3 className="text-[12px] sm:text-sm md:text-base">{project.service}</h3>
           </div>
-          <div className="w-full">
+          <div className="w-full mb-1 md:mb-0">
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-7 mb-2 md:mb-7">Location</h2>
             <h3 className="text-[12px] sm:text-sm md:text-base">{project.location}</h3>
           </div>
-          <div className="w-full">
+          <div className="w-full mb-1 md:mb-0">
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-7 mb-2 md:mb-7">STACK</h2>
             <h3 className="text-[12px] sm:text-sm md:text-base">{project.stack}</h3>
           </div>
@@ -56,7 +56,7 @@ const SingleWork = async ({params}: Params) => {
         <ProjectThumb thumbnail={project.thumbnail} logo={project.logo as string} title={project.title}  />
         {/* laptop video */}
         <div className="relative mx-auto max-w-6xl my-20">
-            <div className="absolute left-[13%] -top-2 md:-top-3 lg:-top-4 w-[74%] h-full overflow-hidden rounded-lg">
+            <div className="absolute left-[13%] -top-1 sm:-top-2 md:-top-3 lg:-top-4 w-[74%] h-full overflow-hidden rounded-lg">
               <video
                 src={project.laptopVideo}
                 autoPlay
@@ -105,11 +105,11 @@ const SingleWork = async ({params}: Params) => {
             />
         </div>
         {/*big image */}
-        <div className="w-full relative h-[400px] lg:h-screen">
-          <Image loading="lazy" src={project.image1 as string} alt="image 1" fill className="w-full h-full object-cover" />
+        <div className="w-full relative h-[40vh] sm:h-[50vh] md:h-[80vh] lg:h-screen">
+          <Image loading="lazy" src={project.image1 as string} alt="image 1" fill className="w-full h-full object-contain" />
         </div>
         
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto lg:gap-16 py-30">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto lg:gap-16 py-24 sm:py-30">
           {project.mobileShots.map((item, i) => (
             <div
               key={i}

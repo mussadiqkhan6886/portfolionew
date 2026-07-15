@@ -45,7 +45,7 @@ const NextProj = ({name, link, image}: Props) => {
     };
 
   return (
-    <div className="bg-text pt-10 text-white">
+    <div className="bg-text pt-10 pb-3 md:pb-0 text-white">
         <motion.div onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)} ref={containerRef}
       onMouseMove={handleMouseMove} className="max-w-4xl group mx-auto text-center relative">
@@ -64,7 +64,7 @@ const NextProj = ({name, link, image}: Props) => {
             className="
             w-full
             h-auto
-            max-w-sm mx-auto
+            max-w-xs sm:max-w-sm mx-auto
             transition-transform
             duration-700
             ease-[cubic-bezier(.22,1,.36,1)]
