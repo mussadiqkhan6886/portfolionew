@@ -1,4 +1,6 @@
+import FeaturesProj from '@/components/comp/FeaturesProj'
 import NextProj from '@/components/comp/NextProj'
+import ProblemStat from '@/components/comp/ProblemStat'
 import ProjectThumb from '@/components/comp/ProjectThumb'
 import FloatEffect from '@/components/ui/FloatEffect'
 import MagnetText from '@/components/ui/MagnetEffect'
@@ -27,22 +29,26 @@ const SingleWork = async ({params}: Params) => {
 
   return (
     <main>
-      <section className="max-w-5xl mx-auto py-16 md:py-24 md:pb-10 mb-0 my-16 px-4 md:px-12 relative h-[54vh] sm:h-[64vh] flex justify-between flex-col ">
-        <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 capitalize tracking-tight">{slug}</h1>
+      <section className="max-w-5xl mx-auto px-4 md:px-12 relative h-screen flex pt-16 sm:pt-12 md:pt-5 justify-evenly flex-col ">
+        <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 tracking-tight">{project.title}</h1>
+        <p className="text-sm">{project.description}</p>
         <div className="flex justify-between flex-col md:flex-row mt-5 md:mt-0 gap-5 sm:gap-10 items-center">
           <div className="w-full mb-1 md:mb-0">
-            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-7 mb-2 md:mb-7">role / Services</h2>
+            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-6 mb-2 md:mb-6">role / Services</h2>
             <h3 className="text-[12px] sm:text-sm md:text-base">{project.service}</h3>
           </div>
           <div className="w-full mb-1 md:mb-0">
-            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-7 mb-2 md:mb-7">Location</h2>
+            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-6 mb-2 md:mb-6">Location</h2>
             <h3 className="text-[12px] sm:text-sm md:text-base">{project.location}</h3>
           </div>
           <div className="w-full mb-1 md:mb-0">
-            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-7 mb-2 md:mb-7">STACK</h2>
+            <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-6 mb-2 md:mb-6">STACK</h2>
             <h3 className="text-[12px] sm:text-sm md:text-base">{project.stack}</h3>
           </div>
         </div>
+
+        <ProblemStat problemStatement={project.problemStatement as string} />
+
         <div className="absolute z-50 -bottom-30 right-10">
           <FloatEffect output={[0,-250]}>
             <Link href={'/'}>
@@ -83,6 +89,7 @@ const SingleWork = async ({params}: Params) => {
                 playsInline
                 className="w-full object-contain"  />
         </div>
+        <FeaturesProj features={project.features} />
         {/* pc*/}
         <div className="relative mx-auto max-w-6xl my-20 ">
             <div className="absolute left-0 top-3 md:top-9 lg:top-16 xl:top-18 w-full h-full overflow-hidden rounded-lg">
