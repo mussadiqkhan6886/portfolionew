@@ -81,6 +81,7 @@ const Header = () => {
             minFontSize={20}
           />
         </TransitionLink>
+        <TransitionLink href="/" className={`block w-full md:hidden font-thin ${pathName === "/" || pathName === "/contact" ? "text-white" : "text-black"}`}>Code By Mussadiq</TransitionLink>
 
         <div className="block sm:hidden">
           <button className={`${pathName === "/" || pathName === "/contact" ? "text-white" : "text-black"}`} onClick={() => setIsOpen(true)}>
