@@ -55,7 +55,7 @@ const Header = () => {
           <MagnetText
             
             dot="no"
-            text={isOpen ? <FiX size={26} /> : <FiMenu size={26} />}
+            text={isOpen ? <FiX size={26} /> : <FiMenu color="gray" size={26} />}
             strength={0.5}
             className={`flex h-15 w-15 items-center justify-center rounded-full text-white sm:h-18 sm:w-18 ${
               isOpen ? "bg-ctr-dark" : "bg-text"

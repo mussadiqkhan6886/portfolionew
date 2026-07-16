@@ -537,12 +537,12 @@ export const experiences: ExperienceItem[] = [
     period: "Aug 2025 — Present",
     location: "Islamabad, PK",
     bullets: [
-      "Built and deployed 20+ production websites for clients across Pakistan, Saudi Arabia, and the UK — solo, end-to-end.",
-      "Architected full-stack Next.js + TypeScript apps with MongoDB, NextAuth, Cloudinary, and REST API routes.",
+      "Built and deployed 20+ production websites for clients across Pakistan, Saudi Arabia, and the UK, solo, end-to-end.",
+      "Architected full-stack Next.js + TypeScript apps with MongoDB, NextAuth, Context API, Cloudinary, and REST API routes.",
       "Engineered admin dashboards with product CRUD, order fulfilment, coupon engines, and real-time analytics.",
-      "Achieved 99+ Lighthouse SEO scores via JSON-LD, XML sitemaps, Open Graph, and GSC integration.",
+      "Achieved 99+ Lighthouse SEO scores via JSON-LD, XML sitemaps, Open Graph, Semantic tags, A11y, GSC & Meta Pixel integration.",
     ],
-    tags: ["Next.js 16", "TypeScript", "MongoDB", "Tailwind CSS", "Cloudinary", "JWT", "SEO"],
+    tags: ["Next.js 16", "TypeScript", "MongoDB", "Tailwind CSS", "Cloudinary", "JWT", "SEO", "Perfomance Optimzation", "Context API"],
   },
   {
     index: "02",
@@ -556,7 +556,7 @@ export const experiences: ExperienceItem[] = [
       "Resolved cross-browser CSS inconsistencies across mobile, tablet, and desktop viewports.",
       "Built responsive, animation-driven UIs in a production-speed remote environment.",
     ],
-    tags: ["JavaScript", "CSS3", "DOM Manipulation", "Responsive Design", "CSS Animation"],
+    tags: ["JavaScript", "CSS3", "HTML5" ,"DOM Manipulation", "Responsive Design", "CSS Animation"],
   },
 ];
 
