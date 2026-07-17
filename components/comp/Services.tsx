@@ -1,36 +1,12 @@
 'use client';
 
 import Image from 'next/image'
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { useEffect, useRef } from 'react'
 import CircularText from '../ui/CircularText';
+import UseParallexImage from '@/lib/hooks/UseParallexImage';
 
-gsap.registerPlugin(ScrollTrigger);
 const Services = () => {
-    const containerRef = useRef<HTMLDivElement>(null);
-    const imageBoxRef = useRef<HTMLDivElement>(null);
-    const imageRef = useRef<HTMLImageElement>(null);
-
-    useEffect(() => {
-    let ctx = gsap.context(() => {
-
-    gsap.fromTo(imageRef.current, 
-        { yPercent: -51 },
-        {
-        yPercent: 15,
-        scrollTrigger: {
-            trigger: imageBoxRef.current,
-            scrub: true,
-        }
-        }
-    );
-
-    }, containerRef); 
-
-        return () => ctx.revert(); 
-    }, []);
-
+    const {containerRef, imageBoxRef, imageRef} = UseParallexImage(-51, 15)
+   
   return (
     <section ref={containerRef} className="pt-40 lg:pt-50 pb-30 flex flex-col-reverse md:flex-row  gap-14 lg:gap-20 lg:px-12">
         <div 

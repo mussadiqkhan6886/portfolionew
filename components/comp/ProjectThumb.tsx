@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap'
+import UseParallexImage from '@/lib/hooks/UseParallexImage';
 
 interface Props {
     thumbnail: string
@@ -12,28 +11,8 @@ interface Props {
 
 const ProjectThumb = ({thumbnail, logo, title}: Props) => {
 
-    const containerRef = useRef<HTMLDivElement>(null);
-  const imageBoxRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
+ const {containerRef, imageBoxRef, imageRef} = UseParallexImage(-15, 15)
 
-  useEffect(() => {
-  let ctx = gsap.context(() => {
-
-    gsap.fromTo(imageRef.current, 
-      { yPercent: 15 },
-      {
-        yPercent: -15,
-        scrollTrigger: {
-          trigger: imageBoxRef.current,
-          scrub: true,
-        }
-      }
-    );
-
-  }, containerRef); 
-
-  return () => ctx.revert(); 
-}, []);
   return (
     <div ref={containerRef} className="relative max-w-6xl mx-auto w-full">
         <div className="relative w-full h-screen overflow-hidden" ref={imageBoxRef}>

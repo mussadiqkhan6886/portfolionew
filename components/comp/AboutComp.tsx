@@ -1,36 +1,12 @@
 "use client"; 
 
 import Image from 'next/image';
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import FloatEffect from '../ui/FloatEffect';
-
-gsap.registerPlugin(ScrollTrigger);
+import UseParallexImage from '@/lib/hooks/UseParallexImage';
 
 const About = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const imageBoxRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
 
-  useEffect(() => {
-  let ctx = gsap.context(() => {
-
-    gsap.fromTo(imageRef.current, 
-      { yPercent: -15 },
-      {
-        yPercent: 15,
-        scrollTrigger: {
-          trigger: imageBoxRef.current,
-          scrub: true,
-        }
-      }
-    );
-
-  }, containerRef); 
-
-  return () => ctx.revert(); 
-}, []);
+  const {containerRef, imageBoxRef, imageRef} = UseParallexImage(-15, 15)
 
   return (
       <section ref={containerRef} className="flex flex-col lg:flex-row gap-8 md:px-13 py-14 md:py-26 relative items-start">
