@@ -63,8 +63,8 @@ const Contact = () => {
               src="/img3.png"
               alt="Mussadiq Khan"
               className="w-23 h-23 inline-block rounded-full object-cover"
-              width={32}
-              height={32}
+              width={200}
+              height={200}
             />
             <FiArrowDownRight className="absolute left-0 -bottom-18" size={30} />
           </div>

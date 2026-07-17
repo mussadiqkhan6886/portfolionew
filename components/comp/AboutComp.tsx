@@ -37,7 +37,7 @@ const About = () => {
         
         <FloatEffect output={[-15, 100]}  className="w-full lg:w-99 mb-6 lg:mb-0 space-y-5 mr-5">
           <p >
-            I help companies from all over the world with tailor-made solutions. With each project, I push my work to new horizons, always putting quality first.
+            I help businesses from all over the world with tailor-made solutions. With each project, I push my work to new horizons, always putting quality first.
           </p>
           <p className="text-gray">Always Exploring...</p>
         </FloatEffect>

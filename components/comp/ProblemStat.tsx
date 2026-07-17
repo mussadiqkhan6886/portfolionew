@@ -16,7 +16,7 @@ const ProblemStat = ({
   techStack,
   description
 }: ProblemStatProps) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(1);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const sections = [
     {
