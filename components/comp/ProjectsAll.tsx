@@ -1,24 +1,16 @@
 'use client';
 
 import { projects } from '@/constants'
-import React, { useEffect, useRef, useState } from 'react'
-import gsap from "gsap"
-import { AnimatePresence, easeInOut, motion } from 'framer-motion';
-import { THUMB_H, THUMB_W } from './ProjectsShowCase';
-import Image from 'next/image';
-import TransitionLink from './TransitionLink';
-import MagnetText from '../ui/MagnetEffect';
+import React, { useEffect, useState } from 'react'
+import {  motion } from 'framer-motion';
 import ProjectShowCaseMobile from './ProjectShowCaseMobile';
+import useCustomCursor from '@/lib/hooks/useCustomCursor';
+import CustomCursor from './CustomCursor';
 
-const ProjectsAll = ({ option }: { option: string }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const cursorRef = useRef<HTMLDivElement>(null);
+const ProjectsAll = ({ option }: { option: string }) => { 
   const [smaller, setSmaller] = useState(false)
-  const xTo = useRef<gsap.QuickToFunc | null>(null);
-  const yTo = useRef<gsap.QuickToFunc | null>(null);
 
-  const [activeId, setActiveId] = useState<string | null>(null);
-  const [isHovering, setIsHovering] = useState(false);
+  const {containerRef, cursorRef, activeId, isHovering, handleMouseMove, handleEnter, handleLeave} = useCustomCursor()
 
   useEffect(() => {
     const checkSize = () => {
@@ -31,27 +23,6 @@ const ProjectsAll = ({ option }: { option: string }) => {
     return  () =>  window.removeEventListener("resize", checkSize)
   }, [])
 
-  // Set up the magnetic-follow quickTo tweens once.
-  useEffect(() => {
-    if (!cursorRef.current) return;
-    xTo.current = gsap.quickTo(cursorRef.current, "x", {
-      duration: 0.55,
-      ease: "power3.out",
-    });
-    yTo.current = gsap.quickTo(cursorRef.current, "y", {
-      duration: 0.55,
-      ease: "power3.out",
-    });
-  }, [option, smaller]);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = containerRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    xTo.current?.(x);
-    yTo.current?.(y);
-  };
 
   const activeProject = projects.find((p) => p.id === activeId) ?? null;
 
@@ -64,68 +35,10 @@ const ProjectsAll = ({ option }: { option: string }) => {
         <section
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      onMouseLeave={() => {
-        setIsHovering(false);
-        setActiveId(null);
-      }}
+      onMouseLeave={handleLeave}
       className="relative my-13 w-full"
     >
-      <div
-        ref={cursorRef}
-        className="pointer-events-none absolute left-[-20%] top-[-14%] z-50"
-      >
-        <AnimatePresence>
-          {isHovering && activeProject && (
-            <motion.div
-              key="thumb"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0 }}
-              transition={{ duration: 0.35, ease: easeInOut }}
-              style={{
-                width: THUMB_W,
-                height: THUMB_H,
-                transform: "translate(-50%, -50%)",
-              }}
-              className="relative overflow-hidden"
-            >
-              {/* Crossfading image layer */}
-              <AnimatePresence mode="popLayout">
-                <motion.div
-                  key={activeProject.id}
-                  initial={{ y: 300 }}
-                  animate={{ y: 0 }}
-                  exit={{ y: 300 }}
-                  transition={{ duration: 0.4 }}
-                  className="absolute inset-0 h-full w-full object-cover flex items-center justify-center"
-                >
-                  <Image
-                    src={activeProject.thumbnail}
-                    alt={activeProject.title}
-                    width={360}
-                    height={300}
-                    className="object-cover w-full h-full object-center"
-                  />
-                </motion.div>
-              </AnimatePresence>
-
-              <TransitionLink
-                href={`/work/${activeProject.link}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="pointer-events-none absolute inset-0 flex items-center justify-center"
-              >
-                <MagnetText
-                  text="View"
-                  className="pointer-events-auto rounded-full bg-ctr w-18 h-18 p-2 text-sm font-medium text-white text-center items-center justify-center "
-                  strength={1}
-                  dot={"no"}
-                />
-              </TransitionLink>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+      <CustomCursor top={"left-[-20%]"} left={"top-[-14%]"} activeProject={activeProject} cursorRef={cursorRef} isHovering={isHovering} />
 
       <motion.table initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} className="w-full border-collapse text-left table-fixed">
         <thead>
@@ -140,10 +53,7 @@ const ProjectsAll = ({ option }: { option: string }) => {
             {projects.map((item) => (
             <tr
                 key={item.id}
-                onMouseEnter={() => {
-                setIsHovering(true);
-                setActiveId(item.id);
-                }}
+                onMouseEnter={() => handleEnter(item.id)}
                 className="px-3 text-black hover:px-0 duration-300 transition-all"
             >
                 <td className="py-9 pr-4 text-4xl capitalize tracking-tight">
