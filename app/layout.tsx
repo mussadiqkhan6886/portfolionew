@@ -6,7 +6,6 @@ import { dSans } from "@/constants/font";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import IntroLoader from "@/components/ui/Intro";
 import ReactLenis from "lenis/react"
-import { AnimatePresence } from "framer-motion";
 import PageTransition from "@/components/ui/PageTransition";
 
 export const metadata: Metadata = {
