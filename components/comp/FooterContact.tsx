@@ -22,8 +22,8 @@ const FooterContact = () => {
                 src="/img3.png"
                 alt="Mussadiq Khan"
                 className="w-23 h-23 inline-block mr-4 rounded-full object-cover"
-                width={32}
-                height={32}
+                width={200}
+                height={200}
               /> Let&apos;s work
               <br />
               together
