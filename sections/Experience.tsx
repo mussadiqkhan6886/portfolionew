@@ -5,6 +5,7 @@ import { motion, AnimatePresence, easeInOut } from "motion/react";
 import { experiences } from "@/constants";
 import MagnetText from "@/components/ui/MagnetEffect";
 import {gsap} from "gsap"
+import useCustomCursor from "@/lib/hooks/useCustomCursor";
 
 // ─── Stat counter ─────────────────────────────────────────────────────────────
 
@@ -49,33 +50,7 @@ function ExperienceRow({
   onToggle: () => void;
 }) {
 
-  const [isHovering, setIsHovering] = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null);
-  const cursorRef = useRef<HTMLDivElement>(null);
-
-  const xTo = useRef<gsap.QuickToFunc | null>(null);
-  const yTo = useRef<gsap.QuickToFunc | null>(null);
-
-  useEffect(() => {
-      if (!cursorRef.current) return;
-      xTo.current = gsap.quickTo(cursorRef.current, "x", {
-        duration: 0.55,
-        ease: "power3.out",
-      });
-      yTo.current = gsap.quickTo(cursorRef.current, "y", {
-        duration: 0.55,
-        ease: "power3.out",
-      });
-    }, []);
-
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-      const rect = containerRef.current?.getBoundingClientRect();
-      if (!rect) return;
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      xTo.current?.(x);
-      yTo.current?.(y);
-    };
+  const {containerRef, cursorRef, isHovering, setIsHovering, handleMouseMove} = useCustomCursor()
 
   return (
     <motion.div
@@ -150,7 +125,7 @@ function ExperienceRow({
                 <button
                   className="pointer-events-none absolute inset-0 flex items-center justify-center"
                 >
-                  <MagnetText text={isOpen ? "Close" : "View"} className="pointer-events-auto rounded-full bg-ctr w-18 h-18 p-2 text-sm font-medium text-white text-center items-center justify-center transition-transform duration-300" strength={7} dot={"no"} />
+                  <MagnetText text={isOpen ? "Close" : "View"} className="pointer-events-auto rounded-full bg-ctr w-18 h-18 p-2 text-sm font-medium text-white text-center items-center justify-center" strength={0.7} dot={"no"} />
                 </button>
               </motion.div>
             )}
