@@ -1,5 +1,4 @@
 import ContactForm from '@/components/comp/ContactForm';
-import FloatEffect from '@/components/ui/FloatEffect';
 import MagnetText from '@/components/ui/MagnetEffect';
 import Image from 'next/image'
 import Link from 'next/link';

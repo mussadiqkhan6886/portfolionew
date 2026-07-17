@@ -4,7 +4,6 @@ import Services from '@/components/comp/Services'
 import { services } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
-import { FiArrowRight } from 'react-icons/fi'
 
 const About = () => {
   return (
