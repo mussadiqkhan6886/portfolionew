@@ -8,11 +8,12 @@ import Link from "next/link";
 import Image from "next/image";
 import MagnetText from "@/components/ui/MagnetEffect";
 import TransitionLink from "./TransitionLink";
+import { twMerge } from "tailwind-merge";
 
 export const THUMB_W = 380;
 export const THUMB_H = 340;
 
-export default function ProjectsShowcase() {
+export default function ProjectsShowcase({className}: {className?: string}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
 
@@ -54,7 +55,7 @@ export default function ProjectsShowcase() {
         setIsHovering(false);
         setActiveId(null);
       }}
-      className="relative max-w-240 mx-auto px-5 lg:px-0 w-full text-black"
+      className={twMerge("relative max-w-240 mx-auto px-5 lg:px-0 w-full text-black", className)}
     >
       <h3 className="text-gray uppercase text-sm border-b border-border pb-10">Recent Work</h3>
       {projects.slice(0, 4).map((project) => (

@@ -1,12 +1,11 @@
 import { projects } from '@/constants'
 import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
 import TransitionLink from './TransitionLink'
+import { twMerge } from 'tailwind-merge'
 
-const ProjectShowCaseMobile = ({smaller, work}: {smaller?: boolean, work?: boolean}) => {
+const ProjectShowCaseMobile = ({smaller, work, className}: {smaller?: boolean, work?: boolean, className?: string}) => {
   return (
-    <section className={`px-5 grid ${smaller ? "grid-cols-1" : "grid-cols-2"} place-items-center gap-17 items-center justify-center`}>
+    <section className={twMerge(`px-5 grid ${smaller ? "grid-cols-1" : "grid-cols-2"} place-items-center gap-17 items-center justify-center`, className)}>
       {projects.slice(0,4).map((item, i) => (
         <TransitionLink href={`/work/${item.link}`} key={i} className="h-[80vh] w-full block">
             <div className="relative w-full h-[78%]">

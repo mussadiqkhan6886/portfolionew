@@ -2,9 +2,6 @@ import TransitionLink from '@/components/comp/TransitionLink'
 import FloatEffect from '@/components/ui/FloatEffect'
 import MagnetText from '@/components/ui/MagnetEffect'
 import ResponsiveSplitText from '@/components/ui/ScrollEffect'
-import ScrollFloat from '@/components/ui/ScrollEffect'
-import Link from 'next/link'
-import React from 'react'
 
 const About = () => {
   return (
