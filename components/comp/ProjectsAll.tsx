@@ -72,7 +72,7 @@ const ProjectsAll = ({ option }: { option: string }) => {
     >
       <div
         ref={cursorRef}
-        className="pointer-events-none absolute left-[-20%] top-[-30%] z-50"
+        className="pointer-events-none absolute left-[-20%] top-[-14%] z-50"
       >
         <AnimatePresence>
           {isHovering && activeProject && (
@@ -117,8 +117,8 @@ const ProjectsAll = ({ option }: { option: string }) => {
               >
                 <MagnetText
                   text="View"
-                  className="pointer-events-auto rounded-full bg-ctr w-18 h-18 p-2 text-sm font-medium text-white text-center items-center justify-center transition-transform duration-300"
-                  strength={7}
+                  className="pointer-events-auto rounded-full bg-ctr w-18 h-18 p-2 text-sm font-medium text-white text-center items-center justify-center "
+                  strength={1}
                   dot={"no"}
                 />
               </TransitionLink>
@@ -164,7 +164,7 @@ const ProjectsAll = ({ option }: { option: string }) => {
             </tr>
             ))}
         </tbody>
-        </motion.table>
+      </motion.table>
     </section>
       )
     

@@ -14,7 +14,7 @@ const WorkComp = () => {
       <section className='min-h-[60vh] md:min-h-[70vh] px-5 gap-8 h-full flex flex-col justify-end'>
         <h1 className="text-[44px] leading-none md:text-6xl lg:text-[86px] lg:leading-22 tracking-tight">Engineering the future of <br className="hidden sm:block" /> digital experience</h1>
         <div className="flex justify-between pt-2 w-full items-center">
-          <p className="max-w-xl text-gray-700">Collaborating with forward-thinking brands to build fast, scalable, and beautifully engineered web systems. We transform complex product strategies into intuitive, high-performance interfaces that scale effortlessly.</p>
+          <p className="max-w-xl text-gray-700">Collaborating with forward-thinking brands to build fast, scalable, and beautifully engineered web systems. I transform complex product strategies into intuitive, high-performance interfaces that scale effortlessly.</p>
           <div className='hidden md:flex gap-4'>
             <button onClick={() => setOption("col")}>
               <MagnetText dot="no" strength={0.6} className={`px-5 py-5 transition-color duration-300 rounded-full ${option === "col" ? "bg-black text-white border border-black" : "bg-white border border-border hover:bg-ctr hover:text-white"}`} text={<FiMenu size={28} /> } />

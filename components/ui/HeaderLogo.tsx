@@ -200,7 +200,7 @@ const TextPressure: React.FC<TextPressureProps> = ({
   return (
     <div ref={containerRef} className="hidden md:block relative w-full h-full overflow-hidden bg-transparent">
       {styleElement}
-      <h1
+      <h2
         ref={titleRef}
         className={`text-pressure-title ${className} ${
           flex ? 'flex justify-between' : ''
@@ -228,7 +228,7 @@ const TextPressure: React.FC<TextPressureProps> = ({
             {char === ' ' ? '\u00A0' : char}
           </span>
         ))}
-      </h1>
+      </h2>
     </div>
   );
 };

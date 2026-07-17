@@ -13,7 +13,7 @@ const ProjectShowCaseMobile = ({smaller, work}: {smaller?: boolean, work?: boole
                 <Image src={item.thumbnail} alt={item.title} fill className="object-center object-cover" />
             </div>
             <div>
-                <h3 className="border-b border-gray text-4xl py-5">{item.title}</h3>
+                <h2 className="border-b border-gray text-4xl py-5">{item.title}</h2>
                 <div className="py-3 flex justify-between items-center">
                     <p className="capitalize">{item.role}</p>
                     <p className="capitalize">{item.location}</p>
