@@ -522,10 +522,16 @@ export const allReviews = [
 ];
 
 export const cert = [
-  {id: 1, src: "/certificate/certf.png", title:"certificate 1"},
-  {id: 2, src: "/certificate/certf.png", title:"certificate 2"},
-  {id: 3, src: "/certificate/certf.png", title:"certificate 3"},
-  {id: 4, src: "/certificate/certf.png", title:"certificate 4"},
+  {id: 1, src: "/certificate/frontend.png", title:"frontend"},
+  {id: 2, src: "/certificate/javascript.png", title:"javascript"},
+  {id: 3, src: "/certificate/responsive.png", title:"responsive"},
+  {id: 4, src: "/certificate/redux.png", title:"redux"},
+  {id: 5, src: "/certificate/nextjs.webp", title:"nextjs"},
+  {id: 6, src: "/certificate/interview.png", title:"interview"},
+  {id: 7, src: "/certificate/typescript.png", title:"typescript"},
+  {id: 8, src: "/certificate/figma.png", title:"figma"},
+  {id: 9, src: "/certificate/prompt.png", title:"prompt"},
+  {id: 9, src: "/certificate/aurex.png", title:"aurex"},
 ]
 
 export const experiences: ExperienceItem[] = [
