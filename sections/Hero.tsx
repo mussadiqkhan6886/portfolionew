@@ -6,7 +6,7 @@ import { HiArrowDownRight } from 'react-icons/hi2'
 
 const Hero = () => {
   return (
-    <section style={{backgroundImage: `URL(${"/img3.png"})`, backgroundPosition: "top", backgroundRepeat: "no-repeat"}} className="w-full h-dvh relative bg-gray/98 overflow-hidden bg-cover xl:bg-contain">
+    <section style={{backgroundImage: `URL(${"/img3.webp"})`, backgroundPosition: "top", backgroundRepeat: "no-repeat"}} className="w-full h-dvh relative bg-gray/98 overflow-hidden bg-cover xl:bg-contain">
       <div className="absolute w-22 h-dvh left-0 bg-gray hidden lg:block" />
       <div className="absolute w-screen h-screen inset-0 bg-black/10" />
       <FloatEffect output={[10, -150]} className="absolute flex justify-between w-full left-1/2 bottom-0 sm:top-[57%] -translate-x-1/2 sm:-translate-y-1/2 h-32 sm:h-37 items-center">
@@ -16,7 +16,7 @@ const Hero = () => {
           </div>
           <div className="w-[30%] flex justify-end">
             <div className='bg-gray aspect-square w-full flex items-center justify-center rounded-full '>
-              <Image src="/globes.gif" alt="globe" width={42} height={42} className="rounded-full  mix-blend-darken animate-rotate" />
+              <Image fetchPriority="high" priority src="/globes.gif" alt="globe" width={42} height={42} className="rounded-full  mix-blend-darken animate-rotate" />
             </div>
           </div>
         </div>

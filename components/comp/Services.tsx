@@ -39,7 +39,7 @@ const Services = () => {
             >
             <Image 
                 ref={imageRef}
-                src="/about2.jpg" 
+                src="/about2.webp" 
                 alt="about 2 image" 
                 fill
                 className="absolute top-0 left-0 w-full h-[130%] object-cover object-center" 

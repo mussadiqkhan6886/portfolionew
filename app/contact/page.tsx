@@ -14,7 +14,7 @@ const Contact = () => {
           <div>
               <h6 className="text-[clamp(42px,7vw,90px)] leading-none tracking-tight text-white">
                   <Image
-                  src="/img3.png"
+                  src="/img3.webp"
                   alt="Mussadiq Khan"
                   className="w-18 h-18 inline-block mr-4 rounded-full object-cover"
                   width={32}
@@ -60,7 +60,7 @@ const Contact = () => {
         <section className="w-[30%]  hidden md:block lg:w-[20%] pt-40">
           <div className="relative mb-34">
             <Image
-              src="/img3.png"
+              src="/img3.webp"
               alt="Mussadiq Khan"
               className="w-23 h-23 inline-block rounded-full object-cover"
               width={200}

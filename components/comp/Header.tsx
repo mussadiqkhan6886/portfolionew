@@ -53,7 +53,6 @@ const Header = () => {
       >
         <button onClick={() => setIsOpen((prev) => !prev)}>
           <MagnetText
-            
             dot="no"
             text={isOpen ? <FiX size={26} /> : <FiMenu color="gray" size={26} />}
             strength={0.5}

@@ -48,7 +48,7 @@ const About = () => {
         >
           <Image 
             ref={imageRef}
-            src="/about1.jpg" 
+            src="/about1.webp" 
             alt="about image" 
             fill
             className="absolute top-0 left-0 w-full h-[130%] object-cover object-center" 
