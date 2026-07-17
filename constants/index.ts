@@ -531,7 +531,7 @@ export const cert = [
   {id: 7, src: "/certificate/typescript.png", title:"typescript"},
   {id: 8, src: "/certificate/figma.png", title:"figma"},
   {id: 9, src: "/certificate/prompt.png", title:"prompt"},
-  {id: 9, src: "/certificate/aurex.png", title:"aurex"},
+  {id: 10, src: "/certificate/aurex.png", title:"aurex"},
 ]
 
 export const experiences: ExperienceItem[] = [
