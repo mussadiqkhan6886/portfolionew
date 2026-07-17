@@ -48,5 +48,3 @@ html::-webkit-scrollbar {
 
 .animate-scroll-down { animation: scroll-down linear infinite; }
 .animate-scroll-up   { animation: scroll-up linear infinite; }
-
-.pause { animation-play-state: paused; }

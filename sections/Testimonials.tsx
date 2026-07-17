@@ -1,7 +1,6 @@
 "use client";
 
-import React from 'react';
-import { motion, useAnimationControls } from 'framer-motion';
+import React, { useState } from 'react';
 import { allReviews } from '@/constants';
 import Image from 'next/image';
 
@@ -34,21 +33,28 @@ const ReviewColumn = ({ reviews, duration, reverse = false }: {
   reviews: typeof allReviews,
   duration: number,
   reverse?: boolean
-}) => (
+}) => {
+  
+  const [pause, setPause] = useState(false)
+
+  return(
   <div
     data-active="false"
-    onMouseEnter={e => e.currentTarget.setAttribute("data-active", "true")}
-    onMouseLeave={e => e.currentTarget.setAttribute("data-active", "false")}
-    className={`flex flex-col data-[active=true]:pause ${
+    onMouseEnter={() => setPause(true)}
+    onMouseLeave={() => setPause(false)}
+    className={`flex flex-col ${
       reverse ? "animate-scroll-up" : "animate-scroll-down"
     }`}
-    style={{ animationDuration: `${duration}s` }}
+     style={{
+    animationPlayState: pause ? "paused" : "running",
+    animationDuration: `${duration}s`,
+  }}
   >
     {reviews.map((rev, i) => (
       <ReviewCard key={i} review={rev} />
     ))}
   </div>
-);
+);}
 
 const Testimonials = () => {
   return (
