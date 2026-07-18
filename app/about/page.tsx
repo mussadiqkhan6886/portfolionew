@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import AboutComp from '@/components/comp/AboutComp'
-import LoadingAnimation from '@/components/comp/LoadingAnimation'
 import Services from '@/components/comp/Services'
 import { services } from '@/constants'
 import { SITE_URL } from '@/app/layout'
@@ -105,7 +104,7 @@ const About = () => {
       <AboutComp />
 
       <section>
-        <h3 className='flex gap-3 items-end text-[33px] sm:text-5xl tracking-tight'>I can help you with <LoadingAnimation /> </h3>
+        <h3 className='text-[33px] sm:text-5xl tracking-tight'>I can help you with ... </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 mt-10 md:mt-16">
           {services.map((service) => (
             <div className="border-t md:border-none border-border" key={service.id}>

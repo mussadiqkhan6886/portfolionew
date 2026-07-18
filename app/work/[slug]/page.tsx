@@ -184,14 +184,6 @@ const SingleWork = async ({params}: Params) => {
               className="relative z-10 w-full scale-y-90 h-auto pointer-events-none"
             />
         </div>
-        {/* simple video */}
-        <div>
-          <video src={project.hero} autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full object-contain"  />
-        </div>
         <FeaturesProj features={project.features} />
         {/* pc*/}
         <div className="relative mx-auto max-w-6xl my-20 ">
@@ -214,12 +206,8 @@ const SingleWork = async ({params}: Params) => {
               className="relative z-10 w-full scale-y-95 md:scale-y-91 lg:scale-80 lg:scale-y-73 h-auto pointer-events-none"
             />
         </div>
-        {/*big image */}
-        <div className="w-full relative h-[40vh] sm:h-[50vh] md:h-[80vh] lg:h-screen">
-          <Image loading="lazy" src={project.image1} alt="image 1" fill className="w-full h-full object-contain" />
-        </div>
-        
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto lg:gap-16 py-24 sm:py-30">
+        {/* mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto lg:gap-16 py-24 sm:py-30">
           {project.mobileShots.map((item, i) => (
             <div
               key={i}
