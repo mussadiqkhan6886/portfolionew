@@ -87,7 +87,6 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
-  manifest: "/site.webmanifest",
   verification: {
     google: "3o7TyGVcbl7HdUTElJVPYv05mzt8Ubwu9N0oQenA0F4",
   },

@@ -1,0 +1,9 @@
+User-agent: *
+
+Allow: /
+Allow: /work
+Allow: /contact
+
+Disallow: /api
+
+Sitemap: https://mussadiqkhan.vercel.app/sitemap.xml
