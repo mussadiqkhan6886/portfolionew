@@ -429,7 +429,7 @@ export const skillsSet = [
       { name: "Material UI", icon: "/skills/mui.png" },
       { name: "Framer Motion", icon: "/skills/fm.svg" },
       { name: "GSAP", icon: "/skills/gsap.svg" },
-      { name: "Lenis", icon: "/skills/lenis.svg" },
+      { name: "Lenis", icon: "/skills/lenis.png" },
       { name: "Figma", icon: "/skills/figma.png" },
       { name: "UI/UX Design", icon: "/skills/ui.png" },
     ],
