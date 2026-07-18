@@ -96,6 +96,8 @@ const Contact = () => {
                   <Image
                   src="/img3.webp"
                   alt="Mussadiq Khan"
+                  fetchPriority="high"
+                  priority
                   className="w-18 h-18 inline-block mr-4 rounded-full object-cover"
                   width={32}
                   height={32}

@@ -144,7 +144,7 @@ const SingleWork = async ({params}: Params) => {
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-6 mb-2 md:mb-6">Location</h2>
             <h3 className="text-[12px] md:text-sm lg:text-base">{project.location}</h3>
           </div>
-          <div className="w-full cols-span-2 mb-1 md:mb-0">
+          <div className="w-full col-span-2 mb-1 md:mb-0">
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-6 mb-2 md:mb-6">STACK</h2>
             <h3 className="text-[12px] md:text-sm lg:text-base">{project.stack}</h3>
           </div>
