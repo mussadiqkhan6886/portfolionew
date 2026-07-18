@@ -16,7 +16,7 @@ interface Params {
     params: Promise<{slug: string}>
 }
 
-export const generateStaticParams = async () => {
+export const generateStaticParams = () => {
   return projects.map(item => ({
      slug: item.link
   }))
