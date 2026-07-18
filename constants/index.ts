@@ -39,7 +39,7 @@ export const projects = [
       "Coupon Code system",
       "Admin Dashboard with Sales Analytics & Product CRUD",
       "Mobile First, ISR-Driven Product Pages",
-      "Lighthouse Performance Score: 100/100",
+      "Lighthouse Performance Score: 99/100",
       "Image Optimization (Next/Image + Cloudinary CDN)",
     ],
     live: "www.chunkdpk.com",
