@@ -16,7 +16,7 @@ interface Params {
     params: Promise<{slug: string}>
 }
 
-export const generateStaticParams = () => {
+export const generateStaticParams = async () => {
   return projects.map(item => ({
      slug: item.link
   }))
@@ -136,7 +136,7 @@ const SingleWork = async ({params}: Params) => {
         <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 tracking-tight">{project.title}</h1>
         <p className="text-sm hidden md:block">{project.description}</p>
         <div className="grid grid-cols-2 sm:flex justify-between  mt-5 md:mt-0 gap-5 sm:gap-10 items-center">
-          <div className="w-[80%] mb-1 md:mb-0">
+          <div className="sm:w-[80%] mb-1 md:mb-0">
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-6 mb-2 md:mb-6">role / Services</h2>
             <h3 className="text-[12px] md:text-sm lg:text-base">{project.service}</h3>
           </div>
@@ -144,7 +144,7 @@ const SingleWork = async ({params}: Params) => {
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-6 mb-2 md:mb-6">Location</h2>
             <h3 className="text-[12px] md:text-sm lg:text-base">{project.location}</h3>
           </div>
-          <div className="w-full mb-1 md:mb-0">
+          <div className="w-full cols-span-2 mb-1 md:mb-0">
             <h2 className="border-b border-border/70 text-[10px] sm:text-xs uppercase text-gray pb-2 md:pb-6 mb-2 md:mb-6">STACK</h2>
             <h3 className="text-[12px] md:text-sm lg:text-base">{project.stack}</h3>
           </div>

@@ -8,7 +8,7 @@ const About = () => {
     <section className="bg-white flex flex-col lg:flex-row justify-between gap-16 max-w-240 mx-auto px-5 lg:px-0 pt-28 lg:pt-40 ">
       <article className="max-w-2xl md:pr-5">
         <ResponsiveSplitText
-          className='text-3xl tracking-tight leading-10'
+          className='text-[25px] sm:text-3xl tracking-tight leading-10'
           text={"Creating websites that turn ideas into exceptional digital experiences. Clean code, thoughtful design, and measurable results."}
         />
       </article>
