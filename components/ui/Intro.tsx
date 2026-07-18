@@ -22,24 +22,29 @@ export default function IntroLoader() {
   const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
-    const greetingInterval = setInterval(() => {
-      setIndex((current) => {
-        if (current === greetings.length - 1) {
-          clearInterval(greetingInterval);
+  let timeout: ReturnType<typeof setTimeout>;
 
-          setTimeout(() => {
-            setShowLoader(false);
-          }, 450);
+  const interval = setInterval(() => {
+    setIndex((current) => {
+      if (current === greetings.length - 1) {
+        clearInterval(interval);
 
-          return current;
-        }
+        timeout = setTimeout(() => {
+          setShowLoader(false);
+        }, 450);
 
-        return current + 1;
-      });
-    }, 140);
+        return current;
+      }
 
-    return () => clearInterval(greetingInterval);
-  }, []);
+      return current + 1;
+    });
+  }, 140);
+
+  return () => {
+    clearInterval(interval);
+    clearTimeout(timeout);
+  };
+}, []);
 
   return (
     <AnimatePresence>
