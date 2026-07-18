@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import FeaturesProj from '@/components/comp/FeaturesProj'
 import NextProj from '@/components/comp/NextProj'
 import ProblemStat from '@/components/comp/ProblemStat'
@@ -5,6 +6,7 @@ import ProjectThumb from '@/components/comp/ProjectThumb'
 import FloatEffect from '@/components/ui/FloatEffect'
 import MagnetText from '@/components/ui/MagnetEffect'
 import { projects } from '@/constants'
+import { SITE_URL } from '@/app/layout'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -20,6 +22,47 @@ export const generateStaticParams = () => {
   }))
 }
 
+export const generateMetadata = async ({ params }: Params): Promise<Metadata> => {
+  const { slug } = await params
+  const project = projects.find(p => p.link === slug)
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+    }
+  }
+
+  const url = `${SITE_URL}/work/${project.link}`
+
+  return {
+    title: project.title,
+    description: project.description,
+    alternates: {
+      canonical: `/work/${project.link}`,
+    },
+    openGraph: {
+      title: `${project.title} | Mussadiq Khan`,
+      description: project.description,
+      url,
+      type: "article",
+      images: [
+        {
+          url: project.thumbnail,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} | Mussadiq Khan`,
+      description: project.description,
+      images: [project.thumbnail],
+    },
+  }
+}
+
 const SingleWork = async ({params}: Params) => {
   const {slug} = await params
 
@@ -33,8 +76,62 @@ const SingleWork = async ({params}: Params) => {
 
   const nextProject = projects[(currentIndex + 1) % projects.length]
 
+  const url = `${SITE_URL}/work/${project.link}`
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Work", item: `${SITE_URL}/work` },
+      { "@type": "ListItem", position: 3, name: project.title, item: url },
+    ],
+  }
+
+  const creativeWorkJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "@id": `${url}#creativework`,
+    name: project.title,
+    description: project.description,
+    url,
+    image: project.thumbnail,
+    creator: { "@id": `${SITE_URL}/#person` },
+    about: project.stack,
+    keywords: Array.isArray(project.skillSet) ? project.skillSet.join(", ") : undefined,
+    isPartOf: { "@id": `${SITE_URL}/work#webpage` },
+    locationCreated: project.location
+      ? { "@type": "Place", name: project.location }
+      : undefined,
+  }
+
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: `${project.title} | Mussadiq Khan`,
+    description: project.description,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    about: { "@id": `${url}#creativework` },
+    breadcrumb: { "@id": `${url}#breadcrumb` },
+  }
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
       <section className="max-w-5xl mx-auto px-4 md:px-12 relative h-screen flex pt-16 sm:pt-12 md:pt-5 justify-evenly flex-col ">
         <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 tracking-tight">{project.title}</h1>
         <p className="text-sm hidden md:block">{project.description}</p>

@@ -3,6 +3,18 @@ import FloatEffect from '@/components/ui/FloatEffect'
 import MagnetText from '@/components/ui/MagnetEffect'
 import React from 'react'
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "404 - Page Not Found",
+  description:
+    "The page you're looking for doesn't exist or may have been moved. Return to the homepage to explore Mussadiq Khan's portfolio.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 const NotFound = () => {
   return (
     <main className="bg-border relative text-ctr-dark flex items-center justify-center h-screen">
