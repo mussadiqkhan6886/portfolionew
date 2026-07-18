@@ -24,7 +24,7 @@ const Hero = () => {
           <FloatEffect output={[0, -80]}>
             <HiArrowDownRight size={22} color='white' />
           </FloatEffect>
-          <h1 className="text-white text-3xl sm:text-[32px] leading-tight tracking-tight">Freelance <br /> Designer & Developer</h1>
+          <h1 className="text-white text-3xl sm:text-[32px] leading-tight tracking-tight">Full-Stack <br /> Web Developer</h1>
         </div>
       </FloatEffect>
 

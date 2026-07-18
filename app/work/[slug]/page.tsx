@@ -14,6 +14,12 @@ interface Params {
     params: Promise<{slug: string}>
 }
 
+export const generateStaticParams = () => {
+  return projects.map(item => ({
+     slug: item.link
+  }))
+}
+
 const SingleWork = async ({params}: Params) => {
   const {slug} = await params
 
