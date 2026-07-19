@@ -11,7 +11,7 @@ export default function IntroLoader() {
   let timeout: ReturnType<typeof setTimeout>;
   timeout = setTimeout(() => {
     setShowLoader(false);
-  }, 2000);
+  }, 1900);
 
   return () => {
     clearTimeout(timeout);
