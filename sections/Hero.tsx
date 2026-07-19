@@ -20,7 +20,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col ml-10 mb-22 h-full justify-end pr-4 md:pr-22">
+        <div className="flex flex-col ml-10 mb-10 h-full justify-end pr-4 md:pr-22">
           <FloatEffect output={[0, -80]}>
             <HiArrowDownRight size={22} color='white' />
           </FloatEffect>
