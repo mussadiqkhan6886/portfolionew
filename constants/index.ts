@@ -42,7 +42,7 @@ export const projects = [
       "100 overall Lighthouse Score",
       "Cloudinary Image Optimization",
     ],
-    live: "www.chunkdpk.com",
+    live: "https://www.chunkdpk.com",
     pcVideo: "/projects/chunkd/pc.mp4",
     laptopVideo: "/projects/chunkd/laptop.mp4",
     mobileShots: [
@@ -86,7 +86,7 @@ export const projects = [
       "Cloudinary Media Delivery",
       "Secured Admin Dashboard",
     ],
-    live: "www.zevoraofficial.com",
+    live: "https://www.zevoraofficial.com",
     pcVideo: "/projects/zevora/pc.mp4",
     laptopVideo: "/projects/zevora/laptop.mp4",
     mobileShots: [
@@ -127,7 +127,7 @@ export const projects = [
       "Context API State",
       "Secured JWT Admin",
     ],
-    live: "www.halirperfumerypk.com",
+    live: "https://www.halirperfumerypk.com",
     pcVideo: "/projects/halir/pc.mp4",
     laptopVideo: "/projects/halir/laptop.mp4",
     mobileShots: [
@@ -166,7 +166,7 @@ export const projects = [
       "ISR Menu Updates",
       "96/100 Lighthouse Score",
     ],
-    live: "www.amassbakery.com",
+    live: "https://www.amassbakery.com",
     pcVideo: "/projects/amassbakery/pc.mp4",
     laptopVideo: "/projects/amassbakery/laptop.mp4",
     mobileShots: [
@@ -205,7 +205,7 @@ export const projects = [
       "Technical SEO",
       "97/100 Lighthouse Score",
     ],
-    live: "www.truehorizon.uk",
+    live: "https://www.truehorizon.uk",
     pcVideo: "/projects/truehorizon/pc.mp4",
     laptopVideo: "/projects/truehorizon/laptop.mp4",
     mobileShots: [
@@ -245,7 +245,7 @@ export const projects = [
       "Accessibility-Focused UI",
       "200+ Product Admin",
     ],
-    live: "www.mzstorepk.com",
+    live: "https://www.mzstorepk.com",
     pcVideo: "/projects/mzstore/pc.mp4",
     laptopVideo: "/projects/mzstore/laptop.mp4",
     mobileShots: [
@@ -284,7 +284,7 @@ export const projects = [
       "ISR Catalog Updates",
       "98/100 Lighthouse Score",
     ],
-    live: "www.shopmirmee.com",
+    live: "https://www.shopmirmee.com",
     pcVideo: "/projects/mirmee/pc.mp4",
     laptopVideo: "/projects/mirmee/laptop.mp4",
     mobileShots: [
@@ -324,7 +324,7 @@ export const projects = [
       "99/100 Lighthouse Score",
       "Secured JWT Admin",
     ],
-    live: "www.kpsla.org",
+    live: "https://www.kpsla.org",
     pcVideo: "/projects/kpsla/pc.mp4",
     laptopVideo: "/projects/kpsla/laptop.mp4",
     mobileShots: [
@@ -366,7 +366,7 @@ export const projects = [
       "TinyMCE Admin Editor",
       "Blog CRUD Dashboard",
     ],
-    live: "www.sabawrites.com",
+    live: "https://www.sabawrites.com",
     pcVideo: "/projects/sabawrites/pc.mp4",
     laptopVideo: "/projects/sabawrites/laptop.mp4",
     mobileShots: [

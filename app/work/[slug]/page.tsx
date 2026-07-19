@@ -154,7 +154,7 @@ const SingleWork = async ({params}: Params) => {
 
         <div className="absolute z-50 -bottom-30 right-10">
           <FloatEffect output={[0,-250]}>
-            <Link href={'/'}>
+            <Link target="_blank" href={project.live}>
               <MagnetText dot="no" text="Live Site" strength={0.6} className="absolute w-41 h-41 items-center justify-center bg-ctr hover:bg-ctr-dark rounded-full text-white -bottom-20 right-8" />
             </Link>
           </FloatEffect>
@@ -187,7 +187,7 @@ const SingleWork = async ({params}: Params) => {
         <FeaturesProj features={project.features} />
         {/* pc*/}
         <div className="relative mx-auto max-w-6xl my-20 ">
-            <div className="absolute left-0 top-3 md:top-9 lg:top-16 xl:top-18 w-full h-full overflow-hidden rounded-lg">
+            <div className="absolute left-0 bg-gray top-3 md:top-9 lg:top-16 xl:top-18 w-full h-full overflow-hidden rounded-lg">
               <video
                 src={project.pcVideo}
                 autoPlay
