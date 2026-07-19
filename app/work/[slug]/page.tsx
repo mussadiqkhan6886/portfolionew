@@ -165,14 +165,14 @@ const SingleWork = async ({params}: Params) => {
         <ProjectThumb thumbnail={project.thumbnail} logo={project.logo} title={project.title}  />
         {/* laptop video */}
         <div className="relative mx-auto max-w-6xl my-20">
-            <div className="absolute left-[13%] -top-1 sm:-top-2 md:-top-3 lg:-top-4 w-[74%] h-full overflow-hidden rounded-lg">
+            <div className="absolute left-[12.5%] -top-1 sm:-top-2 md:-top-3  w-[74.5%] h-full overflow-hidden rounded-lg">
               <video
                 src={project.laptopVideo}
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full h-full  object-contain rounded-lg"
+                className="w-full h-full rounded-3xl  object-contain "
               />
             </div>
 

@@ -167,14 +167,14 @@ export const projects = [
       "96/100 Lighthouse Score",
     ],
     live: "https://www.amassbakery.com",
-    pcVideo: "/projects/amassbakery/pc.mp4",
-    laptopVideo: "/projects/amassbakery/laptop.mp4",
+    pcVideo: "/projects/amass/pc.mp4",
+    laptopVideo: "/projects/amass/laptop.mp4",
     mobileShots: [
-      { type: "image", sr: "/projects/amassbakery/mb1.jpg" },
-      { type: "video", sr: "/projects/amassbakery/mb2video.mp4" },
-      { type: "image", sr: "/projects/amassbakery/mb3.jpg" },
+      { type: "image", sr: "/projects/amass/mb1.jpg" },
+      { type: "video", sr: "/projects/amass/mb2video.mp4" },
+      { type: "image", sr: "/projects/amass/mb3.jpg" },
     ],
-    logo: "/projects/amassbakery/logo.webp",
+    logo: "/projects/amass/logo.webp",
   },
 
   {
@@ -253,7 +253,7 @@ export const projects = [
       { type: "video", sr: "/projects/mzstore/mb2video.mp4" },
       { type: "image", sr: "/projects/mzstore/mb3.jpg" },
     ],
-    logo: "/projects/mzstore/logo.jpegg",
+    logo: "/projects/mzstore/logo.jpeg",
   },
 
   {
@@ -367,14 +367,14 @@ export const projects = [
       "Blog CRUD Dashboard",
     ],
     live: "https://www.sabawrites.com",
-    pcVideo: "/projects/sabawrites/pc.mp4",
-    laptopVideo: "/projects/sabawrites/laptop.mp4",
+    pcVideo: "/projects/saba/pc.mp4",
+    laptopVideo: "/projects/saba/laptop.mp4",
     mobileShots: [
-      { type: "image", sr: "/projects/sabawrites/mb1.jpg" },
-      { type: "video", sr: "/projects/sabawrites/mb2video.mp4" },
-      { type: "image", sr: "/projects/sabawrites/mb3.jpg" },
+      { type: "image", sr: "/projects/saba/mb1.jpg" },
+      { type: "video", sr: "/projects/saba/mb2video.mp4" },
+      { type: "image", sr: "/projects/saba/mb3.jpg" },
     ],
-    logo: "/projects/sabawrites/logo.png",
+    logo: "/projects/saba/logo.png",
   },
 ];
 
