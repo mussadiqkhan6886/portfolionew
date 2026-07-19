@@ -379,10 +379,16 @@ export const projects = [
 ];
 
 export const thumbnails1 = [
-    "/t1.png", "/t2.png", "/t3.png", "/t4.png"
+    {type: "image", src: "/thumbnails/t1.png"},
+    {type: "video", src: "/thumbnails/t6.mp4"},
+    {type: "video", src: "/thumbnails/t7.mp4"},
+    {type: "image", src: "/thumbnails/t2.png"},
 ]
 export const thumbnails2 = [
-    "/t4.png", "/t3.png", "/t2.png", "/t1.png"
+  {type: "image", src: "/thumbnails/t3.png"},
+  {type: "image", src: "/thumbnails/t4.png"},
+  {type: "video", src: "/thumbnails/t8.mp4"},
+  {type: "image", src: "/thumbnails/t5.png"},
 ]
 
 export const skillsSet = [

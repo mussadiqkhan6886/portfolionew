@@ -17,6 +17,11 @@ interface VelocityMapping {
   output: [number, number];
 }
 
+interface Thumbnail {
+  type: string;
+  src: string;
+}
+
 interface VelocityTextProps {
   children: React.ReactNode;
   baseVelocity: number;
@@ -35,7 +40,7 @@ interface VelocityTextProps {
 
 interface ScrollVelocityProps {
   scrollContainerRef?: React.RefObject<HTMLElement>;
-  texts: string[][];
+  texts: Thumbnail[][];
   velocity?: number;
   className?: string;
   damping?: number;
@@ -69,28 +74,19 @@ export const ScrollThumbnail: React.FC<ScrollVelocityProps> = ({
   scrollContainerRef,
   texts = [],
   velocity = 100,
-  className = '',
   damping = 50,
   stiffness = 400,
   numCopies = 6,
   velocityMapping = { input: [0, 1000], output: [0, 5] },
-  parallaxClassName,
-  scrollerClassName,
-  parallaxStyle,
-  scrollerStyle
 }) => {
   function VelocityText({
     children,
     baseVelocity = velocity,
     scrollContainerRef,
-    className = '',
     damping,
     stiffness,
     numCopies,
     velocityMapping,
-    parallaxClassName,
-    scrollerClassName,
-    parallaxStyle,
     scrollerStyle
   }: VelocityTextProps) {
     const baseX = useMotionValue(0);
@@ -165,7 +161,7 @@ export const ScrollThumbnail: React.FC<ScrollVelocityProps> = ({
 
   return (
     <section>
-      {texts.map((text : string[], index) => (
+      {texts.map((text, index) => (
         <VelocityText
         key={index}
         baseVelocity={index % 2 !== 0 ? -velocity : velocity}
@@ -178,16 +174,20 @@ export const ScrollThumbnail: React.FC<ScrollVelocityProps> = ({
         <div className="flex items-center gap-6">
         {text.map((img, i) => (
           <div
-            key={`${img}-${i}`}
-            className="relative h-[200px] w-[280px] mb-6 shrink-0 overflow-hidden md:h-[260px] md:w-[420px] bg-border px-7 py-10"
+            key={`${img.src}-${i}`}
+            className="relative  mb-6 shrink-0 overflow-hidden h-[260px] w-[390px] bg-border px-7 py-10"
           >
-            <Image
-              src={img}
+            {img.type === "video" ? 
+              <video autoPlay playsInline muted loop src={img.src} className="object-cover object-center" />
+            : 
+              <Image
+              src={img.src}
               alt={`Thumbnail ${i + 1}`}
               width={300}
               height={300}
               className="object-cover w-full h-full object-center"
             />
+            }
           </div>
             ))}
           </div>
