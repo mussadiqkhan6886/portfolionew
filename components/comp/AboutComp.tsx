@@ -9,7 +9,7 @@ const About = () => {
   const {containerRef, imageBoxRef, imageRef} = UseParallexImage(-15, 15)
 
   return (
-      <section ref={containerRef} className="flex flex-col lg:flex-row gap-8 md:px-13 py-14 md:py-26 relative items-start">
+      <section ref={containerRef} className="hidden md:flex flex-col lg:flex-row gap-8 md:px-13 py-14 md:py-26 relative items-start">
         
         <FloatEffect output={[-15, 100]}  className="w-full lg:w-99 mb-6 lg:mb-0 space-y-5 mr-5">
           <p >

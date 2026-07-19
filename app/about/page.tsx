@@ -103,6 +103,28 @@ const About = () => {
 
       <AboutComp />
 
+      <section className="flex md:hidden flex-col lg:flex-row gap-8 md:px-13 py-14 md:py-26 relative items-start">
+          
+        <p >
+            I help businesses from all over the world with tailor-made solutions. With each project, I push my work to new horizons, always putting quality first.
+          </p>
+          <p className="text-gray">Always Exploring...</p>
+
+        <div 
+          className="relative w-full h-screen overflow-hidden "
+        >
+          <Image 
+            src="/about1.webp" 
+            alt="about image" 
+            fill
+            priority
+            fetchPriority="high"
+            className="absolute top-0 left-0 w-full h-full object-cover object-center" 
+          />
+        </div>
+  
+        </section>
+
       <section>
         <h3 className='text-[33px] sm:text-5xl tracking-tight'>I can help you with ... </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 mt-10 md:mt-16">

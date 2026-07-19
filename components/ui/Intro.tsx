@@ -2,46 +2,18 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
-
-const greetings = [
-    "Hola",           // Spanish
-    "Bonjour",        // French
-    "Ciao",           // Italian
-  "Hallo",          // German
-  "السلام علیکم",    // Urdu / Arabic
-  "Hej",            // Swedish / Danish
-  "Hallo",          // Dutch
-  "Merhaba",        // Turkish
-  "こんにちは",       // Japanese
-  "안녕하세요",       // Korean
-  "Hello",          // English
-];
+import WritingEffect from "./TypingEffect";
 
 export default function IntroLoader() {
-  const [index, setIndex] = useState(0);
   const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
   let timeout: ReturnType<typeof setTimeout>;
-
-  const interval = setInterval(() => {
-    setIndex((current) => {
-      if (current === greetings.length - 1) {
-        clearInterval(interval);
-
-        timeout = setTimeout(() => {
-          setShowLoader(false);
-        }, 450);
-
-        return current;
-      }
-
-      return current + 1;
-    });
-  }, 140);
+  timeout = setTimeout(() => {
+    setShowLoader(false);
+  }, 2000);
 
   return () => {
-    clearInterval(interval);
     clearTimeout(timeout);
   };
 }, []);
@@ -63,11 +35,7 @@ export default function IntroLoader() {
           }}
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-text"
         >
-          <p
-            className="text-3xl flex gap-4 items-center font-medium tracking-tight text-white md:text-6xl"
-          >
-           <span className="w-2 h-2 block bg-white rounded-full" /> {greetings[index]}
-          </p>
+          <WritingEffect className="text-3xl tracking-wide text-white md:text-6xl" text="i love to code" />
         </motion.div>
       )}
     </AnimatePresence>
