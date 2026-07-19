@@ -96,7 +96,7 @@ const About = () => {
       />
       <section className="py-16 md:py-20 md:px-12 relative border-b border-border h-full flex items-center">
         <h1 className="text-[44px] md:text-6xl lg:text-[86px] leading-none lg:leading-22 tracking-tight">Helping brands thrive <br className="hidden md:block" />in the digital world</h1>
-      <div className='bg-ctr right-17 -bottom-15 md:-bottom-22 aspect-square w-30 h-30 md:w-40 md:h-40 flex items-center justify-center rounded-full absolute'>
+      <div className='hidden bg-ctr right-17 -bottom-15 md:-bottom-22 aspect-square w-30 h-30 md:w-40 md:h-40 md:flex items-center justify-center rounded-full absolute'>
         <Image src="/globes.gif" alt="globe" width={50} height={50} className="rounded-full  mix-blend-darken animate-rotate" />
       </div>
       </section>
