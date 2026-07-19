@@ -46,9 +46,9 @@ export const projects = [
     pcVideo: "/projects/chunkd/pc.mp4",
     laptopVideo: "/projects/chunkd/laptop.mp4",
     mobileShots: [
-      { type: "image", sr: "/projects/chunkd/mb1.jpeg" },
+      { type: "image", sr: "/projects/chunkd/mb1.jpg" },
       { type: "video", sr: "/projects/chunkd/mb2video.mp4" },
-      { type: "image", sr: "/projects/chunkd/mb3.jpeg" },
+      { type: "image", sr: "/projects/chunkd/mb3.jpg" },
     ],
     logo: "/projects/chunkd/logo.png",
   },
@@ -90,9 +90,9 @@ export const projects = [
     pcVideo: "/projects/zevora/pc.mp4",
     laptopVideo: "/projects/zevora/laptop.mp4",
     mobileShots: [
-      { type: "image", sr: "/projects/zevora/mb1.jpeg" },
+      { type: "image", sr: "/projects/zevora/mb1.jpg" },
       { type: "video", sr: "/projects/zevora/mb2video.mp4" },
-      { type: "image", sr: "/projects/zevora/mb3.jpeg" },
+      { type: "image", sr: "/projects/zevora/mb3.jpg" },
     ],
     logo: "/projects/zevora/logo.png",
   },
@@ -100,7 +100,7 @@ export const projects = [
    {
     id: "6",
     service: "Design & Development",
-    title: "Halir Perfumery",
+    title: "Halir",
     role: "design & developer",
     thumbnail: "/projects/halir/halirMain.webp",
     link: "halir",
@@ -131,9 +131,9 @@ export const projects = [
     pcVideo: "/projects/halir/pc.mp4",
     laptopVideo: "/projects/halir/laptop.mp4",
     mobileShots: [
-      { type: "image", sr: "/projects/halir/mb1.jpeg" },
+      { type: "image", sr: "/projects/halir/mb1.jpg" },
       { type: "video", sr: "/projects/halir/mb2video.mp4" },
-      { type: "image", sr: "/projects/halir/mb3.jpeg" },
+      { type: "image", sr: "/projects/halir/mb3.jpg" },
     ],
     logo: "/projects/halir/logo.png",
   },
@@ -147,7 +147,7 @@ export const projects = [
     link: "amassbakery",
     location: "Al Khobar, Saudi Arabia",
     skillSet: ["nextjs", "REST APIs" ,"mongodb", "cloudinary", "typescript", "JWT", "bcryptjs", "nodemailer", "tailwindcss", "context API", "MUI", "Swiper"],
-    stack: "NEXT.JS ✦ MONGODB ✦ TYPESCRIPT ✦ i18n (EN/AR)",
+    stack: "NEXT.JS ✦ MONGODB ✦ TYPESCRIPT ✦ (EN/AR)",
     description:
       "Amass Bakery replaced WhatsApp/Instagram cake ordering with a bilingual (EN/AR, true RTL) digital menu and cake builder. Engineered a calendar-based capacity system with per-category rules simple orders capped at 2/day, custom at 1/day, wedding on a separate flow all handled through admin dashboard auto-blocking dates once limits are hit, across a 50+ product catalog.",
     problemStatement:
@@ -170,11 +170,11 @@ export const projects = [
     pcVideo: "/projects/amassbakery/pc.mp4",
     laptopVideo: "/projects/amassbakery/laptop.mp4",
     mobileShots: [
-      { type: "image", sr: "/projects/amassbakery/mb1.jpeg" },
+      { type: "image", sr: "/projects/amassbakery/mb1.jpg" },
       { type: "video", sr: "/projects/amassbakery/mb2video.mp4" },
-      { type: "image", sr: "/projects/amassbakery/mb3.jpeg" },
+      { type: "image", sr: "/projects/amassbakery/mb3.jpg" },
     ],
-    logo: "/projects/amassbakery/logo.png",
+    logo: "/projects/amassbakery/logo.webp",
   },
 
   {
@@ -209,9 +209,9 @@ export const projects = [
     pcVideo: "/projects/truehorizon/pc.mp4",
     laptopVideo: "/projects/truehorizon/laptop.mp4",
     mobileShots: [
-      { type: "image", sr: "/projects/truehorizon/mb1.jpeg" },
+      { type: "image", sr: "/projects/truehorizon/mb1.jpg" },
       { type: "video", sr: "/projects/truehorizon/mb2video.mp4" },
-      { type: "image", sr: "/projects/truehorizon/mb3.jpeg" },
+      { type: "image", sr: "/projects/truehorizon/mb3.jpg" },
     ],
     logo: "/projects/truehorizon/logo.png",
   },
@@ -249,11 +249,11 @@ export const projects = [
     pcVideo: "/projects/mzstore/pc.mp4",
     laptopVideo: "/projects/mzstore/laptop.mp4",
     mobileShots: [
-      { type: "image", sr: "/projects/mzstore/mb1.jpeg" },
+      { type: "image", sr: "/projects/mzstore/mb1.jpg" },
       { type: "video", sr: "/projects/mzstore/mb2video.mp4" },
-      { type: "image", sr: "/projects/mzstore/mb3.jpeg" },
+      { type: "image", sr: "/projects/mzstore/mb3.jpg" },
     ],
-    logo: "/projects/mzstore/logo.png",
+    logo: "/projects/mzstore/logo.jpegg",
   },
 
   {
@@ -288,11 +288,11 @@ export const projects = [
     pcVideo: "/projects/mirmee/pc.mp4",
     laptopVideo: "/projects/mirmee/laptop.mp4",
     mobileShots: [
-      { type: "image", sr: "/projects/mirmee/mb1.jpeg" },
+      { type: "image", sr: "/projects/mirmee/mb1.jpg" },
       { type: "video", sr: "/projects/mirmee/mb2video.mp4" },
-      { type: "image", sr: "/projects/mirmee/mb3.jpeg" },
+      { type: "image", sr: "/projects/mirmee/mb3.jpg" },
     ],
-    logo: "/projects/mirmee/logo.png",
+    logo: "/projects/mirmee/logo.jpg",
   },
 
   {
@@ -328,9 +328,9 @@ export const projects = [
     pcVideo: "/projects/kpsla/pc.mp4",
     laptopVideo: "/projects/kpsla/laptop.mp4",
     mobileShots: [
-      { type: "image", sr: "/projects/kpsla/mb1.jpeg" },
+      { type: "image", sr: "/projects/kpsla/mb1.jpg" },
       { type: "video", sr: "/projects/kpsla/mb2video.mp4" },
-      { type: "image", sr: "/projects/kpsla/mb3.jpeg" },
+      { type: "image", sr: "/projects/kpsla/mb3.jpg" },
     ],
     logo: "/projects/kpsla/logo.png",
   },
@@ -370,9 +370,9 @@ export const projects = [
     pcVideo: "/projects/sabawrites/pc.mp4",
     laptopVideo: "/projects/sabawrites/laptop.mp4",
     mobileShots: [
-      { type: "image", sr: "/projects/sabawrites/mb1.jpeg" },
+      { type: "image", sr: "/projects/sabawrites/mb1.jpg" },
       { type: "video", sr: "/projects/sabawrites/mb2video.mp4" },
-      { type: "image", sr: "/projects/sabawrites/mb3.jpeg" },
+      { type: "image", sr: "/projects/sabawrites/mb3.jpg" },
     ],
     logo: "/projects/sabawrites/logo.png",
   },
