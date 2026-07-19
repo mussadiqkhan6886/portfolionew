@@ -31,7 +31,7 @@ const maskRevealVariants = {
 
 const Skills = () => {
   return (
-    <section className="max-w-6xl mx-auto my-5 px-6 xl:px-0 select-none">
+    <section className="max-w-6xl mx-auto mt-20 md:mt-5 my-5 px-6 xl:px-0 select-none">
       <h3 className="text-gray uppercase text-sm border-b border-border pb-8">Skills Set</h3>
       
       <div className="py-8 flex flex-col gap-10">

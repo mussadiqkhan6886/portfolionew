@@ -27,7 +27,7 @@ const ProjectShowCaseMobile = ({
         <TransitionLink
           href={`/work/${item.link}`}
           key={item.link}
-          className="h-[80vh] w-full block"
+          className="h-[75vh] w-full block"
         >
           <div className="relative h-[78%] w-full">
             <Image

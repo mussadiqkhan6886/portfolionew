@@ -15,13 +15,9 @@ const FeaturesProj = ({ features }: { features: string[] }) => {
             key={index}
             initial={{
               opacity: 0,
-              y: 35,
-              scale: 0.9,
             }}
             whileInView={{
               opacity: 1,
-              y: 0,
-              scale: 1,
             }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{
@@ -29,10 +25,6 @@ const FeaturesProj = ({ features }: { features: string[] }) => {
               stiffness: 260,
               damping: 14,
               delay: index * 0.07,
-            }}
-            whileHover={{
-              y: -6,
-              scale: 1.02,
             }}
             className="group flex items-center gap-4 rounded-2xl border border-border p-5"
           >
