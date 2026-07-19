@@ -24,7 +24,7 @@ const About = () => {
         >
           <Image 
             ref={imageRef}
-            src="/about1.webp" 
+            src="/projectassets/abouts1.webp" 
             alt="about image" 
             fill
             priority

@@ -114,7 +114,7 @@ const About = () => {
           className="relative w-full h-screen overflow-hidden "
         >
           <Image 
-            src="/about1.webp" 
+            src="/projectassets/abouts1.webp" 
             alt="about image" 
             fill
             priority

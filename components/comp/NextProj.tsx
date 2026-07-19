@@ -42,7 +42,7 @@ const NextProj = ({name, link, image}: Props) => {
             transition-transform
             duration-700
             ease-[cubic-bezier(.22,1,.36,1)]
-            translate-y-[80%]
+            translate-y-[70%]
             group-hover:translate-y-[35%]
             "
         />

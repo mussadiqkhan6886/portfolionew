@@ -207,7 +207,7 @@ const SingleWork = async ({params}: Params) => {
             />
         </div>
         {/* mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto lg:gap-16 py-24 sm:py-30">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto lg:gap-16 py-20">
           {project.mobileShots.map((item, i) => (
             <div
               key={i}
