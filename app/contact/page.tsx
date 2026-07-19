@@ -99,8 +99,8 @@ const Contact = () => {
                   fetchPriority="high"
                   priority
                   className="w-18 h-18 inline-block mr-4 rounded-full object-cover"
-                  width={32}
-                  height={32}
+                  width={200}
+                  height={200}
                 /> Let&apos;s start a 
                 <br />
                 project together

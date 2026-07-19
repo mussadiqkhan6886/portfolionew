@@ -39,7 +39,7 @@ export const projects = [
       "Coupon Code System",
       "Admin Sales Analytics",
       "ISR Product Pages",
-      "99/100 Lighthouse Score",
+      "100 overall Lighthouse Score",
       "Cloudinary Image Optimization",
     ],
     live: "www.chunkdpk.com",
@@ -458,64 +458,68 @@ export const skillsSet = [
 
 export const allReviews = [
   {
-    name: "Ali Khan",
+    name: "IQzaibessence",
     review:
-      "Working with Mussadiq was a great experience. He understood my requirements clearly and delivered a modern, responsive website that looks professional on every device.",
-    image: "/reviews/s.jpg",
+      "Excellent work, It is so pleasing to work with you. You are doing so good may Allah bless you more n more",
   },
   {
-    name: "Sarah Ahmed",
+    name: "Mir Mee",
     review:
-      "The website design was clean, fast, and exactly what I wanted. Communication was smooth throughout the project, and every small detail was handled carefully.",
-    image: "/reviews/s.jpg",
+      "Working with Scrupulous(Mussadiq) was amazing they actually listened to what we wanted for Mirmee and just made it happen. The communication was super easy, and they didnt overcomplicate things. Out site looks great and the results speaks for themselves. Definitely going to work with them again",
+    image: "/projects/mirmee/logo.jpg",
   },
   {
-    name: "Hamza Shah",
+    name: "HALIR",
     review:
-      "Mussadiq improved the performance and user experience of our website significantly. The final result was fast, mobile-friendly, and visually impressive.",
-    image: "/reviews/s.jpg",
+      "Work with mussadiq is peaceful you just have to put requirments and idea and he will bring that to internet. His work is professional and have 24/7 customer support. His creativity and work is outstanding have no doubt to come back to him.Beyond being talented he is an amazing person to work with.",
+    image: "/projects/halir/logo.png",
   },
   {
-    name: "Ayesha Malik",
+    name: "Saba writes",
     review:
-      "I really liked how professionally the project was managed. The design was modern, easy to use, and perfectly matched my business requirements.",
-    image: "/reviews/s.jpg",
+      "working with mussadiq was such a lovely experience mashallah, their work truly impressed me.May Allah put barakah in their work always.",
+    image: "/projects/saba/logo.png",
   },
   {
-    name: "Usman Tariq",
+    name: "Chunkd",
     review:
-      "Excellent front-end developer. He converted our ideas into a polished website with smooth animations, responsive layouts, and a very clean interface.",
-    image: "/reviews/s.jpg",
+      "Honeslty, I am really impressed with mussadiq work. When I showed the website to my friends and family they really loved it. I personally loved how everything turned out, and it felt like my money was well spent, They even did a free logo redesign, which made everthing look even better.",
+    image: "/projects/chunkd/logo.png",
   },
   {
-    name: "Hira Noor",
+    name: "KPSLA",
     review:
-      "The website feels premium and works perfectly on mobile as well as desktop. I appreciated the quick updates and attention to detail during the whole process.",
-    image: "/reviews/s.jpg",
+      "Working with mussadiq is a great experience. They handled eveything with professionalism and respect. Website turned out exactly how we wanted.",
+    image: "/projects/kpsla/logo.png",
   },
   {
-    name: "Bilal Raza",
+    name: "True Horizon",
     review:
-      "Very skilled and cooperative developer. He delivered the project on time and made sure everything was working properly before handing it over.",
-    image: "/reviews/s.jpg",
+      "Our website look out of this world that aniamtion and work was too impressing. He understand exactly what we needed and delivered without back-and-forth, highly recommended.",
+    image: "/projects/truehorizon/logo.png",
   },
   {
-    name: "Zainab Fatima",
+    name: "Zayphire",
     review:
-      "I am very happy with the final website. It is simple, attractive, and easy for visitors to navigate. Highly recommended for web development projects.",
-    image: "/reviews/s.jpg",
+      "I am fully satisfied with his work. He is polite make changes on request and has built a fast and clean website. He truly knows his work and is one of the best really appreciated.",
   },
   {
-    name: "Danish Ali",
+    name: "M&Z Store",
     review:
-      "Mussadiq has strong problem-solving skills and great design sense. He made our website faster, more professional, and much easier to use.",
-    image: "/reviews/s.jpg",
+      "I have worked with mussadiq almost half year and his work is amazing, he delivered a clean, fast and professional website exactly as I wanted.",
+    image: "/projects/mzstore/logo.jpeg",
   },
   {
-    name: "Mariam Iqbal",
+    name: "Zevora",
     review:
-      "A reliable developer who listens carefully and delivers quality work. The portfolio website he created was modern, responsive, and exceeded my expectations.",
-    image: "/reviews/s.jpg",
+      "Working with mussadiq was a truly wonderful experience. He showed honesty, respect and patience, always listening carefully to my requirments. His work exceeded my expectations, and I am very happy with the final result may Allah bless them with more success. Highly recommended for anyone seeking a reliable and professional work",
+    image: "/projects/zevora/logo.png",
+  },
+  {
+    name: "Amass Bakery",
+    review:
+      "Mussadiq did an excellent job on our bakery website, His work quality is impressive, and he communicates with great professionalism and respecct. He listens carefully never dismisses ideas and always find solutions. I truly appreciate his attitude and dedication to delivering the best results",
+    image: "/projects/amass/logo.webp",
   },
 ];
 

@@ -12,14 +12,16 @@ const ReviewCard = ({ review }: { review: (typeof allReviews)[0] }) => (
       "{review.review}"
     </p>
     <div className="flex items-center gap-4 pt-4 border-t border-zinc-900">
-      <div className="w-8 h-8 rounded-full overflow-hidden border border-zinc-800">
-        <Image 
+      <div className="w-8 h-8 rounded-full overflow-hidden border bg-gray border-zinc-800">
+        {review.image ? <Image 
           src={review.image} 
           alt={`${review.name} image`} 
-          width={32} 
-          height={32}  
-          className="object-cover w-full h-full"
-        />
+          width={50} 
+          height={50}  
+          className="object-contain w-full h-full"
+        /> :
+          <p className='uppercase text-center text-xl font-bold text-black'>{review.name[0]}</p>
+        }
       </div>
       <div>
         <h4 className="font-medium text-white/90 text-xs uppercase tracking-wider">{review.name}</h4>
