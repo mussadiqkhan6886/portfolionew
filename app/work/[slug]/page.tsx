@@ -177,7 +177,7 @@ const SingleWork = async ({params}: Params) => {
             </div>
 
             <Image
-              src="/projectassets/laptop.png"
+              src="/projectassets/laptop.webp"
               alt="Laptop"
               width={1200}
               height={750}
@@ -199,7 +199,7 @@ const SingleWork = async ({params}: Params) => {
             </div>
 
             <Image
-              src="/projectassets/pc.png"
+              src="/projectassets/pc.webp"
               alt="pc"
               width={1200}
               height={750}
@@ -215,7 +215,7 @@ const SingleWork = async ({params}: Params) => {
             >
               {/* Phone Frame */}
               <Image
-                src="/projectassets/phone.png"
+                src="/projectassets/phone.webp"
                 alt="Phone Frame"
                 fill
                 className="pointer-events-none z-20 object-contain"
