@@ -1,7 +1,7 @@
 "use client";
 
 import { special } from "@/constants/font";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 
 interface TypingEffectProps {
   text?: string;
@@ -10,27 +10,27 @@ interface TypingEffectProps {
   cursorClassName?: string;
 }
 
-export default function TypingEffect({
+function TypingEffect({
   text = "I love to code",
-  typingSpeed = 80,
+  typingSpeed = 75,
   className = "",
   cursorClassName = "",
 }: TypingEffectProps) {
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
-    let timeout: ReturnType<typeof setTimeout>;
+  let index = 0;
 
-    if (displayedText.length < text.length) {
-      // Typing forward
-      timeout = setTimeout(() => {
-        setDisplayedText(text.slice(0, displayedText.length + 1));
-      }, typingSpeed);
-    }
+  const interval = setInterval(() => {
+    index++;
 
-    return () => clearTimeout(timeout);
+    setDisplayedText(text.slice(0, index));
 
-  }, [displayedText, text, typingSpeed]);
+    if (index === text.length) clearInterval(interval);
+  }, typingSpeed);
+
+  return () => clearInterval(interval);
+}, [text, typingSpeed]);
 
   return (
     <span className={`inline-flex items-end ${special.className} ${className}`}>
@@ -41,3 +41,5 @@ export default function TypingEffect({
     </span>
   );
 }
+
+export default memo(TypingEffect);

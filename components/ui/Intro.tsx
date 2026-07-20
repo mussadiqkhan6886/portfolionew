@@ -11,7 +11,7 @@ export default function IntroLoader() {
   let timeout: ReturnType<typeof setTimeout>;
   timeout = setTimeout(() => {
     setShowLoader(false);
-  }, 1900);
+  }, 1500);
 
   return () => {
     clearTimeout(timeout);
@@ -29,13 +29,13 @@ export default function IntroLoader() {
             borderBottomLeftRadius: "100%",
             borderBottomRightRadius: "100%",
             transition: {
-              duration: 1,
-              ease: [0.76, 0, 0.24, 1],
+              duration: 0.8,
+              ease: [0.60, 0, 0.15, 1],
             },
           }}
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-text"
         >
-          <WritingEffect className="text-3xl tracking-wide text-white md:text-6xl" text="i love to code" />
+          <WritingEffect className="text-3xl tracking-wide text-white md:text-6xl" text="Open to work" />
         </motion.div>
       )}
     </AnimatePresence>
