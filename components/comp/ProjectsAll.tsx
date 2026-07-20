@@ -1,11 +1,17 @@
 'use client';
 
 import { projects } from '@/constants'
-import React, { useEffect, useState } from 'react'
-import {  motion } from 'framer-motion';
+import React, { useEffect, useMemo, useState } from 'react'
+import {  motion, Variants } from 'framer-motion';
 import ProjectShowCaseMobile from './ProjectShowCaseMobile';
 import useCustomCursor from '@/lib/hooks/useCustomCursor';
 import CustomCursor from './CustomCursor';
+
+
+const fadeUp = {
+  initial: { opacity: 0, y: 100 },
+  animate: { opacity: 1, y: 0 },
+} as Variants
 
 const ProjectsAll = ({ option }: { option: string }) => { 
   const [smaller, setSmaller] = useState(false)
@@ -24,11 +30,14 @@ const ProjectsAll = ({ option }: { option: string }) => {
   }, [])
 
 
-  const activeProject = projects.find((p) => p.id === activeId) ?? null;
+  const activeProject = useMemo(
+    () => projects.find((p) => p.id === activeId) ?? null,
+    [activeId]
+  );
 
 
    return option === "grid" || smaller ? 
-   <motion.section initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} className="my-20">
+   <motion.section variants={fadeUp} initial="initial" animate="animate" className="my-20">
      <ProjectShowCaseMobile smaller={smaller} work={true} />
    </motion.section>
         :  (
@@ -40,7 +49,7 @@ const ProjectsAll = ({ option }: { option: string }) => {
     >
       <CustomCursor top={"left-[-20%]"} left={"top-[-14%]"} activeProject={activeProject} cursorRef={cursorRef} isHovering={isHovering} />
 
-      <motion.table initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} className="w-full border-collapse text-left table-fixed">
+      <motion.table variants={fadeUp} initial="initial" animate="animate" className="w-full border-collapse text-left table-fixed">
         <thead>
             <tr className="border-b border-border/60 ">
                 <th className="py-10 text-xs font-medium tracking-tight text-gray uppercase w-[35%]">CLIENT</th>

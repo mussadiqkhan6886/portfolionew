@@ -18,6 +18,7 @@ const ReviewCard = ({ review }: { review: (typeof allReviews)[0] }) => (
           alt={`${review.name} image`} 
           width={50} 
           height={50}  
+          loading="lazy"
           className="object-contain w-full h-full"
         /> :
           <p className='uppercase text-center text-xl font-bold text-black'>{review.name[0]}</p>

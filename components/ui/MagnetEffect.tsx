@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, MouseEvent, ReactNode } from "react";
+import { useRef, useState, MouseEvent, ReactNode, memo } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
@@ -13,7 +13,7 @@ interface MagnetTextProps {
   active?: boolean
 }
 
-export default function MagnetText({
+function MagnetText({
   text,
   className = "",
   strength = 0.4,
@@ -74,3 +74,5 @@ export default function MagnetText({
     </motion.span>
   );
 }
+
+export default memo(MagnetText)

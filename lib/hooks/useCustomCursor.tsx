@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import gsap from "gsap"
 
 const useCustomCursor = () => {
@@ -12,7 +12,7 @@ const useCustomCursor = () => {
       const [isHovering, setIsHovering] = useState(false);
     
       // Set up the magnetic-follow quickTo tweens once.
-      useEffect(() => {
+      useLayoutEffect(() => {
         if (!cursorRef.current) return;
         xTo.current = gsap.quickTo(cursorRef.current, "x", {
           duration: 0.55,
@@ -22,7 +22,7 @@ const useCustomCursor = () => {
           duration: 0.55,
           ease: "power3.out",
         });
-      }, []);
+      });
     
       const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const rect = containerRef.current?.getBoundingClientRect();

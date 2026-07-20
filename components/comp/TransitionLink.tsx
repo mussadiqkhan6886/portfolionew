@@ -32,11 +32,11 @@ export default function TransitionLink({ href, children, className, target, rel 
     // then execute the actual router switch behind the black curtain.
     setTimeout(() => {
       router.push(href);
-    }, 650); 
+    }, 100); 
   };
 
   return (
-    <Link href={href} target={target} rel={rel} onClick={handleNavigation} className={className}>
+    <Link href={href} prefetch target={target} rel={rel} onClick={handleNavigation} className={className}>
       {children}
     </Link>
   );

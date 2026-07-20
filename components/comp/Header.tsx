@@ -1,10 +1,8 @@
 'use client';
 
 import { menu } from '@/constants'
-import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import MagnetText from '../ui/MagnetEffect'
-import TextPressure from '../ui/HeaderLogo'
 import Menu from './Menu';
 import { FiMenu, FiX } from 'react-icons/fi';
 import {AnimatePresence, motion} from "framer-motion"
@@ -18,13 +16,14 @@ const Header = () => {
 
   useEffect(() => {
     const checkScroll = () => {
-      setHide(window.scrollY > 100);
+      const shouldHide = window.scrollY > 100;
+
+      setHide(prev => (prev === shouldHide ? prev : shouldHide));
     };
 
-    checkScroll(); 
-    window.addEventListener('scroll', checkScroll);
+    window.addEventListener("scroll", checkScroll, { passive: true });
 
-    return () => window.removeEventListener('scroll', checkScroll);
+    return () => window.removeEventListener("scroll", checkScroll);
   }, []);
 
   
@@ -66,21 +65,7 @@ const Header = () => {
       <div  
         className="flex w-full items-center justify-between"
       >
-        <TransitionLink href="/">
-          <TextPressure
-            text="Code By Mussadiq!"
-            flex={false}
-            alpha={false}
-            stroke={false}
-            width
-            weight
-            italic
-            textColor={pathName === "/" || pathName === "/contact" ? "#fff" : "#000"}
-            strokeColor="#5227FF"
-            minFontSize={20}
-          />
-        </TransitionLink>
-        <TransitionLink href="/" className={`block w-full md:hidden text-sm font-light ${pathName === "/" || pathName === "/contact" ? "text-white" : "text-black"}`}>Code By Mussadiq</TransitionLink>
+        <TransitionLink href="/" className={`block w-full text-sm font-light ${pathName === "/" || pathName === "/contact" ? "text-white" : "text-black"}`}>Code By Mussadiq</TransitionLink>
 
         <div className="block sm:hidden">
           <button className={`${pathName === "/" || pathName === "/contact" ? "text-white" : "text-black"}`} onClick={() => setIsOpen(true)}>

@@ -4,7 +4,6 @@ import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence, easeInOut } from "motion/react";
 import { experiences } from "@/constants";
 import MagnetText from "@/components/ui/MagnetEffect";
-import {gsap} from "gsap"
 import useCustomCursor from "@/lib/hooks/useCustomCursor";
 
 // ─── Stat counter ─────────────────────────────────────────────────────────────

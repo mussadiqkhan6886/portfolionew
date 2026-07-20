@@ -5,7 +5,6 @@ import Footer from "@/components/comp/Footer";
 import { dSans } from "@/constants/font";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import IntroLoader from "@/components/ui/Intro";
-import ReactLenis from "lenis/react"
 import PageTransition from "@/components/ui/PageTransition";
 
 export const SITE_URL = "https://mussadiqkhan.vercel.app";
@@ -178,13 +177,13 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
-        <ReactLenis root >
           <Header />
           <PageTransition />
           <IntroLoader />
-            <SmoothScroll> {children} </SmoothScroll>
+            <SmoothScroll>
+               {children}
+            </SmoothScroll>
           <Footer />
-        </ReactLenis>
         </body>
     </html>
   );
