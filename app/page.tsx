@@ -6,7 +6,6 @@ import Idea from '@/sections/Idea'
 import Projects from '@/sections/Projects'
 import Skills from '@/sections/Skills'
 import Testimonials from '@/sections/Testimonials'
-import WorkThumbnails from '@/sections/WorkThumbnails'
 import { Metadata } from 'next'
 import React from 'react'
 import { SITE_URL } from './layout'
@@ -99,7 +98,6 @@ const Home = () => {
       <Hero />
       <About />
       <Projects />
-      <WorkThumbnails />
       <Skills />
       <Experience />
       <Certificates />
