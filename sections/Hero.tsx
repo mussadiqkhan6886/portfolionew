@@ -12,6 +12,7 @@ const Hero = () => {
         alt="hero image of mussadiq khan"
         fill
         priority
+        quality={100}
         fetchPriority="high"
         className="object-cover absolute inset-0"
       />
