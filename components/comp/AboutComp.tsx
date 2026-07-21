@@ -4,7 +4,7 @@ import Image from 'next/image';
 import FloatEffect from '../ui/FloatEffect';
 import UseParallexImage from '@/lib/hooks/UseParallexImage';
 
-const About = () => {
+const AboutComp = () => {
 
   const {containerRef, imageBoxRef, imageRef} = UseParallexImage(-15, 15)
 
@@ -37,4 +37,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutComp;

@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import AboutComp from '@/components/comp/AboutComp'
 import Services from '@/components/comp/Services'
 import { services } from '@/constants'
 import { SITE_URL } from '@/app/layout'
 import Image from 'next/image'
-import React from 'react'
+import AboutComp from "@/components/comp/AboutComp";
 
 export const metadata: Metadata = {
   title: "About",
