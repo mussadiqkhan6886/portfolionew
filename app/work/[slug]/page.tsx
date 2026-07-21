@@ -163,11 +163,10 @@ const SingleWork = async ({params}: Params) => {
       <section>
         {/* main image */}
         <ProjectThumb thumbnail={project.thumbnail} logo={project.logo} title={project.title}  />
-        {/* laptop video */}
         <div className="relative mx-auto max-w-6xl my-20">
             <div className="absolute left-[12.5%] -top-1 sm:-top-2 md:-top-3  w-[74.5%] h-full overflow-hidden rounded-lg">
               <video
-                src={project.laptopVideo}
+                src={project.video.src}
                 autoPlay
                 muted
                 loop
@@ -186,32 +185,13 @@ const SingleWork = async ({params}: Params) => {
         </div>
         <FeaturesProj features={project.features} />
         {/* pc*/}
-        <div className="relative mx-auto max-w-6xl my-20 ">
-            <div className="absolute left-0 bg-gray top-3 md:top-9 lg:top-16 xl:top-18 w-full h-full overflow-hidden rounded-lg">
-              <video
-                src={project.pcVideo}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full object-contain rounded-lg lg:scale-80"
-              />
-            </div>
-
-            <Image
-              src="/projectassets/pc.webp"
-              alt="pc"
-              width={1200}
-              height={750}
-              className="relative z-10 w-full scale-y-95 md:scale-y-91 lg:scale-80 lg:scale-y-73 h-auto pointer-events-none"
-            />
-        </div>
+        
         {/* mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto lg:gap-16 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto lg:gap-16 py-20">
           {project.mobileShots.map((item, i) => (
             <div
               key={i}
-              className="relative max-h-screen aspect-[1/2] scale-85 xl:scale-100 w-full"
+              className="relative max-h-[90vh] aspect-[1/2] scale-85 xl:scale-100 w-full"
             >
               {/* Phone Frame */}
               <Image
@@ -222,7 +202,7 @@ const SingleWork = async ({params}: Params) => {
               />
 
               {/* Screen */}
-              <div className="absolute left-0 sm:left-[5.5%] top-4 sm:top-3 h-[96%] sm:h-[97%] w-full sm:w-[89%] overflow-hidden">
+              <div className="absolute left-0 sm:left-[5.5%] top-2.5 h-[96%] sm:h-[96%] w-full sm:w-[89%] overflow-hidden">
                 {item.type === "video" ? (
                   <video
                     src={item.sr}
