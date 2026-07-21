@@ -49,7 +49,7 @@ export const projects = [
     },
     mobileShots: [
       { type: "video", sr: "/projects/chunkd/mb2video.mp4" },
-      { type: "image", sr: "/projects/chunkd/mb1.jpg" },
+      { type: "image", sr: "/projects/chunkd/mb3.jpg" },
     ],
     logo: "/projects/chunkd/logo.png",
   },
@@ -93,7 +93,7 @@ export const projects = [
       src: "/projects/zevora/laptop.mp4"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/zevora/mb1.jpg" },
+      { type: "image", sr: "/projects/zevora/mb3.jpg" },
       { type: "video", sr: "/projects/zevora/mb2video.mp4" },
     ],
     logo: "/projects/zevora/logo.png",
@@ -135,7 +135,7 @@ export const projects = [
       src: "/projects/halir/laptop.mp4"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/halir/mb1.jpg" },
+      { type: "image", sr: "/projects/halir/mb3.jpg" },
       { type: "video", sr: "/projects/halir/mb2video.mp4" },
     ],
     logo: "/projects/halir/logo.png",
@@ -175,7 +175,7 @@ export const projects = [
       src: "/projects/amass/laptop.mp4"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/amass/mb1.jpg" },
+      { type: "image", sr: "/projects/amass/mb3.jpg" },
       { type: "video", sr: "/projects/amass/mb2video.mp4" },
     ],
     logo: "/projects/amass/logo.webp",
@@ -215,7 +215,7 @@ export const projects = [
       src: "/projects/truehorizon/laptop.mp4"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/truehorizon/mb1.jpg" },
+      { type: "image", sr: "/projects/truehorizon/mb3.jpg" },
       { type: "video", sr: "/projects/truehorizon/mb2video.mp4" },
     ],
     logo: "/projects/truehorizon/logo.png",
@@ -256,7 +256,7 @@ export const projects = [
       src: "/projects/mzstore/pc.mp4"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/mzstore/mb1.jpg" },
+      { type: "image", sr: "/projects/mzstore/mb3.jpg" },
       { type: "video", sr: "/projects/mzstore/mb2video.mp4" },
     ],
     logo: "/projects/mzstore/logo.jpeg",
@@ -296,7 +296,7 @@ export const projects = [
       src: "/projects/mirmee/pc.mp4"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/mirmee/mb1.jpg" },
+      { type: "image", sr: "/projects/mirmee/mb3.jpg" },
       { type: "video", sr: "/projects/mirmee/mb2video.mp4" },
     ],
     logo: "/projects/mirmee/logo.jpg",
@@ -337,7 +337,7 @@ export const projects = [
       src: "/projects/kpsla/pc.mp4"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/kpsla/mb1.jpg" },
+      { type: "image", sr: "/projects/kpsla/mb3.jpg" },
       { type: "video", sr: "/projects/kpsla/mb2video.mp4" },
     ],
     logo: "/projects/kpsla/logo.png",
@@ -380,7 +380,7 @@ export const projects = [
       src: "/projects/saba/laptop.mp4"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/saba/mb1.jpg" },
+      { type: "image", sr: "/projects/saba/mb3.jpg" },
       { type: "video", sr: "/projects/saba/mb2video.mp4" },
     ],
     logo: "/projects/saba/logo.png",
