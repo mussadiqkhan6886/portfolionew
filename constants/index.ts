@@ -45,11 +45,11 @@ export const projects = [
     live: "https://www.chunkdpk.com",
     video: {
       type: "laptop",
-      src: "/projects/chunkd/laptop.mp4"
+      src: "/projects/chunkd/laptop.avi"
     },
     mobileShots: [
       { type: "video", sr: "/projects/chunkd/mb2video.mp4" },
-      { type: "image", sr: "/projects/chunkd/mb3.jpg" },
+      { type: "image", sr: "/projects/chunkd/mb3.webp" },
     ],
     logo: "/projects/chunkd/logo.png",
   },
@@ -90,10 +90,10 @@ export const projects = [
     live: "https://www.zevoraofficial.com",
     video: {
       type: "laptop",
-      src: "/projects/zevora/laptop.mp4"
+      src: "/projects/zevora/laptop.avi"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/zevora/mb3.jpg" },
+      { type: "image", sr: "/projects/zevora/mb3.webp" },
       { type: "video", sr: "/projects/zevora/mb2video.mp4" },
     ],
     logo: "/projects/zevora/logo.png",
@@ -132,10 +132,10 @@ export const projects = [
     live: "https://www.halirperfumerypk.com",
     video: {
       type: "pc",
-      src: "/projects/halir/laptop.mp4"
+      src: "/projects/halir/laptop.avi"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/halir/mb3.jpg" },
+      { type: "image", sr: "/projects/halir/mb3.webp" },
       { type: "video", sr: "/projects/halir/mb2video.mp4" },
     ],
     logo: "/projects/halir/logo.png",
@@ -172,10 +172,10 @@ export const projects = [
     live: "https://www.amassbakery.com",
     video: {
       type: "pc",
-      src: "/projects/amass/laptop.mp4"
+      src: "/projects/amass/laptop.avi"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/amass/mb3.jpg" },
+      { type: "image", sr: "/projects/amass/mb3.webp" },
       { type: "video", sr: "/projects/amass/mb2video.mp4" },
     ],
     logo: "/projects/amass/logo.webp",
@@ -212,10 +212,10 @@ export const projects = [
     live: "https://www.truehorizon.uk",
     video: {
       type: "pc",
-      src: "/projects/truehorizon/laptop.mp4"
+      src: "/projects/truehorizon/laptop.avi"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/truehorizon/mb3.jpg" },
+      { type: "image", sr: "/projects/truehorizon/mb3.webp" },
       { type: "video", sr: "/projects/truehorizon/mb2video.mp4" },
     ],
     logo: "/projects/truehorizon/logo.png",
@@ -253,10 +253,10 @@ export const projects = [
     live: "https://www.mzstorepk.com",
     video: {
       type: "pc",
-      src: "/projects/mzstore/pc.mp4"
+      src: "/projects/mzstore/pc.avi"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/mzstore/mb3.jpg" },
+      { type: "image", sr: "/projects/mzstore/mb3.webp" },
       { type: "video", sr: "/projects/mzstore/mb2video.mp4" },
     ],
     logo: "/projects/mzstore/logo.jpeg",
@@ -293,10 +293,10 @@ export const projects = [
     live: "https://www.shopmirmee.com",
     video: {
       type: "pc",
-      src: "/projects/mirmee/pc.mp4"
+      src: "/projects/mirmee/pc.avi"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/mirmee/mb3.jpg" },
+      { type: "image", sr: "/projects/mirmee/mb3.webp" },
       { type: "video", sr: "/projects/mirmee/mb2video.mp4" },
     ],
     logo: "/projects/mirmee/logo.jpg",
@@ -334,10 +334,10 @@ export const projects = [
     live: "https://www.kpsla.org",
     video: {
       type: "pc",
-      src: "/projects/kpsla/pc.mp4"
+      src: "/projects/kpsla/pc.avi"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/kpsla/mb3.jpg" },
+      { type: "image", sr: "/projects/kpsla/mb3.webp" },
       { type: "video", sr: "/projects/kpsla/mb2video.mp4" },
     ],
     logo: "/projects/kpsla/logo.png",
@@ -377,10 +377,10 @@ export const projects = [
     live: "https://www.sabawrites.com",
     video: {
       type: "pc",
-      src: "/projects/saba/laptop.mp4"
+      src: "/projects/saba/laptop.avi"
     },
     mobileShots: [
-      { type: "image", sr: "/projects/saba/mb3.jpg" },
+      { type: "image", sr: "/projects/saba/mb3.webp" },
       { type: "video", sr: "/projects/saba/mb2video.mp4" },
     ],
     logo: "/projects/saba/logo.png",
