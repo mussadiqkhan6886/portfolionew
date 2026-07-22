@@ -13,6 +13,7 @@ const Hero = () => {
         fill
         priority
         quality={100}
+        unoptimized
         fetchPriority="high"
         className="object-cover absolute inset-0"
       />
