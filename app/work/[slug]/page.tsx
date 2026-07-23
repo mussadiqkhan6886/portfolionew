@@ -166,7 +166,7 @@ const SingleWork = async ({params}: Params) => {
         <div className="relative mx-auto max-w-6xl my-20">
             <div className="absolute left-[12.5%] -top-1 sm:-top-2 md:-top-3  w-[74.5%] h-full overflow-hidden rounded-lg">
               <video
-                src={project.video.src}
+                src={project.vid}
                 autoPlay
                 muted
                 loop
@@ -210,7 +210,7 @@ const SingleWork = async ({params}: Params) => {
                     muted
                     loop
                     playsInline
-                    className="h-full w-full rounded-[8%] sm:rounded-[40%] md:rounded-[30%] lg:rounded-[20%] xl:rounded-[5%] object-contain"
+                    className="h-full w-full rounded-[8%] sm:rounded-[40%] md:rounded-[20%] lg:rounded-[20%] xl:rounded-[20%] object-contain"
                   />
                 ) : (
                   <Image
@@ -218,7 +218,7 @@ const SingleWork = async ({params}: Params) => {
                     alt={`Mobile ${i + 1}`}
                     fill
                     loading="lazy"
-                    className="object-contain rounded-xl"
+                    className="object-contain rounded-[30%] md:rounded-[20%]"
                   />
                 )}
               </div>

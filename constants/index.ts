@@ -43,10 +43,7 @@ export const projects = [
       "Cloudinary Image Optimization",
     ],
     live: "https://www.chunkdpk.com",
-    video: {
-      type: "laptop",
-      src: "/projects/chunkd/laptop.avi"
-    },
+    vid: "/projects/chunkd/laptop.webm",
     mobileShots: [
       { type: "video", sr: "/projects/chunkd/mb2video.mp4" },
       { type: "image", sr: "/projects/chunkd/mb3.webp" },
@@ -88,10 +85,7 @@ export const projects = [
       "Secured Admin Dashboard",
     ],
     live: "https://www.zevoraofficial.com",
-    video: {
-      type: "laptop",
-      src: "/projects/zevora/laptop.avi"
-    },
+    vid: "/projects/zevora/laptop.webm",
     mobileShots: [
       { type: "image", sr: "/projects/zevora/mb3.webp" },
       { type: "video", sr: "/projects/zevora/mb2video.mp4" },
@@ -130,10 +124,7 @@ export const projects = [
       "Secured JWT Admin",
     ],
     live: "https://www.halirperfumerypk.com",
-    video: {
-      type: "pc",
-      src: "/projects/halir/laptop.avi"
-    },
+    vid: "/projects/halir/laptop.webm",
     mobileShots: [
       { type: "image", sr: "/projects/halir/mb3.webp" },
       { type: "video", sr: "/projects/halir/mb2video.mp4" },
@@ -170,10 +161,7 @@ export const projects = [
       "96/100 Lighthouse Score",
     ],
     live: "https://www.amassbakery.com",
-    video: {
-      type: "pc",
-      src: "/projects/amass/laptop.avi"
-    },
+    vid: "/projects/amass/laptop.webm",
     mobileShots: [
       { type: "image", sr: "/projects/amass/mb3.webp" },
       { type: "video", sr: "/projects/amass/mb2video.mp4" },
@@ -210,10 +198,7 @@ export const projects = [
       "97/100 Lighthouse Score",
     ],
     live: "https://www.truehorizon.uk",
-    video: {
-      type: "pc",
-      src: "/projects/truehorizon/laptop.avi"
-    },
+    vid: "/projects/truehorizon/laptop.webm",
     mobileShots: [
       { type: "image", sr: "/projects/truehorizon/mb3.webp" },
       { type: "video", sr: "/projects/truehorizon/mb2video.mp4" },
@@ -251,10 +236,7 @@ export const projects = [
       "200+ Product Admin",
     ],
     live: "https://www.mzstorepk.com",
-    video: {
-      type: "pc",
-      src: "/projects/mzstore/pc.avi"
-    },
+    vid: "/projects/mzstore/pc.webm",
     mobileShots: [
       { type: "image", sr: "/projects/mzstore/mb3.webp" },
       { type: "video", sr: "/projects/mzstore/mb2video.mp4" },
@@ -291,10 +273,7 @@ export const projects = [
       "98/100 Lighthouse Score",
     ],
     live: "https://www.shopmirmee.com",
-    video: {
-      type: "pc",
-      src: "/projects/mirmee/pc.avi"
-    },
+    vid: "/projects/mirmee/pc.webm",
     mobileShots: [
       { type: "image", sr: "/projects/mirmee/mb3.webp" },
       { type: "video", sr: "/projects/mirmee/mb2video.mp4" },
@@ -332,10 +311,7 @@ export const projects = [
       "Secured JWT Admin",
     ],
     live: "https://www.kpsla.org",
-    video: {
-      type: "pc",
-      src: "/projects/kpsla/pc.avi"
-    },
+    vid: "/projects/kpsla/pc.webm",
     mobileShots: [
       { type: "image", sr: "/projects/kpsla/mb3.webp" },
       { type: "video", sr: "/projects/kpsla/mb2video.mp4" },
@@ -375,10 +351,7 @@ export const projects = [
       "Blog CRUD Dashboard",
     ],
     live: "https://www.sabawrites.com",
-    video: {
-      type: "pc",
-      src: "/projects/saba/laptop.avi"
-    },
+    vid: "/projects/saba/laptop.webm",
     mobileShots: [
       { type: "image", sr: "/projects/saba/mb3.webp" },
       { type: "video", sr: "/projects/saba/mb2video.mp4" },
