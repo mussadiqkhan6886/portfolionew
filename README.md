@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# 🚀 Personal Portfolio
 
-First, run the development server:
+A modern, high-performance developer portfolio built with **Next.js**, **TypeScript**, and **Tailwind CSS**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🌐 **Live Demo:** https://mussadiqkhan.vercel.app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Overview
 
-To learn more about Next.js, take a look at the following resources:
+This portfolio showcases my work, skills, and experience as a **Frontend / Full-Stack JavaScript Developer**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The goal was to create a portfolio that is not only visually appealing but also fast, accessible, responsive, and optimized for search engines.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ⚡ Lightning-fast performance
+- 📱 Fully responsive design
+- 🎨 Smooth animations & page transitions
+- 🌙 Modern minimal UI
+- ♿ Accessibility focused
+- 🔍 SEO optimized
+- 📊 Structured Data (JSON-LD)
+- 🖼️ Optimized images
+- 📄 Dynamic project pages
+- 📬 Contact section
+- 🌍 Production ready
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- GSAP
+- Lenis
+
+### Tools
+
+- Vercel
+- Git & GitHub
+- ESLint
+- Prettier
+
+---
+
+## 📈 Lighthouse
+
+- ⚡ Performance 97
+- ♿ Accessibility 90
+- ✅ Best Practices 100
+- 🔍 SEO 100
+
+*(Scores may vary depending on device and network conditions.)*
+
+---
+
+## 👨‍💻 About Me
+
+Hi, I'm **Mussadiq Khan**.
+
+I'm a Frontend & Full-Stack JavaScript Developer passionate about building fast, scalable, and modern web applications.
+
+I enjoy creating intuitive user experiences while maintaining clean, maintainable code.
+
+---
+
+## 🌐 Connect
+
+Portfolio  
+https://mussadiqkhan.vercel.app
+
+LinkedIn  
+https://linkedin.com/in/mussadiq-khan-dev
+
+GitHub  
+https://github.com/mussadiqkhan6886
+
+---
+
+## 🙌 Inspiration
+
+The overall design direction was inspired by **Dennis Snellenberg's portfolio**.
+
+This project is **not a clone**. Every component, animation, layout implementation, and codebase was developed from scratch while using his work as design inspiration.
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a **⭐ Star**.
+
+It helps support my work and motivates me to build more open-source projects.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
