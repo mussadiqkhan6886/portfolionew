@@ -86,9 +86,6 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
-  verification: {
-    google: "3o7TyGVcbl7HdUTElJVPYv05mzt8Ubwu9N0oQenA0F4",
-  },
 };
 
 export default function RootLayout({
