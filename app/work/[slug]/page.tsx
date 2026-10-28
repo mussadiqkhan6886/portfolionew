@@ -202,7 +202,7 @@ const SingleWork = async ({params}: Params) => {
               />
 
               {/* Screen */}
-              <div className="absolute left-0 sm:left-[5.5%] top-2.5 h-[96%] sm:h-[96%] w-full sm:w-[89%] overflow-hidden">
+              <div className="absolute left-0 sm:left-[5.5%] top-2.5 h-[97%] sm:h-[96%] w-full sm:w-[89%] overflow-hidden">
                 {item.type === "video" ? (
                   <video
                     src={item.sr}
@@ -218,7 +218,7 @@ const SingleWork = async ({params}: Params) => {
                     alt={`Mobile ${i + 1}`}
                     fill
                     loading="lazy"
-                    className="object-contain rounded-[25%] sm:rounded-[30%] md:rounded-[20%]"
+                    className="object-contain rounded-[15%] sm:rounded-[30%] md:rounded-[20%]"
                   />
                 )}
               </div>
