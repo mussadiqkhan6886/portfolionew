@@ -66,7 +66,7 @@ const ProjectsAll = ({ option }: { option: string }) => {
                 className="px-3 text-black hover:px-0 duration-300 transition-all"
             >
                 <td className="py-9 pr-4 text-4xl capitalize tracking-tight">
-                    {item.title}
+                    {item.title} { item.personalWork && <span className="text-[11px] lg:text-sm tracking-wider text-gray">( {item.personalWork} )</span> }
                 </td>
 
                 <td className="py-9 pr-4  capitalize">

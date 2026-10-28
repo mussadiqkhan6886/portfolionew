@@ -12,22 +12,27 @@ export const SITE_URL = "https://mussadiqkhan.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Mussadiq Khan | Full-Stack Web Developer",
+    default: "Mussadiq Khan | Full-Stack Engineer",
     template: "%s | Mussadiq Khan",
   },
   description:
-    "Mussadiq Khan is a freelance Full-Stack Web Developer who has helped 20+ brands grow with custom, high-performance websites and scalable web applications, and is founder of Scrupulous.",
+    "Mussadiq Khan is a freelance Full-Stack Engineer who has helped 20+ brands grow with custom, high-performance websites and scalable web applications, and is founder of Scrupulous.",
   keywords: [
     "Mussadiq Khan",
     "Full-Stack Web Developer",
+    "Full-Stack Web Engineer",
     "Freelance Web Developer",
     "Next.js Developer",
+    "Express.js Developer",
+    "Node.js Developer",
     "React Developer",
     "TypeScript Developer",
     "Frontend Developer",
     "Backend Developer",
     "MERN Stack Developer",
+    "PERN Stack Developer",
     "Web Developer Pakistan",
+    "Software Engineer Pakistan",
     "SEO Developer",
     "Portfolio",
     "Scrupulous",
@@ -60,24 +65,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    siteName: "Mussadiq Khan | Full-Stack Web Developer",
-    title: "Mussadiq Khan | Full-Stack Web Developer",
+    siteName: "Mussadiq Khan | Full-Stack Engineer",
+    title: "Mussadiq Khan | Full-Stack Engineer",
     description:
-      "Mussadiq Khan is a freelance Full-Stack Web Developer who has helped 20+ brands grow with custom, high-performance websites and scalable web applications, and is founder of Scrupulous.",
+      "Mussadiq Khan is a freelance Full-Stack Engineer who has helped 20+ brands grow with custom, high-performance websites and scalable web applications, and is founder of Scrupulous.",
     images: [
       {
         url: "/img3.webp",
         width: 1200,
         height: 630,
-        alt: "Mussadiq Khan | Full-Stack Web Developer",
+        alt: "Mussadiq Khan | Full-Stack Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mussadiq Khan | Full-Stack Web Developer",
+    title: "Mussadiq Khan | Full-Stack Engineer",
     description:
-      "Mussadiq Khan is a freelance Full-Stack Web Developer who has helped 20+ brands grow with custom, high-performance websites and scalable web applications, and is founder of Scrupulous.",
+      "Mussadiq Khan is a freelance Full-Stack Engineer who has helped 20+ brands grow with custom, high-performance websites and scalable web applications, and is founder of Scrupulous.",
     images: ["/img3.webp"],
     // creator: "@yourtwitterhandle", // ⬅ replace or remove
   },
@@ -104,8 +109,8 @@ export default function RootLayout({
     name: "Mussadiq Khan",
     url: SITE_URL,
     image: `${SITE_URL}/about2.webp`, // ⬅ add a real photo/avatar
-    jobTitle: "Full-Stack Web Developer",
-   description: "Full-Stack Web Developer based in Pakistan specializing in Next.js, React, TypeScript, performance optimization, and technical SEO.",
+    jobTitle: "Full-Stack Engineer",
+   description: "Full-Stack Engineer based in Pakistan, Islamabad specializing in Next.js, Express.js, React, TypeScript, MongoDB, performance optimization, and technical SEO.",
     address: {
       "@type": "PostalAddress",
       addressCountry: "PK",
@@ -118,12 +123,18 @@ export default function RootLayout({
     ], 
     knowsAbout: [
       "Web Development",
+      "Web Engineer",
       "Next.js",
+      "Express.js",
+      "Node.js",
       "React",
       "UI/UX Design",
       "Frontend Development",
+      "Backend Development",
       "Full-Stack developer",
+      "Full-Stack Engineer",
       "MERN stack",
+      "PERN stack",
     ],
   };
 
@@ -132,9 +143,9 @@ export default function RootLayout({
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
     url: SITE_URL,
-    name: "Mussadiq Khan | Full-Stack Web Developer",
+    name: "Mussadiq Khan | Full-Stack Engineer",
     description:
-      "Portfolio showcasing modern websites, scalable web applications, case studies, and technical expertise by Full-Stack Web Developer Mussadiq Khan.",
+      "Portfolio showcasing modern websites, scalable web applications, case studies, and technical expertise by Full-Stack Engineer Mussadiq Khan.",
     publisher: { "@id": `${SITE_URL}/#person` },
     inLanguage: "en-US",
   };

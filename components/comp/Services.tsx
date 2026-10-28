@@ -29,7 +29,7 @@ const Services = () => {
                 className="custom-class"
             />
             <h4 className="text-4xl lg:text-[44px] leading-none font-medium tracking-tight mb-10">Production Experience</h4>
-            <p className="font-[450]">Over 1+ year of building production-ready web applications for businesses across Pakistan, Saudi Arabia, and the UK, delivering fast, scalable, and high-performance digital solutions.</p>
+            <p className="font-[450]">Over 1.5+ year of building production-ready web applications for businesses across Pakistan, Saudi Arabia, and the UK, delivering fast, scalable, and high-performance digital solutions.</p>
         </div>
       </section>
   )

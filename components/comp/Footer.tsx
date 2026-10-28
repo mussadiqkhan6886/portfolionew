@@ -42,12 +42,12 @@ const Footer = () => {
             © {new Date().getFullYear()} Mussadiq Khan. All rights reserved.
           </p>
 
-        <div className="flex flex-col lg:items-end gap-2">
-          <p className="text-[10px] uppercase tracking-widest text-gray">
-            Socials
-           </p>
-          <Socials />
-        </div>
+          <div className="flex flex-col lg:items-end gap-2">
+            <p className="text-[10px] uppercase tracking-widest text-gray">
+              Socials
+            </p>
+            <Socials />
+          </div>
 
         </div>
       </section>

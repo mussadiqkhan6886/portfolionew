@@ -49,21 +49,21 @@ const FooterContact = () => {
           <Link
             href="mailto:mussadiqkhan6886@gmail.com"
           >
-            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all duration-300 w-full justify-center items-center text-sm md:text-base" dot="no" text="mussadiqkhan6886@gmail.com" />
+            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all w-full justify-center items-center text-sm md:text-base" dot="no" text="mussadiqkhan6886@gmail.com" />
           </Link>
 
           <Link
             href="tel:+923189328584"
           >
-            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all duration-300 w-full justify-center items-center text-sm md:text-base" dot="no" text="+92 318 9328584" />
+            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all w-full justify-center items-center text-sm md:text-base" dot="no" text="+92 318 9328584" />
             
           </Link>
 
           <Link
-            href="/Resume.docx.pdf"
-            download="/Resume.docx.pdf"
+            href="/Resume_FULL.pdf"
+            download="/Resume_FULL.pdf"
           >
-            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all duration-300 w-full justify-center items-center text-sm md:text-base" dot="no" text="Download CV" />
+            <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all w-full justify-center items-center text-sm md:text-base" dot="no" text="Download CV" />
           </Link>
         </div>
       </section>

@@ -11,16 +11,16 @@ import React from 'react'
 import { SITE_URL } from './layout'
 
 export const metadata: Metadata = {
-  title: "Mussadiq Khan | Full-Stack Web Developer",
+  title: "Mussadiq Khan | Full-Stack Engineer",
   description:
-    "Mussadiq Khan is a freelance Full-Stack Web Developer who has helped 20+ brands grow with custom, high-performance websites and scalable web applications, and is founder of Scrupulous.",
+    "Mussadiq Khan is a freelance Full-Stack Engineer who has helped 20+ brands grow with custom, high-performance websites and scalable web applications, and is founder of Scrupulous.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Mussadiq Khan | Full-Stack Web Developer",
+    title: "Mussadiq Khan | Full-Stack Engineer",
     description:
-      "Mussadiq Khan is a freelance Full-Stack Web Developer who has helped 20+ brands grow with custom, high-performance websites and scalable web applications, and is founder of Scrupulous.",
+      "Mussadiq Khan is a freelance Full-Stack Engineer who has helped 20+ brands grow with custom, high-performance websites and scalable web applications, and is founder of Scrupulous.",
     url: SITE_URL,
     type: "website",
   },
@@ -45,11 +45,11 @@ const Home = () => {
     "@type": "WebPage",
     "@id": `${SITE_URL}/#webpage`,
     url: SITE_URL,
-    name: "Mussadiq Khan | Full-Stack Web Developer",
+    name: "Mussadiq Khan | Full-Stack Web Engineer",
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#person` },
     description:
-      "Portfolio homepage of Mussadiq Khan, freelance Full-Stack web developer based in Pakistan.",
+      "Portfolio homepage of Mussadiq Khan, freelance Full-Stack Engineer based in Pakistan, Islamabad.",
     breadcrumb: { "@id": `${SITE_URL}/#breadcrumb` },
   };
 

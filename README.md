@@ -18,7 +18,7 @@ A modern, high-performance developer portfolio built with **Next.js**, **TypeScr
 
 ## ✨ Overview
 
-This portfolio showcases my work, skills, and experience as a **Frontend / Full-Stack JavaScript Developer**.
+This portfolio showcases my work, skills, and experience as a **Full-Stack Engineer**.
 
 The goal was to create a portfolio that is not only visually appealing but also fast, accessible, responsive, and optimized for search engines.
 
@@ -76,7 +76,7 @@ The goal was to create a portfolio that is not only visually appealing but also 
 
 Hi, I'm **Mussadiq Khan**.
 
-I'm a Frontend & Full-Stack JavaScript Developer passionate about building fast, scalable, and modern web applications.
+I'm a Full-Stack Engineer passionate about building fast, scalable, and modern web applications.
 
 I enjoy creating intuitive user experiences while maintaining clean, maintainable code.
 

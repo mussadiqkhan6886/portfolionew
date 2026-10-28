@@ -41,7 +41,7 @@ const ProjectShowCaseMobile = ({
 
           <div>
             <h2 className="border-b border-gray py-5 text-4xl">
-              {item.title}
+              {item.title} { item.personalWork && <span className="text-[11px] lg:text-sm tracking-wider text-gray">( {item.personalWork} )</span> }
             </h2>
 
             <div className="flex items-center justify-between py-3 text-sm">

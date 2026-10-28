@@ -22,7 +22,7 @@ const Hero = () => {
       <FloatEffect output={[10, -150]} className="absolute flex justify-between w-full left-1/2 bottom-0 sm:top-[57%] -translate-x-1/2 sm:-translate-y-1/2 h-32 sm:h-37 items-center">
         <div className="bg-text text-white hidden sm:flex p-4 rounded-r-full items-center justify-between w-60">
           <div className="w-[50%] ml-7">
-            <p className='leading-[1.2] font-medium tracking-tighter'>Located <br /> in the <br /> Pakistan</p>
+            <p className='leading-[1.2] font-medium tracking-tighter'>Located <br /> in <br /> Pakistan</p>
           </div>
           <div className="w-[30%] flex justify-end">
             <div className='bg-gray aspect-square w-full flex items-center justify-center rounded-full '>
@@ -34,7 +34,7 @@ const Hero = () => {
           <FloatEffect output={[0, -80]}>
             <HiArrowDownRight size={22} color='white' />
           </FloatEffect>
-          <h1 className="text-white text-3xl sm:text-[32px] leading-tight tracking-tight">Full-Stack <br /> Web Developer</h1>
+          <h1 className="text-white text-3xl sm:text-[32px] leading-tight tracking-tight">Full-Stack <br /> Engineer</h1>
         </div>
       </FloatEffect>
 

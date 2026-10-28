@@ -133,7 +133,7 @@ const SingleWork = async ({params}: Params) => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       <section className="max-w-5xl mx-auto px-4 md:px-12 relative h-screen flex pt-16 sm:pt-12 md:pt-5 justify-evenly flex-col ">
-        <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 tracking-tight">{project.title}</h1>
+        <h1 className="text-[44px] sm:text-6xl md:text-8xl leading-none lg:leading-22 tracking-tight">{project.title}  { project.personalWork && <span className="text-[11px] lg:text-sm tracking-wider text-gray">( {project.personalWork} )</span> }</h1>
         <p className="text-sm hidden md:block">{project.description}</p>
         <div className="grid grid-cols-2 sm:flex justify-between  mt-5 md:mt-0 gap-5 sm:gap-10 items-center">
           <div className="sm:w-[80%] mb-1 md:mb-0">
@@ -162,7 +162,7 @@ const SingleWork = async ({params}: Params) => {
       </section>
       <section>
         {/* main image */}
-        <ProjectThumb thumbnail={project.thumbnail} logo={project.logo} title={project.title}  />
+        {project.personalWork === undefined && <ProjectThumb thumbnail={project.thumbnail} logo={project.logo} title={project.title}  />}
         <div className="relative mx-auto max-w-6xl my-20">
             <div className="absolute left-[12.5%] -top-1 sm:-top-2 md:-top-3  w-[74.5%] h-full overflow-hidden rounded-lg">
               <video

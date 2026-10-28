@@ -30,7 +30,7 @@ export default function ProjectsShowcase({className}: {className?: string}) {
           className={`relative flex cursor-pointer items-center justify-between ${project.id === activeId ? "px-4" : "px-0"} border-b border-border transition-all duration-300 h-40`}
         >
           <h3 className={`text-2xl tracking-tight transition-colors duration-300 ${activeId !== project.id ? "text-black" : "text-gray"} sm:text-4xl md:text-7xl capitalize`}>
-            {project.title}
+            {project.title} { project.personalWork && <span className="text-[11px] lg:text-sm tracking-wider text-gray">( {project.personalWork} )</span> }
           </h3>
           <p className={`transition-colors capitalize duration-300 ${activeId !== project.id ? "text-black" : "text-gray"}`}>
             {project.role}

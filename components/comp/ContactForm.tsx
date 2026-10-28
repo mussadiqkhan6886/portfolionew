@@ -69,7 +69,7 @@ const ContactForm = () => {
         </span>
         <div className="w-full">
             <label className="font-[450] text-white tracking-tight text-xl md:text-2xl mb-3 block" htmlFor='email'>What&apos;s your Email?</label>
-            <input name="email" value={data.email} onChange={e => handleChange(e)} autoComplete='off' id="email" type="email" placeholder="mussadiqkhan@gmail.com *" className="outline-none w-full  placeholder:text-gray/70 text-white  tracking-tight text-[16px] md:text-[20px]" />
+            <input name="email" value={data.email} onChange={e => handleChange(e)} autoComplete='off' id="email" type="email" placeholder="mussadiqkhan6886@gmail.com *" className="outline-none w-full  placeholder:text-gray/70 text-white  tracking-tight text-[16px] md:text-[20px]" />
         </div>
         </div>
         <div className="border-t border-gray/50 py-10 flex gap-6 sm:gap-8 md:gap-10">
