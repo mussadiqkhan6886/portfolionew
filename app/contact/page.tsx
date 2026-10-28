@@ -167,8 +167,8 @@ const Contact = () => {
               </Link>
 
               <Link
-                href="/Resume.docx.pdf"
-                download="/Resume.docx.pdf"
+                href="/Resume_FULL.pdf"
+                download="/Resume_FULL.pdf"
               >
                 <MagnetText strength={0.2} className="hover:border-b border-white w-full text-sm md:text-base" dot="no" text="Download CV" />
               </Link>

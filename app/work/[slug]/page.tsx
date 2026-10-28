@@ -218,7 +218,7 @@ const SingleWork = async ({params}: Params) => {
                     alt={`Mobile ${i + 1}`}
                     fill
                     loading="lazy"
-                    className="object-contain rounded-[30%] md:rounded-[20%]"
+                    className="object-contain rounded-[25%] sm:rounded-[30%] md:rounded-[20%]"
                   />
                 )}
               </div>
