@@ -210,7 +210,7 @@ const SingleWork = async ({params}: Params) => {
                     muted
                     loop
                     playsInline
-                    className="h-full w-full rounded-[8%] sm:rounded-[40%] md:rounded-[20%] lg:rounded-[20%] xl:rounded-[20%] object-contain"
+                    className="h-full w-full rounded-[12%] sm:rounded-[40%] md:rounded-[20%] lg:rounded-[20%] xl:rounded-[20%] object-contain"
                   />
                 ) : (
                   <Image
