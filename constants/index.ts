@@ -608,7 +608,7 @@ export const experiences: ExperienceItem[] = [
     role: ["Front-End Developer", "Intern"],
     company: "Code Alpha",
     type: "Remote",
-    period: "Feb 2024 — Mar 2024",
+    period: "Feb 2025 — Mar 2025",
     location: "Remote",
     bullets: [
       "Shipped three interactive JS apps — Calculator, 3D CSS Gallery, Music Player — demonstrating DOM manipulation and event delegation.",
