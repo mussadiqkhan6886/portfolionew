@@ -60,8 +60,8 @@ const FooterContact = () => {
           </Link>
 
           <Link
-            href="/Resume_FULL.pdf"
-            download="/Resume_FULL.pdf"
+            href="/Resume.pdf"
+            download="/Resume.pdf"
           >
             <MagnetText className="border border-gray/40 rounded-full px-7 py-4 hover:bg-ctr bg-transparent transition-all w-full justify-center items-center text-sm md:text-base" dot="no" text="Download CV" />
           </Link>

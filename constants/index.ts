@@ -441,8 +441,6 @@ export const skillsSet = [
       { name: "Redux Toolkit", icon: "/skills/Redux.png" },
       { name: "TanStack Query", icon: "/skills/react-query-icon.svg" },
       { name: "Tailwind CSS", icon: "/skills/tailwindcss.svg" },
-      { name: "HTML5", icon: "/skills/html.png" },
-      { name: "CSS3", icon: "/skills/css.png" },
     ],
   },
   {
@@ -593,7 +591,7 @@ export const experiences: ExperienceItem[] = [
     role: ["Full-Stack Engineer", "& Founder"],
     company: "Scrupulous",
     type: "Freelance Agency",
-    period: "Aug 2025 — Present",
+    period: "Jun 2025 — Present",
     location: "Islamabad, PK",
     bullets: [
       "Built and deployed 20+ production websites for clients across Pakistan, Saudi Arabia, and the UK, solo, end-to-end.",
@@ -601,7 +599,7 @@ export const experiences: ExperienceItem[] = [
       "Engineered admin dashboards with product CRUD, order fulfilment, coupon engines, and real-time analytics.",
       "Achieved 99+ Lighthouse SEO scores via JSON-LD, XML sitemaps, Open Graph, Semantic tags, A11y, GSC & Meta Pixel integration.",
     ],
-    tags: ["Next.js 16", "Node.js", "TypeScript", "MongoDB", "Tailwind CSS", "Cloudinary", "JWT", "SEO", "Perfomance Optimzation", "Context API"],
+    tags: ["Next.js 16", "Express.js", "TypeScript", "MongoDB", "PostqreSQL", "zod" ,"Tailwind CSS", "Cloudinary", "JWT", "SEO", "Context API"],
   },
   {
     index: "02",

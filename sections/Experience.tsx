@@ -239,7 +239,7 @@ export default function WorkExperience() {
             { target: 20, suffix: "+", label: "Sites shipped" },
             { target: 3,  suffix: "",  label: "Countries" },
             { target: 100, suffix: "%", label: "Lighthouse" },
-            { target: 1, suffix: "+", label: "Years exp." },
+            { target: 2, suffix: "+", label: "Years exp." },
           ].map((s) => (
             <div key={s.label} className="py-8 px-4 flex flex-col items-center first:pl-0">
               <p className="text-[36px] font-extralight tracking-[-0.04em] text-black leading-none mb-1.5">
