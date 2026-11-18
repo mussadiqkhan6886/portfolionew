@@ -594,10 +594,9 @@ export const experiences: ExperienceItem[] = [
     period: "Jun 2025 — Present",
     location: "Islamabad, PK",
     bullets: [
-      "Built and deployed 20+ production websites for clients across Pakistan, Saudi Arabia, and the UK, solo, end-to-end.",
-      "Architected full-stack Next.js + TypeScript apps with MongoDB, JWT, NextAuth, Context API, Cloudinary, and REST API routes.",
-      "Engineered admin dashboards with product CRUD, order fulfilment, coupon engines, and real-time analytics.",
-      "Achieved 99+ Lighthouse SEO scores via JSON-LD, XML sitemaps, Open Graph, Semantic tags, A11y, GSC & Meta Pixel integration.",
+      "Delivered 20+ production web applications end-to-end (requirements → Figma → data model → API → deployment → support), serving live customers in 3 countries(UK, Pakistan, & Saudi Arabia). ",
+      "Architected Next.js + Express + TypeScript systems on MongoDB/PostgreSQL with JWT-secured admin dashboards, product CRUD, order fulfilment, coupon engines, dynamic delivery pricing, review moderation, and real-time sales analytics.",
+      "Drove technical SEO (dynamic metadata, JSON-LD, XML sitemaps, Search Console) and performance work that consistently produced 99+ Lighthouse scores across client sites.",
     ],
     tags: ["Next.js 16", "Express.js", "TypeScript", "MongoDB", "PostqreSQL", "zod" ,"Tailwind CSS", "Cloudinary", "JWT", "SEO", "Context API"],
   },
